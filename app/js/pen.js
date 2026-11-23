@@ -71,8 +71,9 @@ export function createPalmGuard(now = () => performance.now()) {
     takeClick(target) {
       const t = now();
       lifts = lifts.filter((l) => l.until > t);
-      const same = (l) => !l.target || !target || l.target === target
-        || l.target.contains?.(target) || target.contains?.(l.target);
+      // A touch's click goes to the element it lifted on, or an ancestor (capture released), never
+      // to something inside it: a Pencil tap on a button inside where a hand lifted is not the hand's.
+      const same = (l) => !l.target || !target || l.target === target || target.contains?.(l.target);
       const i = lifts.findIndex(same);
       if (i < 0) return false;
       lifts.splice(i, 1);

@@ -18,9 +18,10 @@ const store = {
 let speaker = store.get('toddler.recorder.speaker', '');
 let filter = store.get('toddler.recorder.filter', 'all');
 let clips = [];
+let loadSeq = 0;
 let stream = null;
 let session = null;            // {clipId, speaker, phase: 'starting'|'recording', recorder, timer}
-const rows = new Map();        // clip id -> {phase: 'idle'|'processing'|'review'|'keeping', take, error, seq}
+const rows = new Map();        // clip id -> {phase, take, retry, error, seq}
 const player = new Audio();    // the one preview player
 
 const $ = (sel) => document.querySelector(sel);
@@ -116,7 +117,7 @@ function renderClip(c) {
   el.dataset.clip = c.id;
   const r = rowOf(c.id);
   const recordingThis = session?.clipId === c.id;
-  const busy = r.phase === 'processing' || r.phase === 'keeping';
+  const busy = r.phase !== 'idle' && r.phase !== 'review';
   el.innerHTML = `
     <div><div class="text"></div><div class="prompt"></div></div>
     <div class="actions"></div>
@@ -144,8 +145,10 @@ function renderClip(c) {
   }
   if (r.take && r.phase !== 'processing') {
     button('listen', 'Listen', () => preview(r.take.preview_url), !!session);
-    button('keep', r.phase === 'keeping' ? 'Keeping…' : 'Keep', () => keep(c), !!session || r.phase === 'keeping');
-  } else if (c.active && !r.take && !busy) {
+    button('keep', r.phase === 'keeping' ? 'Keeping…' : 'Keep', () => finishReview(c, 'keep'), !!session || busy);
+    button('discard', r.phase === 'discarding' ? 'Discarding…' : 'Discard', () => finishReview(c, 'discard'), !!session || busy);
+  }
+  if (c.active && !busy) {
     button('listen-kept', 'Play kept', () => preview(`/api/takes/${encodeURIComponent(c.active.take_id)}.m4a`), !!session);
   }
 
@@ -159,11 +162,11 @@ function renderClip(c) {
   } else if (r.error) {
     // A failed redo keeps the earlier take: say so, so it's clear what Keep would publish.
     status.textContent = r.take
-      ? `${r.error} The earlier take (${r.take.duration.toFixed(1)} s, ${r.take.speaker}) is still here: Listen, Keep, or record again.`
+      ? `${r.error} The take by ${r.take.speaker} (${r.take.duration.toFixed(1)} s) is still here for review.`
       : r.error;
     status.classList.add('err');
   } else if (r.take) {
-    status.textContent = `New take by ${r.take.speaker} (${r.take.duration.toFixed(1)} s)${r.take.autoplayed ? '' : ', ready: tap Listen'}. Keep it, or record again.`;
+    status.textContent = `New take by ${r.take.speaker} (${r.take.duration.toFixed(1)} s)${r.take.autoplayed ? '' : ', ready to listen'}.`;
   } else if (c.active) {
     status.textContent = `Kept: ${c.active.speaker}, ${fmtWhen(c.active.recorded_at)} (${Number(c.active.duration).toFixed(1)} s)`;
     status.classList.add('kept');
@@ -171,6 +174,11 @@ function renderClip(c) {
     status.textContent = 'Not recorded yet';
   }
   return el;
+}
+
+function releaseMic() {
+  stream?.getTracks().forEach((t) => t.stop());
+  stream = null;
 }
 
 function fail(c, message) {
@@ -188,6 +196,7 @@ async function startRecording(c) {
   rowOf(c.id).error = null;
   player.pause();                  // never record the speaker playing a preview
   renderList();
+  if (stream && !stream.getAudioTracks().some((t) => t.readyState === 'live')) releaseMic();
   let got = stream;
   try {
     got ??= await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: false, autoGainControl: false } });
@@ -211,8 +220,9 @@ async function startRecording(c) {
     recorder.start();
   } catch (e) {
     clearTimeout(s.timer);
+    releaseMic();
     if (session === s) session = null;
-    return fail(c, `Recording could not start (${e.name || e}). Reload the page and try again.`);
+    return fail(c, `Recording could not start (${e.name || e}). Tap Record to try again.`);
   }
   renderList();
 }
@@ -264,21 +274,24 @@ async function upload(c, s, blob) {
   renderList();
 }
 
-async function keep(c) {
+async function finishReview(c, action) {
   const r = rowOf(c.id);
   const take = r.take;
   if (!take || r.phase !== 'review') return;
   const seq = r.seq;
-  r.phase = 'keeping';
+  const keeping = action === 'keep';
+  r.phase = keeping ? 'keeping' : 'discarding';
   r.error = null;
   renderList();
   let res, body = {};
   try {
-    res = await fetch(`/api/clips/${encodeURIComponent(c.id)}/active`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ take_id: take.take_id }),
-    });
+    res = keeping
+      ? await fetch(`/api/clips/${encodeURIComponent(c.id)}/active`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ take_id: take.take_id }),
+      })
+      : await fetch(`/api/takes/${encodeURIComponent(take.take_id)}/discard`, { method: 'POST' });
     body = await res.json().catch(() => ({}));
   } catch {
     res = null;
@@ -287,17 +300,35 @@ async function keep(c) {
   r.phase = 'review';
   if (res?.ok) {
     r.take = null;
+    r.retry = null;                // decided: a failed redo's "Try again" no longer applies
     r.phase = 'idle';
     await load();
     return;
   }
-  r.error = res ? (body.detail || `Keep failed (${res.status}). Try again.`) : 'Could not reach the server. Is Tailscale on?';
-  renderList();                    // the take stays, so Keep can be retried
+  r.error = res ? (body.detail || `Could not ${action} this take. Try again.`) : 'Could not reach the server. Is Tailscale on?';
+  renderList();
 }
 
 async function load() {
-  const r = await fetch('/api/clips');
-  clips = (await r.json()).clips;
+  // Reviews of different clips can finish while a previous refresh is still in flight.
+  const seq = ++loadSeq;
+  $('#retry-load').disabled = true;
+  try {
+    const response = await fetch('/api/clips');
+    if (!response.ok) throw new Error();
+    const body = await response.json();
+    if (!Array.isArray(body.clips)) throw new Error();
+    if (seq !== loadSeq) return;
+    clips = body.clips;
+  } catch {
+    if (seq !== loadSeq) return;
+    $('#list').hidden = $('#summary').hidden = true;
+    $('#load-error').hidden = false;
+    $('#retry-load').disabled = false;
+    return;
+  }
+  $('#load-error').hidden = true;
+  $('#list').hidden = $('#summary').hidden = false;
   // A take uploaded earlier but never kept (a lost response, a reload): offer it again.
   for (const c of clips) {
     const row = rowOf(c.id);
@@ -312,7 +343,6 @@ async function load() {
 document.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'hidden') {
     player.pause();
-    const releaseMic = () => { stream?.getTracks().forEach((t) => t.stop()); stream = null; };
     const s = session;
     if (s?.recorder && s.recorder.state !== 'inactive') {
       // Leaving mid-take: stop and upload what was said (it's reviewed before Keep anyway),
@@ -329,6 +359,7 @@ document.addEventListener('visibilitychange', () => {
 
 renderSpeakers();
 renderFilters();
+$('#retry-load').onclick = load;
 load();
 if (!window.isSecureContext) {
   $('#micnote').textContent = 'The microphone only works over https (the tailnet address), not plain http.';

@@ -53,8 +53,10 @@ export function hasClip(id) {
   return !!(id && available[resolveClip(id, getSettings().voices)]);
 }
 
+// A context marked resumeFailed may say "running" but be silent (after backgrounding, below), and
+// the next lift replaces it. Until then a clip waits for that lift (held) instead of starting on it.
 function running() {
-  return ctx && ctx.state === 'running';
+  return ctx && ctx.state === 'running' && !resumeFailed;
 }
 
 /** Call inside a user gesture. */

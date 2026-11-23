@@ -19,6 +19,8 @@ def test_snapshots_and_rollback(tmp_path):
     (app / "content").mkdir(parents=True)
     (app / "content/catalog.json").write_text('{"clips":{}}')
     (repo / "PRIVATE.md").write_text("private")
+    (repo / "voices/en-test").mkdir(parents=True)
+    (repo / "voices/en-test/num.1.en.m4a").write_bytes(b"hosted voice")
     db.initialize(repo / "data")
     (repo / "data/keep").touch()
     bin_dir = tmp_path / "bin"
@@ -55,7 +57,7 @@ print(json.dumps(build_release(Path("app"), {})))
         snapshots.append(current.resolve())
         assert (current / "app/index.html").read_text() == version
         assert (current / "src/toddler_ipad/sw_template.js").is_file()
-        assert all(not (current / key).exists() for key in ("data", "live", "PRIVATE.md", ".git"))
+        assert all(not (current / key).exists() for key in ("data", "live", "PRIVATE.md", ".git", "voices"))
     # Roll back the whole tree. The previous link allows the other direction as well.
     run("rollback")
     assert current.resolve() == snapshots[1] and previous.resolve() == snapshots[2]

@@ -181,7 +181,7 @@ Playwright is pinned to 1.63.0, whose Chromium build is 1243.
   localhost or a private network such as a tailnet (`tailscale serve`, never `funnel`).
 - **It runs from a whole-version snapshot, never the working tree.**
   - `scripts/deploy.sh` runs the tests (with `TODDLER_REQUIRE_ALL=1`), then copies the publishable
-    tree (`git ls-files -co --exclude-standard`, minus `data/`, `live/` and the private files) into
+    tree (`git ls-files -co --exclude-standard`, minus `data/`, `live/`, the private files and the hosted `voices/`) into
     `live/<UTC stamp>/`.
   - It points `live/current` at the new snapshot, restarts the unit, and checks that the served
     release id matches the snapshot's.
@@ -194,8 +194,10 @@ Playwright is pinned to 1.63.0, whose Chromium build is 1243.
   - The Python environment is the shared `live/.venv`.
   - Deploy keeps the three newest snapshots plus the current and previous ones.
 - The iPad picks up any change (code, content or a kept recording) the next time it opens the app
-  online. The update installs in the background and switches over on the Home screen. The corner tag
-  on Home shows the release, and a ✓ once that copy works offline.
+  online. The update installs in the background (files it already has, by hash, are copied rather
+  than downloaded; the rest come six at a time) and switches over on the Home screen. The corner tag
+  on Home shows the release, a ✓ once that copy works offline, and "!" if a download stopped (the
+  parent screen says why).
 
 ## How Claude and Codex share the work
 

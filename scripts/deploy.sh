@@ -14,8 +14,10 @@ stamp=$(date -u +%Y%m%dT%H%M%S%NZ)
 stage=$(mktemp -d live/.stage.XXXXXXXX)
 trap 'rm -rf -- "$stage"' EXIT
 # Keep modes, symlinks and unusual filenames. A tracked file deleted in the working tree
-# has no bytes to publish. Always exclude personal data and the snapshot directory itself.
-git ls-files -coz --exclude-standard --deduplicate -- . ':!data' ':!live' ':!PRIVATE.md' ':!.privacy-patterns' |
+# has no bytes to publish. Always exclude personal data and the snapshot directory itself, and the
+# hosted build's voice packs (about 4 MB), which the self-hosted server never reads.
+git ls-files -coz --exclude-standard --deduplicate -- . ':!data' ':!live' ':!PRIVATE.md' ':!.privacy-patterns' \
+    ':!voices' ':!voices-heard' |
   while IFS= read -r -d '' path; do
     if [[ -f "$path" || -L "$path" ]]; then printf '%s\0' "$path"; fi
   done | tar --null -T - -cf - | tar -C "$stage" -xf -

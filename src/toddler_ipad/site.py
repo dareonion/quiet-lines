@@ -89,6 +89,10 @@ def collect_voice_packs(voices, catalog, *, audio=None, preview=False):
                 if (not isinstance(record, dict) or record.get("sha256") != digest
                         or record.get("tier") != "S0" or record.get("voice") != metadata["voice"]):
                     raise ValueError(f"Missing or mismatched S0 source record: {path}")
+                # Made for today's word, with today's fix: a catalog edit or a new recipe needs a new clip.
+                if (record.get("text") != catalog[path.stem]["text"]
+                        or (record.get("recipe") or None) != (recipes.get(path.stem) or None)):
+                    raise ValueError(f"Clip made for a different word or recipe; regenerate it: {path}")
             if audio is not None:
                 dest = audio / pack.name / path.name
                 dest.parent.mkdir(exist_ok=True)

@@ -150,3 +150,15 @@ test("a lifted hand's id is forgotten: reused by the Pencil, or after a while", 
   ev('pointerdown', 'mouse', 5);
   assert.equal(g.isPalm(2), false);
 });
+
+test("a Pencil tap on a button inside where a hand lifted is not dropped", () => {
+  const { g, ev, at } = setup();
+  const grid = el('grid');
+  const tile = el('tile', grid);
+  ev('pointerdown', 'pen', 9);
+  ev('pointerdown', 'touch', 1, grid);
+  at(100);
+  ev('pointerup', 'touch', 1, grid);        // the hand slid, so it made no click
+  ev('pointerup', 'pen', 9, tile);
+  assert.equal(g.takeClick(tile), false);
+});

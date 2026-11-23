@@ -74,7 +74,7 @@ def voice_pack(tmp_path, recording):
         ("en-jenny", "en", "Jenny", True, [1, 2, 3]),
         ("en-guy", "en", "Guy", False, [1, 3]),
         ("zh-hsiaochen", "zh", "HsiaoChen", True, [1, 2, 3]),
-        ("zh-yunjhe", "zh", "YunJhe", False, [2]),
+        ("zh-yunjhe", "zh", "YunJhe", False, [2, "char.da4.zh"]),   # like the real one: no 一, has 大
     ]):
         directory = root / pack
         directory.mkdir()
@@ -84,14 +84,14 @@ def voice_pack(tmp_path, recording):
         audio = recording("mp4", db=-12 - index, tone=0.2, pad=0.05)
         approved = {}
         language = {key for key, clip in clips.items() if clip["lang"] == lang}
-        wanted = language if default else {f"num.{n}.{lang}" for n in numbers}
+        wanted = language if default else {f"num.{n}.{lang}" if isinstance(n, int) else n for n in numbers}
         (directory / "recipes.json").write_text(json.dumps({k: {"skip": True} for k in language - wanted}))
         for key in sorted(wanted):
             (directory / f"{key}.m4a").write_bytes(audio)
             approved[key] = hashlib.sha256(audio).hexdigest()
         (directory / "approved.json").write_text(json.dumps(approved))
         (directory / "source.json").write_text(json.dumps({
-            key: {"tier": "S0", "voice": label + "Test", "sha256": digest}
+            key: {"tier": "S0", "voice": label + "Test", "sha256": digest, "text": clips[key]["text"]}
             for key, digest in approved.items()
         }))
     return root

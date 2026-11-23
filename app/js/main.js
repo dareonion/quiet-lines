@@ -46,6 +46,7 @@ export function swStatus() {
     installing: !!registration?.installing,
     waiting: !!registration?.waiting,
     lastCheck,
+    online: navigator.onLine !== false,
     release: ctx?.release?.id ?? null,
   };
 }
@@ -165,7 +166,7 @@ function route() {
   const item = id && screen !== 'area' ? ctx.catalog.items.find((i) => i.id === decodeURIComponent(id)) : null;
   const args = { ...ctx, item, go };
   if (screen === 'card' && item) cleanup = renderCard(root, args);
-  else if (screen === 'trace' && item?.glyph) cleanup = renderTrace(root, args);
+  else if (screen === 'trace' && item?.trace && item?.glyph) cleanup = renderTrace(root, args);
   else if (screen === 'area' && AREAS.some((a) => a.id === id && a.kind)) cleanup = renderPicker(root, { ...args, areaId: id, page: Number(page) || 0 });
   else if (screen === 'draw') cleanup = renderDraw(root, args);
   else if (screen === 'parent') cleanup = renderParent(root, { ...args, go: leaveParent, swStatus, onSwStatus, checkForUpdate });
@@ -189,6 +190,8 @@ async function boot() {
     window.addEventListener('hashchange', route);
     route();
     document.documentElement.dataset.ready = '1';
+    // A slow first load can outlast index.html's 8-second "couldn't load" fallback: take it down.
+    document.getElementById('boot-fallback')?.setAttribute('hidden', '');
   } catch {
     // The connection dropped before anything was saved. A calm screen with one big retry button;
     // it also retries by itself when the offline copy takes over (controllerchange).
@@ -198,7 +201,8 @@ async function boot() {
     el.className = 'screen boot-failed';
     el.innerHTML = `<div class="boot-body"><button class="round big" aria-label="Try again">${RETRY}</button>
       <p>Couldn't load. Check the iPad is online, then tap to try again.</p></div>`;
-    el.querySelector('button').addEventListener('click', () => boot());
+    // Retry the offline setup too: if the first registration failed, nothing else retries it.
+    el.querySelector('button').addEventListener('click', () => { checkForUpdate(); boot(); });
     root.append(el);
   } finally {
     booting = false;

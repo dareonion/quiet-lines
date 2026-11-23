@@ -23,8 +23,9 @@
 //   direction: that waits for a fresh touch, so a stray tail never locks the wrong way.
 //   "normal": forward only.
 // - A stroke is done at `doneFraction` of its samples; then the next stroke becomes active.
-// - One active pointer: the first to land near the active stroke, until it lifts or is
-//   cancelled. Other touches (a resting palm, a second finger) are ignored.
+// - One active pointer: the first to land near the active stroke, or to slide onto it after
+//   landing off it, until it lifts or is cancelled. Other touches (a resting palm, a second
+//   finger) are ignored while it is down.
 
 const dist = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1]);
 const MIN_DRAG = 8;
@@ -56,6 +57,7 @@ export function createTracer(strokes, opts = {}, snap = null) {
   });
   let active = snap ? Math.min(snap.active, state.length) : 0;
   let pointer = null;       // id of the active pointer
+  const loose = new Map();  // pointers down but not (yet) on the line: id -> last point
   let last = null;          // last processed point of the active pointer
   let travel = 0;           // px the finger has moved since this stroke was picked up
 
@@ -161,9 +163,9 @@ export function createTracer(strokes, opts = {}, snap = null) {
   return {
     /** Picks the stroke up if near it. Credits nothing: progress needs movement. */
     pointerDown(id, x, y) {
-      if (pointer !== null || active >= state.length) return [];
+      if (active >= state.length) return [];
       const pt = [x, y];
-      if (!nearStroke(state[active], pt)) return [];
+      if (pointer !== null || !nearStroke(state[active], pt)) { loose.set(id, pt); return []; }
       pointer = id;
       last = pt;
       pickUp(pt, false);
@@ -171,8 +173,32 @@ export function createTracer(strokes, opts = {}, snap = null) {
     },
     pointerMove(id, x, y) {
       const events = [];
-      if (id !== pointer || active >= state.length) return events;
+      if (active >= state.length) return events;
       const pt = [x, y];
+      // A finger that landed just off the line and slides onto it is picked up where it arrives
+      // (as if it had landed there), so a small miss at touchdown doesn't cost the whole drag. The
+      // move is walked in half-steps, so a fast one crossing the start still starts there.
+      if (pointer === null && loose.has(id)) {
+        const from = loose.get(id);
+        const d = dist(from, pt), n = Math.max(1, Math.ceil(d / (step / 2)));
+        for (let i = 1; i <= n; i++) {
+          const q = [from[0] + ((pt[0] - from[0]) * i) / n, from[1] + ((pt[1] - from[1]) * i) / n];
+          if (!nearStroke(state[active], q)) continue;
+          loose.delete(id);
+          pointer = id;
+          last = q;
+          pickUp(q, false);
+          processSegment(q, pt, events);
+          last = pt;
+          return events;
+        }
+        loose.set(id, pt);
+        return events;
+      }
+      if (id !== pointer) {
+        if (loose.has(id)) loose.set(id, pt);
+        return events;
+      }
       processSegment(last, pt, events);
       last = pt;
       return events;
@@ -182,11 +208,13 @@ export function createTracer(strokes, opts = {}, snap = null) {
       let events = [];
       if (id === pointer && x !== undefined) events = this.pointerMove(id, x, y);
       if (id === pointer) { pointer = null; last = null; }
+      loose.delete(id);
       return events;
     },
     /** Cancel (system gesture, rotation): release without counting the position. */
     pointerCancel(id) {
       if (id === pointer) { pointer = null; last = null; }
+      loose.delete(id);
       return [];
     },
     get activePointer() { return pointer; },

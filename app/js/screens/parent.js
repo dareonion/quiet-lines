@@ -2,7 +2,7 @@ import { playSequence, selectedVoice, silence } from '../audio.js';
 import { getSettings, saveSettings } from '../settings.js';
 
 /** Parent area (behind the 3-second hold): offline status and settings. */
-export function renderParent(root, { go, release, swStatus, onSwStatus, checkForUpdate }) {
+export function renderParent(root, { go, release, catalog, swStatus, onSwStatus, checkForUpdate }) {
   const el = document.createElement('section');
   el.className = 'screen parent';
   el.innerHTML = `
@@ -41,13 +41,28 @@ export function renderParent(root, { go, release, swStatus, onSwStatus, checkFor
       button.addEventListener('click', () => {
         saveSettings({ voices: { ...getSettings().voices, [lang]: id } });
         for (const b of row.children) b.setAttribute('aria-pressed', String(b === button));
-        const one = `${id}/num.1.${lang}`;
-        const sample = release.clips[one] ? one : Object.keys(release.clips).find((key) => key.startsWith(id + '/'));
+        // The sample is "one" (or the next number the voice has), the same word for every voice.
+        const sample = Array.from({ length: 10 }, (_, i) => `${id}/num.${i + 1}.${lang}`).find((key) => release.clips[key])
+          ?? Object.keys(release.clips).find((key) => key.startsWith(id + '/'));
         if (sample) playSequence([sample]);
       });
       row.append(button);
     }
+    // A voice without some words (YunJhe) plays those in the default voice: say which.
+    const [defaultId, defaultPack] = packs[0];
+    const gaps = packs.slice(1).map(([id, pack]) => {
+      const missing = Object.keys(release.clips).filter((key) => key.startsWith(defaultId + '/'))
+        .map((key) => key.slice(defaultId.length + 1)).filter((clip) => !release.clips[`${id}/${clip}`]);
+      const words = missing.map((clip) => catalog?.clips?.[clip]?.text).filter(Boolean);
+      return words.length ? `With ${pack.label.split(' (')[0]}, ${words.join(' ')} play in ${defaultPack.label.split(' (')[0]}'s voice.` : '';
+    }).filter(Boolean);
     el.querySelector('.note').before(heading, row);
+    if (gaps.length) {
+      const note = document.createElement('p');
+      note.className = 'voice-note';
+      note.textContent = gaps.join(' ');
+      el.querySelector('.note').before(note);
+    }
   }
 
   if (release?.voices?.disclosure) {
@@ -68,7 +83,8 @@ export function renderParent(root, { go, release, swStatus, onSwStatus, checkFor
     else if (s.switching) text = `Release ${id}. Saved for offline use; it finishes switching the next time the app is on its home screen.`;
     else if (s.controlled) text = `Release ${id}. Ready offline ✓ (no connection needed).`;
     else text = `Release ${id}. Not yet saved for offline use: stay online, then reopen the app.`;
-    if (s.lastCheck === 'failed') text = `The update check failed. ${text}`;
+    // Offline, a failed check is expected (the app is meant to work offline): say so plainly.
+    if (s.lastCheck === 'failed') text = s.online ? `The update check failed. ${text}` : `No connection, so no update check. ${text}`;
     if (s.lastCheck === 'checking') text = `Checking for an update… ${text}`;
     statusEl.textContent = text;
   };

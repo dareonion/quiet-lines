@@ -29,13 +29,17 @@ def initialize(data_dir: Path) -> None:
                 take_id TEXT PRIMARY KEY, clip_id TEXT NOT NULL, speaker TEXT NOT NULL,
                 recorded_at TEXT NOT NULL, raw_path TEXT NOT NULL, raw_sha256 TEXT NOT NULL,
                 mime TEXT, ok INTEGER NOT NULL, error TEXT, duration REAL,
-                processed_path TEXT, processed_sha256 TEXT
+                processed_path TEXT, processed_sha256 TEXT, discarded INTEGER NOT NULL DEFAULT 0
             );
             CREATE TABLE IF NOT EXISTS active (
                 clip_id TEXT PRIMARY KEY, take_id TEXT NOT NULL REFERENCES takes(take_id),
                 set_at TEXT NOT NULL
             );
         """)
+        # Two server processes can open the same older database at startup.
+        conn.execute("BEGIN IMMEDIATE")
+        if "discarded" not in {row["name"] for row in conn.execute("PRAGMA table_info(takes)")}:
+            conn.execute("ALTER TABLE takes ADD COLUMN discarded INTEGER NOT NULL DEFAULT 0")
 
 
 def add_raw_take(data_dir: Path, take: dict) -> None:
@@ -52,7 +56,7 @@ def keep(data_dir: Path, clip_id: str, take_id: str) -> bool:
     with connect(data_dir) as conn:
         result = conn.execute("""
             INSERT INTO active (clip_id, take_id, set_at)
-            SELECT clip_id, take_id, ? FROM takes WHERE clip_id=? AND take_id=? AND ok=1
+            SELECT clip_id, take_id, ? FROM takes WHERE clip_id=? AND take_id=? AND ok=1 AND discarded=0
             ON CONFLICT(clip_id) DO UPDATE SET take_id=excluded.take_id, set_at=excluded.set_at
         """, (timestamp(), clip_id, take_id))
         return result.rowcount == 1

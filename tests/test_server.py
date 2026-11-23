@@ -8,6 +8,8 @@ from datetime import datetime
 
 import pytest
 
+from toddler_ipad import db
+
 
 def upload(client, origin, clip, content, mime="audio/webm", speaker=" Robin "):
     return client.post(f"/api/clips/{clip}/takes", headers=origin,
@@ -41,6 +43,7 @@ def test_invalid_clip(client, origin, bad):
 def test_origin_before_body(client, data_dir, clip, headers):
     assert client.post(f"/api/clips/{clip}/takes", headers=headers).status_code == 403
     assert client.post(f"/api/clips/{clip}/active", headers=headers).status_code == 403
+    assert client.post("/api/takes/unknown/discard", headers=headers).status_code == 403
     assert not rows(data_dir, "SELECT * FROM takes")
     assert not (data_dir / "recordings").exists()
 
@@ -231,3 +234,47 @@ def test_unkept_take_is_offered_until_kept(client, origin, recording):
     assert keep(client, origin, clip, take).status_code == 200
     entry = next(c for c in client.get("/api/clips").json()["clips"] if c["id"] == clip)
     assert entry["unkept"] is None and entry["active"]["take_id"] == take
+
+
+def test_discard_take(client, data_dir, origin, clip, recording):
+    assert client.post("/api/takes/unknown/discard", headers=origin).status_code == 404
+    active, _, latest = [upload(client, origin, clip, recording()).json()["take_id"] for _ in range(3)]
+    assert keep(client, origin, clip, active).status_code == 200
+    assert client.post(f"/api/takes/{active}/discard", headers=origin).status_code == 409
+    entry = client.get("/api/clips").json()["clips"][0]
+    assert entry["unkept"]["take_id"] == latest
+    for _ in range(2):  # A lost response can lead to a second Discard.
+        assert client.post(f"/api/takes/{latest}/discard", headers=origin).status_code == 200
+    entry = client.get("/api/clips").json()["clips"][0]
+    assert entry["unkept"] is None and entry["active"]["take_id"] == active
+    assert entry["takes"] == 3
+    assert keep(client, origin, clip, latest).status_code == 409
+    for take in rows(data_dir, "SELECT * FROM takes"):
+        assert take["discarded"] == (take["take_id"] == latest)
+        assert (data_dir / take["raw_path"]).is_file()
+        assert (data_dir / take["processed_path"]).is_file()
+
+
+def test_migrate_recordings_database(data_dir):
+    data_dir.mkdir()
+    with db.connect(data_dir) as conn:
+        conn.executescript("""
+            CREATE TABLE takes (
+                take_id TEXT PRIMARY KEY, clip_id TEXT NOT NULL, speaker TEXT NOT NULL,
+                recorded_at TEXT NOT NULL, raw_path TEXT NOT NULL, raw_sha256 TEXT NOT NULL,
+                mime TEXT, ok INTEGER NOT NULL, error TEXT, duration REAL,
+                processed_path TEXT, processed_sha256 TEXT
+            );
+            CREATE TABLE active (
+                clip_id TEXT PRIMARY KEY, take_id TEXT NOT NULL REFERENCES takes(take_id),
+                set_at TEXT NOT NULL
+            );
+            INSERT INTO takes (take_id, clip_id, speaker, recorded_at, raw_path, raw_sha256, ok)
+                VALUES ('take1', 'clip1', 'Robin', 'yesterday', 'raw', 'hash', 1);
+            INSERT INTO active VALUES ('clip1', 'take1', 'today');
+        """)
+    db.initialize(data_dir)
+    db.initialize(data_dir)
+    with db.connect(data_dir) as conn:
+        kept = db.active_takes(conn)["clip1"]
+        assert kept["take_id"] == "take1" and kept["discarded"] == 0

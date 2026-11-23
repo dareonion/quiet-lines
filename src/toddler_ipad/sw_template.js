@@ -14,6 +14,26 @@ async function sha256(buffer) {
 // while the iPad is downloading, the install fails, the old release keeps running, and the next
 // update check brings a worker for the new release.
 const COMPLETE = new URL('__release_complete__', scope);
+const PARALLEL = 6;   // downloads in flight at once: hundreds of small files, one by one, took minutes
+
+// Earlier releases' caches of this scope (at '/', also the first version's "release-*" names).
+async function earlierCaches() {
+  const names = (await caches.keys()).filter(name => name !== cacheName &&
+    (name.startsWith(prefix) || (scopePath === '/' && name.startsWith('release-'))));
+  return Promise.all(names.map(name => caches.open(name)));
+}
+
+// A file an earlier release already holds byte for byte (same SHA-256, checked here, not trusted)
+// is copied instead of downloaded, so an update that changes one line downloads one file.
+async function reusable(earlier, url, hash) {
+  for (const old of earlier) {
+    try {
+      const hit = await old.match(url);
+      if (hit && (await sha256(await hit.clone().arrayBuffer())) === hash) return hit;
+    } catch { /* an unreadable entry is a miss: download the file instead */ }
+  }
+  return null;
+}
 
 self.addEventListener('install', event => {
   event.waitUntil((async () => {
@@ -23,8 +43,15 @@ self.addEventListener('install', event => {
     const cache = await caches.open(cacheName);
     if (existed && await cache.match(COMPLETE)) return;
     try {
-      for (const key of RELEASE.files) {
+      const earlier = await earlierCaches();
+      let next = 0, failure = null;
+      const installOne = async key => {
         const url = new URL(key, scope);
+        if (key !== 'release.json') {
+          const kept = await reusable(earlier, url, RELEASE.hashes[key]);
+          if (kept) return cache.put(url, kept);
+        }
+        if (failure) return;           // another download already failed: start no new ones
         const response = await fetch(url, {cache: 'reload'});
         if (!response.ok) throw new Error(`Could not install ${url}: ${response.status}`);
         const body = await response.clone().arrayBuffer();
@@ -35,7 +62,16 @@ self.addEventListener('install', event => {
           throw new Error(`changed during install: ${url}`);
         }
         await cache.put(url, response);
-      }
+      };
+      // A few downloads at a time. The first failure stops new ones, and the install fails.
+      const lane = async () => {
+        while (!failure && next < RELEASE.files.length) {
+          const key = RELEASE.files[next++];
+          try { await installOne(key); } catch (error) { failure ??= error; }
+        }
+      };
+      await Promise.all(Array.from({length: PARALLEL}, lane));
+      if (failure) throw failure;
       await cache.put(COMPLETE, new Response('ok'));
     } catch (error) {
       if (!existed) await caches.delete(cacheName);

@@ -53,9 +53,23 @@ def server(tmp_path, voice_pack, request):
 
         allow_audio = threading.Event()
         allow_audio.set()
+        requests = []           # every path the browser asked the server for
+        flight = {"now": 0, "max": 0, "delay": 0.0, "lock": threading.Lock()}   # downloads at once
 
         class StaticHandler(SimpleHTTPRequestHandler):
             def do_GET(self):
+                requests.append(self.path)
+                with flight["lock"]:
+                    flight["now"] += 1
+                    flight["max"] = max(flight["max"], flight["now"])
+                try:
+                    time.sleep(flight["delay"] if self.path.endswith(".m4a") else 0)
+                    self._get()
+                finally:
+                    with flight["lock"]:
+                        flight["now"] -= 1
+
+            def _get(self):
                 if self.path.endswith(".m4a") and not allow_audio.wait(20):
                     self.send_error(503)
                     return
@@ -73,7 +87,7 @@ def server(tmp_path, voice_pack, request):
             try:
                 base = f"http://localhost:{http.server_port}/sub"
                 yield {"base": base, "app_dir": app_dir, "tmp": tmp_path, "out": out, "pack": voice_pack,
-                       "allow_audio": allow_audio}
+                       "allow_audio": allow_audio, "requests": requests, "flight": flight}
             finally:
                 http.shutdown()
                 thread.join()
@@ -307,25 +321,51 @@ def test_parent_gate_needs_the_full_hold(server, page):
     page.wait_for_selector(".home")
 
 
-def test_recorder_ui_records_and_keeps(server, page):
+@pytest.mark.parametrize("action", ["keep", "discard"])
+def test_recorder_review(server, page, action):
+    key = "letter.b.en"
+    kept = _record_and_keep(page, server["base"], key, _tone(server["tmp"] / "kept.m4a"))
     page.goto(server["base"] + "/recorder/")
     page.wait_for_selector(".clip")
     page.goto(server["base"] + "/record")
     page.wait_for_selector(".clip")
     page.locator("#speakers input").fill("Robin")
-    row = page.locator('.clip[data-clip="letter.b.en"]')
+    row = page.locator(f'.clip[data-clip="{key}"]')
     row.locator("button.rec").click()
     row.locator("button.rec.on", has_text="Stop").wait_for()
     page.wait_for_timeout(1500)                     # the fake mic plays a beep
     row.locator("button.rec.on").click()
     row.locator("button.keep").wait_for(timeout=20000)
+    page.reload()
     row.locator("button.listen").click()            # the processed take plays back
-    row.locator("button.keep").click()
+    row.get_by_role("button", name="Play kept").click()
+
+    # A failed redo leaves both an upload to retry and the previous take to review.
+    page.route(f"**/api/clips/{key}/takes", lambda route: route.abort())
+    row.get_by_role("button", name="Record again").click()
+    row.get_by_role("button", name="Stop").click()
+    row.get_by_role("button", name="Try again").wait_for()
+    row.locator(f"button.{action}").click()
     row.locator(".status.kept").wait_for(timeout=10000)
-    assert "Robin" in row.locator(".status").inner_text()
+    expect(row.get_by_role("button", name="Try again")).to_have_count(0)
+    page.reload()
+    expect(row.get_by_role("button", name="Play kept")).to_be_visible()
+    expect(row.locator("button.discard")).to_have_count(0)
     clips = page.context.request.get(server["base"] + "/api/clips").json()["clips"]
-    active = next(c for c in clips if c["id"] == "letter.b.en")["active"]
-    assert active and active["speaker"] == "Robin"
+    entry = next(c for c in clips if c["id"] == key)
+    assert entry["unkept"] is None
+    assert entry["active"]["speaker"] == ("Robin" if action == "keep" else "Test")
+    assert (entry["active"]["take_id"] == kept) == (action == "discard")
+
+
+def test_recorder_retries_clip_list(server, page):
+    page.route("**/api/clips", lambda route: route.fulfill(status=503, body="Unavailable"), times=1)
+    page.goto(server["base"] + "/record")
+    error = page.locator("#load-error")
+    expect(error).to_contain_text("Could not load the clips")
+    error.get_by_role("button", name="Try again").click()
+    expect(page.locator(".clip").first).to_be_visible()
+    expect(error).to_be_hidden()
 
 
 @both_hosts
@@ -393,6 +433,8 @@ def test_voice_selection_and_fallback_on_offline_cold_relaunch(server):
         zh = page.get_by_role("group", name="中文 voice")
         assert en.get_by_role("button", name="Jenny").get_attribute("aria-pressed") == "true"
         assert zh.get_by_role("button", name="HsiaoChen").get_attribute("aria-pressed") == "true"
+        notes = page.locator(".voice-note").all_inner_texts()   # the fallback words are named
+        assert any("With YunJhe" in n and "一" in n and "HsiaoChen" in n for n in notes), notes
         zh.get_by_role("button", name="YunJhe").click()
         # This pack lacks the usual sample. The parent hears one of its own clips.
         assert page.evaluate("window.__plays.at(-1)") == ["zh-yunjhe/num.2.zh"]
@@ -434,6 +476,37 @@ def test_language_with_only_one_pack_hides_its_voice_row(server, page):
     _open_parent(page)
     assert page.get_by_text("English voice", exact=True).count() == 0
     assert page.get_by_role("group", name="中文 voice").get_by_role("button").count() == 2
+
+
+@static_host
+def test_an_update_downloads_only_the_files_that_changed(server, page):
+    server["flight"]["delay"] = 0.05           # slow audio a little, so parallel downloads overlap
+    page.goto(server["base"] + "/")
+    _offline_ready(page)
+    server["flight"]["delay"] = 0.0
+    assert server["flight"]["max"] >= 3, "the first install downloaded one file at a time"
+    old_release = _release_id(page)
+    page.locator('.tile[data-area="draw"]').click()      # off Home, so the update waits
+    css = server["app_dir"] / "app.css"
+    css.write_text(css.read_text() + "\n/* release bump */\n")
+    build_site(server["out"], server["pack"], app_dir=server["app_dir"])
+    server["requests"].clear()
+    page.evaluate("navigator.serviceWorker.getRegistration().then(r => r.update())")
+    assert _wait_for_waiting_worker(page), "the new release never finished installing"
+    fetched = {p.split("?")[0] for p in server["requests"]}
+    assert "/sub/app.css" in fetched and "/sub/release.json" in fetched
+    assert not [p for p in fetched if p.endswith(".m4a") or "/js/" in p], fetched   # unchanged: copied
+    # The new release is complete: it takes over at Home and works offline, audio included.
+    page.context.set_offline(True)
+    page.evaluate("window.__oldDocument = true")
+    page.locator('[data-act="home"]').click()            # Home: the new release takes over
+    page.wait_for_function(
+        "!window.__oldDocument && document.documentElement.dataset.ready === '1'", timeout=15000
+    )
+    release = page.evaluate("fetch('release.json').then(r => r.json())")
+    assert release["id"] != old_release
+    for key, clip in list(release["clips"].items())[:5]:  # copied clips are intact
+        assert _fetch_in_page(page, f"audio/{key}.m4a") == {"status": 200, "sha": clip["sha256"]}
 
 
 @pytest.mark.parametrize("code_change", [False, True], ids=["audio-only", "audio-and-code"])
@@ -550,6 +623,7 @@ def test_counting_counts_each_object_once(server, page, lang, expected):
     page.goto(server["base"] + "/#/card/num.0")
     page.wait_for_selector(".card-number .ten-frame")
     assert page.locator(".count-obj").count() == 0
+    assert page.locator('[data-act="recount"]').count() == 0   # nothing to count again
 
 
 @both_hosts
@@ -848,6 +922,7 @@ def test_fresh_mixed_install_marks_only_verified_page(server, page):
     page.wait_for_function("""async () => (await import('./js/main.js')).swStatus().lastCheck === 'failed'""")
     assert not page.evaluate("!!navigator.serviceWorker.controller")
     assert "✓" not in page.locator(".release-tag").inner_text()
+    page.wait_for_function("document.querySelector('.release-tag').textContent.endsWith('!')")   # stopped, not "…"
     # The complete release installs while the app is on Home: the page that wasn't loaded from the
     # worker reloads onto it at once (a parent waiting for the ✓ sees it), and only then shows ✓.
     page.evaluate("window.firstPage = true")

@@ -48,7 +48,10 @@ export function renderHome(root, { go, openParent, swStatus, onSwStatus }) {
   const show = (s) => {
     const id = s.release ? s.release.slice(0, 6) : '';
     // ✓ only inside the Home Screen app: a Safari tab's offline copy isn't the app's.
-    const mark = !s.standalone ? ' (browser tab)' : s.controlled && !s.installing ? ' ✓' : ' …';
+    // "!" when nothing is downloading and the last attempt failed (e.g. a first install cut off),
+    // so a parent doesn't wait on "…" for something that has stopped. The parent screen explains.
+    const stopped = !s.installing && !s.waiting && !s.switching && s.lastCheck === 'failed';
+    const mark = !s.standalone ? ' (browser tab)' : s.controlled && !s.installing ? ' ✓' : stopped ? ' !' : ' …';
     tag.textContent = `${id}${mark}`;
   };
   show(swStatus());

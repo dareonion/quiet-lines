@@ -120,12 +120,12 @@ def create_app(app_dir: Path, data_dir: Path, origins: set[str]) -> FastAPI:
             conn.execute("BEGIN")
             active = db.active_takes(conn)
             counts = dict(conn.execute("SELECT clip_id, COUNT(*) FROM takes WHERE ok=1 GROUP BY clip_id"))
-            # The newest ok take per clip: if it isn't the active one, it's waiting for Keep (the
-            # recorder offers it again after a reload or a lost response, so nobody re-records).
+            # Check discard after finding the newest successful take, so dismissing it
+            # doesn't put a superseded take back in review on the next visit.
             newest = {row["clip_id"]: row for row in conn.execute("""
                 SELECT t.* FROM takes t
                 JOIN (SELECT clip_id, MAX(take_id) AS take_id FROM takes WHERE ok=1 GROUP BY clip_id) m
-                  ON m.take_id = t.take_id""")}
+                  ON m.take_id = t.take_id WHERE t.discarded=0""")}
         clips = []
         for clip_id, info in catalog_clips(app_dir).items():
             take = active.get(clip_id)
@@ -184,6 +184,19 @@ def create_app(app_dir: Path, data_dir: Path, origins: set[str]) -> FastAPI:
         if not await run_in_threadpool(db.keep, data_dir, clip_id, take_id):
             raise HTTPException(409, "Choose a successful recording of this word.")
         return {"clip_id": clip_id, "take_id": take_id}
+
+    @app.post("/api/takes/{take_id}/discard")
+    def discard(take_id: str):
+        with db.connect(data_dir) as conn:
+            result = conn.execute("""
+                UPDATE takes SET discarded=1 WHERE take_id=?
+                AND NOT EXISTS (SELECT 1 FROM active WHERE active.take_id=takes.take_id)
+            """, (take_id,))
+            if result.rowcount == 0:
+                if conn.execute("SELECT 1 FROM takes WHERE take_id=?", (take_id,)).fetchone() is None:
+                    raise HTTPException(404, "Unknown take.")
+                raise HTTPException(409, "This take is currently kept.")
+        return {"take_id": take_id}
 
     app.mount("/", StaticFiles(directory=app_dir, html=True))
     return app

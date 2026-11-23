@@ -12,6 +12,8 @@ import { glyphSVG } from '../glyph.js';
  * Home, back to the list, and (where there is one) the trace button are always there.
  */
 export function renderCard(root, { item, catalog, glyphs, go }) {
+  // Zero has an empty frame: nothing to count again, so no button that does nothing.
+  const recount = item.kind === 'number' && countOf(item) > 0;
   const el = document.createElement('section');
   el.className = `screen card card-${item.kind}`;
   el.innerHTML = `
@@ -21,7 +23,7 @@ export function renderCard(root, { item, catalog, glyphs, go }) {
         <button class="round" data-act="back" aria-label="Back to the list">${icons.back}</button>
       </div>
       <div class="bar-group">
-        ${item.kind === 'number' ? `<button class="round" data-act="recount" aria-label="Count again">${icons.restart}</button>` : ''}
+        ${recount ? `<button class="round" data-act="recount" aria-label="Count again">${icons.restart}</button>` : ''}
         ${item.trace ? `<button class="round trace-btn" data-act="trace" aria-label="Trace it">${icons.trace}</button>` : ''}
       </div>
     </div>
@@ -31,17 +33,21 @@ export function renderCard(root, { item, catalog, glyphs, go }) {
     </div>`;
   const glyphBtn = el.querySelector('[data-act="say"]');
   glyphBtn.innerHTML = glyphSVG(item.glyph, glyphs) || `<span class="glyph-text">${item.text ?? ''}</span>`;
+  // A quick second tap interrupts the first clip: only the latest tap's clip clears the highlight.
+  let speaking = 0;
   const speak = async (btn, ids) => {
+    const mine = ++speaking;
+    el.querySelectorAll('.speaking').forEach((b) => b.classList.remove('speaking'));   // the other button's clip stopped
     btn.classList.add('speaking');
     await playSequence(ids);
-    btn.classList.remove('speaking');
+    if (mine === speaking) btn.classList.remove('speaking');
   };
   glyphBtn.addEventListener('click', () => speak(glyphBtn, clipsToSay(item)));
 
   const picture = el.querySelector('.card-picture');
   if (item.kind === 'number') {
     let frame = renderCounting(picture, item);
-    el.querySelector('[data-act="recount"]').addEventListener('click', () => {
+    el.querySelector('[data-act="recount"]')?.addEventListener('click', () => {
       silence();
       frame.remove();
       frame = renderCounting(picture, item);
@@ -72,8 +78,10 @@ export function renderCard(root, { item, catalog, glyphs, go }) {
  * After the last object, the number is said again. Zero is an empty frame. "Count again" and
  * every new visit start afresh.
  */
+const countOf = (item) => Number(item.glyph.split(':')[1]);
+
 function renderCounting(box, item) {
-  const n = Number(item.glyph.split(':')[1]);
+  const n = countOf(item);
   const frame = document.createElement('div');
   frame.className = 'ten-frame';
   let counted = 0;

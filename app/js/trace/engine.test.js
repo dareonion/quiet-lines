@@ -214,3 +214,34 @@ test('wandering far off the path does not let progress jump ahead', () => {
   const [[, hi]] = t.coverage()[0].ranges;
   assert.ok(hi < 40, `jumped to sample ${hi}`);
 });
+
+// ---- agy review (2026-11-23) ----
+
+test('a finger landing just off the line and sliding onto it is picked up', () => {
+  const t = createTracer([line]);
+  const pts = [[100, 40], [100, 60], [100, 80], ...range(100, 500, 40).map((y) => [100, y])];   // lands 60 px above the start
+  assert.ok(drag(t, pts).some((e) => e.type === 'complete'));
+});
+
+test('a finger sliding onto the middle of the line arms no direction there', () => {
+  const t = createTracer([line]);
+  const pts = [[200, 300], ...range(170, 100, 7).map((x) => [x, 300]), ...range(300, 320, 4).map((y) => [100, y])];
+  drag(t, pts);
+  assert.equal(t.coverage()[0].ranges.length, 0);
+});
+
+test('a second finger sliding onto the line is ignored while the first is tracing', () => {
+  const t = createTracer([line]);
+  t.pointerDown(1, 100, 100);
+  t.pointerDown(2, 300, 480);                    // lands off the line
+  for (const x of range(300, 100, 20)) t.pointerMove(2, x, 480);
+  for (const y of range(480, 500, 5)) t.pointerMove(2, 100, y);
+  assert.equal(t.activePointer, 1);
+  assert.ok(!t.complete);
+});
+
+test('a fast move that crosses the start between two events still starts there (normal mode)', () => {
+  const t = createTracer([line], { mode: 'normal' });
+  const pts = [[100, 72], [100, 132], ...range(140, 500, 36).map((y) => [100, y])];   // lands 28 px above, skips the start
+  assert.ok(drag(t, pts).some((e) => e.type === 'complete'));
+});

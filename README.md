@@ -33,8 +33,9 @@ The hosted app's voices are **computer-generated** with Microsoft Azure Speech, 
 listened to before release.
 
 - **English:** Jenny (the default), Guy or Andrew.
-- **Taiwan Mandarin:** HsiaoChen (the default) or YunJhe. YunJhe can't say three of the words (一, 魚,
-  人) cleanly on their own, so those play in HsiaoChen's voice.
+- **Taiwan Mandarin:** HsiaoChen (the default), Yunfan or YunJhe. YunJhe can't say three of the words
+  (一, 魚, 人) cleanly on their own, so those play in HsiaoChen's voice (the parent screen says so).
+  Yunfan is an HD voice: each clip is the take that passed a pitch check of its tones, then a listen.
 
 See [voices/CREDITS.md](voices/CREDITS.md). These audio files are not under the code's MIT licence.
 

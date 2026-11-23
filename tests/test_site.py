@@ -132,7 +132,8 @@ def test_unapproved_audio_and_preview(tmp_path, voice_pack, clear):
         build_site(out, voice_pack)
     assert not out.exists()
     # The review includes even an empty pack, but lists only that pack's language.
-    (voice_pack / "zh-yunjhe/num.2.zh.m4a").unlink()
+    for clip in (voice_pack / "zh-yunjhe").glob("*.m4a"):   # an empty pack
+        clip.unlink()
     release = build_site(out, voice_pack, preview=True)
     html = (out / "voices.html").read_text()
     assert html.count("<section>") == 4
@@ -158,6 +159,23 @@ def test_build_requires_matching_source(tmp_path, voice_pack, field):
         source["num.1.en"][field] = "other"
         path.write_text(json.dumps(source))
     with pytest.raises(ValueError, match="source"):
+        build_site(tmp_path / "site", voice_pack)
+
+
+@pytest.mark.parametrize("change", ["text", "recipe"])
+def test_build_requires_clips_made_for_todays_word_and_recipe(tmp_path, voice_pack, change):
+    """A catalog edit or a new per-word recipe, without regenerating, must not ship the old clip."""
+    if change == "text":
+        path = voice_pack / "en-guy/source.json"
+        source = json.loads(path.read_bytes())
+        source["num.1.en"]["text"] = "an older word"
+        path.write_text(json.dumps(source))
+    else:
+        path = voice_pack / "en-guy/recipes.json"
+        recipes = json.loads(path.read_bytes())
+        recipes["num.1.en"] = {"carrier": "one two"}
+        path.write_text(json.dumps(recipes))
+    with pytest.raises(ValueError, match="different word or recipe"):
         build_site(tmp_path / "site", voice_pack)
 
 
