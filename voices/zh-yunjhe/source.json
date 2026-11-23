@@ -1,0 +1,466 @@
+{
+ "char.da4.zh": {
+  "approval": "carried from the heard file 833c765c7d96 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.581,
+  "generated_at": "2026-11-23T17:01:32+00:00",
+  "sha256": "833c765c7d9673522dfedca28be20a052dc7a47bb902ad23381f0bd5380e021f",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>大</prosody></voice></speak>",
+  "text": "大",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "char.er3.zh": {
+  "approval": "carried from the heard file 4a6b554ec0f7 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.462,
+  "generated_at": "2026-11-23T17:01:47+00:00",
+  "sha256": "4a6b554ec0f72d4b92efda50d5cfd858de03553b3af71728de301cfa525ed8cc",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>耳</prosody></voice></speak>",
+  "text": "耳",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "char.huo3.zh": {
+  "approval": "carried from the heard file 7dcdd063c855 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.585,
+  "generated_at": "2026-11-23T17:01:36+00:00",
+  "sha256": "7dcdd063c85545d7a6909c3bb50b45f7a46d1f27283216ed07fbb556591b051d",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>火</prosody></voice></speak>",
+  "text": "火",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "char.kou3.zh": {
+  "approval": "carried from the heard file 3dac4ad1738e (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.553,
+  "generated_at": "2026-11-23T17:01:31+00:00",
+  "sha256": "3dac4ad1738ed12a182d8f72513a05c9bcbe4837b0813405c5fb64668c7ed786",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>口</prosody></voice></speak>",
+  "text": "口",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "char.ma3.zh": {
+  "approval": "carried from the heard file fdceb65598a6 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.505,
+  "generated_at": "2026-11-23T17:01:44+00:00",
+  "sha256": "fdceb65598a67abda3f0d0fb05b04eab6baed1f4c6f2db73cbe4384fdbd0759d",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>馬</prosody></voice></speak>",
+  "text": "馬",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "char.mu4-eye.zh": {
+  "approval": "carried from the heard file 58ec3499c22e (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.658,
+  "generated_at": "2026-11-23T17:01:41+00:00",
+  "sha256": "0e84e9278a72399d68690ba42e292889d8a8103325ce4b8469b70efee0d12588",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>目</prosody></voice></speak>",
+  "text": "目",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "char.mu4.zh": {
+  "approval": "carried from the heard file 7d7075bb2acc (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.679,
+  "generated_at": "2026-11-23T17:01:39+00:00",
+  "sha256": "6455fd0723af6b7cbc8951c48687e3c34706b385d4bdc1c558e567edf161379f",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>木</prosody></voice></speak>",
+  "text": "木",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "char.niao3.zh": {
+  "approval": "carried from the heard file 3318a18a7658 (length diff 0.0 ms, corr 1.0000)",
+  "cut": {
+   "cut": 0.466,
+   "mode": "min",
+   "next_syllable": 0.511,
+   "voicing_end": 0.441
+  },
+  "duration": 0.336,
+  "generated_at": "2026-11-23T17:01:42+00:00",
+  "recipe": {
+   "carrier": "鳥蛋"
+  },
+  "sha256": "3318a18a7658d8a18fb8482ab4c5ba9be134bf9cc10e0bcdcf9529ed7d410da6",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>鳥蛋</prosody></voice></speak>",
+  "text": "鳥",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "char.niu2.zh": {
+  "approval": "carried from the heard file a859c3871188 (length diff 0.0 ms, corr 1.0000)",
+  "cut": {
+   "cut": 0.478,
+   "mode": "min",
+   "next_syllable": 0.577,
+   "voicing_end": 0.457
+  },
+  "duration": 0.34,
+  "generated_at": "2026-11-23T17:01:45+00:00",
+  "recipe": {
+   "carrier": "牛排"
+  },
+  "sha256": "a859c3871188264f1affda4a9568a9642d124ddb0ebbbf8480c20a288b167598",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>牛排</prosody></voice></speak>",
+  "text": "牛",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "char.ri4.zh": {
+  "approval": "carried from the heard file 6d60ac0c88fa (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.603,
+  "generated_at": "2026-11-23T17:01:37+00:00",
+  "sha256": "6d60ac0c88fa17bb1f27dca3f72bc6b39a04fc45ca012d35727bdb97a502420d",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>日</prosody></voice></speak>",
+  "text": "日",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "char.shan1.zh": {
+  "approval": "carried from the heard file 9fa88d0da057 (length diff 0.0 ms, corr 1.0000)",
+  "cut": {
+   "cut": 0.572,
+   "mode": "min",
+   "next_syllable": 0.625,
+   "voicing_end": 0.57
+  },
+  "duration": 0.444,
+  "generated_at": "2026-11-23T17:01:34+00:00",
+  "recipe": {
+   "carrier": "山頂"
+  },
+  "sha256": "9fa88d0da0576c6aedee2f6dd9a53736f0ca294c7809a765a153d94124029a3d",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>山頂</prosody></voice></speak>",
+  "text": "山",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "char.shang4.zh": {
+  "approval": "carried from the heard file 9b0b62676408 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.687,
+  "generated_at": "2026-11-23T17:01:49+00:00",
+  "sha256": "ba2c817881a02727d4c3f5bed5c3f148d1c77141ea707d53839682b0d8437388",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>上</prosody></voice></speak>",
+  "text": "上",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "char.shou3.zh": {
+  "approval": "carried from the heard file 5def369a92a3 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.625,
+  "generated_at": "2026-11-23T17:01:40+00:00",
+  "sha256": "5def369a92a3949b5603e2e23a0373c8bf6e68de99215bd2edc86d716fcb5e30",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>手</prosody></voice></speak>",
+  "text": "手",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "char.shui3.zh": {
+  "approval": "carried from the heard file eba0447fc63b (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.658,
+  "generated_at": "2026-11-23T17:01:35+00:00",
+  "sha256": "eba0447fc63b3203addde5499b411c3597a050b506b602532c6426a245155f4b",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>水</prosody></voice></speak>",
+  "text": "水",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "char.xia4.zh": {
+  "approval": "carried from the heard file 5ae72565c1b4 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.678,
+  "generated_at": "2026-11-23T17:01:50+00:00",
+  "sha256": "a978731de0f14a7a4351d375a5c2bba36f1ad6c97070e5dcc9bac173e0237f23",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>下</prosody></voice></speak>",
+  "text": "下",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "char.xiao3.zh": {
+  "approval": "carried from the heard file 0a09d61a42e8 (length diff 0.0 ms, corr 1.0000)",
+  "cut": {
+   "cut": 0.544,
+   "mode": "min",
+   "next_syllable": 0.625,
+   "voicing_end": 0.525
+  },
+  "duration": 0.422,
+  "generated_at": "2026-11-23T17:01:33+00:00",
+  "recipe": {
+   "carrier": "小兔"
+  },
+  "sha256": "0a09d61a42e8de9fe1b44acfe41a5235db45934976cf5f4f2d3e35b9d3dcc8ee",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>小兔</prosody></voice></speak>",
+  "text": "小",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "char.yang2.zh": {
+  "approval": "carried from the heard file df6b441f8e48 (length diff 0.0 ms, corr 1.0000)",
+  "cut": {
+   "cut": 0.456,
+   "mode": "min",
+   "next_syllable": 0.572,
+   "voicing_end": 0.447
+  },
+  "duration": 0.334,
+  "generated_at": "2026-11-23T17:01:46+00:00",
+  "recipe": {
+   "carrier": "羊排"
+  },
+  "sha256": "df6b441f8e487a74860f20d11b39f1fcdeb75a2bc1bc7b43c39ff6eb874f3750",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>羊排</prosody></voice></speak>",
+  "text": "羊",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "char.yu3.zh": {
+  "approval": "carried from the heard file 8502d5688116 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.621,
+  "generated_at": "2026-11-23T17:01:48+00:00",
+  "sha256": "8502d5688116768408f742c14bfec5354c3b7d266953be67e5942f7e6c3a4859",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>雨</prosody></voice></speak>",
+  "text": "雨",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "char.yue4.zh": {
+  "approval": "carried from the heard file 00c50cc6bc67 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.616,
+  "generated_at": "2026-11-23T17:01:38+00:00",
+  "sha256": "00c50cc6bc677c7935f4da03cd3fefe170c5567ee1ec4ad67a04ad408c65f016",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>月</prosody></voice></speak>",
+  "text": "月",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "num.0.zh": {
+  "approval": "carried from the heard file b3ff68133654 (length diff 0.0 ms, corr 1.0000)",
+  "cut": {
+   "cut": 0.472,
+   "mode": "min",
+   "next_syllable": 0.496,
+   "voicing_end": 0.471
+  },
+  "duration": 0.337,
+  "generated_at": "2026-11-23T17:01:21+00:00",
+  "recipe": {
+   "carrier": "零點"
+  },
+  "sha256": "b3ff68133654cbea8a8bd6619d905193f19a75c581161338abf963b18c1b954d",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>零點</prosody></voice></speak>",
+  "text": "零",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "num.10.zh": {
+  "approval": "carried from the heard file b77bb2de2dfc (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.675,
+  "generated_at": "2026-11-23T17:01:30+00:00",
+  "recipe": {
+   "contour": "(0%,-8%) (40%,-6%) (100%,+30%)"
+  },
+  "sha256": "0766fd4e51b8dd5d466938f7061f1356e6a8e3c36d6e3c2ced95c0af7b1c957b",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%' contour='(0%,-8%) (40%,-6%) (100%,+30%)'>十</prosody></voice></speak>",
+  "text": "十",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "num.2.zh": {
+  "approval": "carried from the heard file 51bbf152521c (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.608,
+  "generated_at": "2026-11-23T17:01:22+00:00",
+  "sha256": "51bbf152521ce7e56db598d862a1994910351060a89018948da644354c202ae4",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>二</prosody></voice></speak>",
+  "text": "二",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "num.3.zh": {
+  "approval": "carried from the heard file ac96762210d8 (length diff 0.0 ms, corr 1.0000)",
+  "cut": {
+   "cut": 0.572,
+   "mode": "min",
+   "next_syllable": 0.627,
+   "voicing_end": 0.567
+  },
+  "duration": 0.451,
+  "generated_at": "2026-11-23T17:01:23+00:00",
+  "recipe": {
+   "carrier": "三個"
+  },
+  "sha256": "ac96762210d8cfd49d905755683e450a8f9653e92135f026653febe722442925",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>三個</prosody></voice></speak>",
+  "text": "三",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "num.4.zh": {
+  "approval": "carried from the heard file d2862d071882 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.711,
+  "generated_at": "2026-11-23T17:01:24+00:00",
+  "sha256": "51d395769e961d92a17512f121423369a015ed71e3567a376020b65f3e418d73",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>四</prosody></voice></speak>",
+  "text": "四",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "num.5.zh": {
+  "approval": "carried from the heard file 219489029b19 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.573,
+  "generated_at": "2026-11-23T17:01:25+00:00",
+  "sha256": "219489029b1924fabff4a804186ceb573e7c8f7e096f8619bd5c76d1a857ca4a",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>五</prosody></voice></speak>",
+  "text": "五",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "num.6.zh": {
+  "approval": "carried from the heard file 1b710071849c (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.593,
+  "generated_at": "2026-11-23T17:01:26+00:00",
+  "sha256": "1b710071849cd7fcd7a47259ad4743fe72b68214ef7deff6fb5ea6967960a7b8",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>六</prosody></voice></speak>",
+  "text": "六",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "num.7.zh": {
+  "approval": "carried from the heard file 599487c0b220 (length diff 0.0 ms, corr 1.0000)",
+  "cut": {
+   "cut": 0.526,
+   "mode": "min",
+   "next_syllable": 0.602,
+   "voicing_end": 0.522
+  },
+  "duration": 0.393,
+  "generated_at": "2026-11-23T17:01:27+00:00",
+  "recipe": {
+   "carrier": "七個"
+  },
+  "sha256": "599487c0b220c1915d70f78c8eda3cad9959722c54b916b1d44c4136de667356",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>七個</prosody></voice></speak>",
+  "text": "七",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "num.8.zh": {
+  "approval": "carried from the heard file 690829cf5aef (length diff 0.0 ms, corr 1.0000)",
+  "cut": {
+   "cut": 0.416,
+   "mode": "min",
+   "next_syllable": 0.516,
+   "voicing_end": 0.406
+  },
+  "duration": 0.295,
+  "generated_at": "2026-11-23T17:01:28+00:00",
+  "recipe": {
+   "carrier": "八天"
+  },
+  "sha256": "690829cf5aefbd581ef160d1cec0fb85923cfbfbced93df4017b1b6fca9833a8",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>八天</prosody></voice></speak>",
+  "text": "八",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "num.9.zh": {
+  "approval": "carried from the heard file 16bec040b969 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.577,
+  "generated_at": "2026-11-23T17:01:29+00:00",
+  "sha256": "16bec040b969f90916046dffcd2c7fc10d9a1fd32f98809dd6522147300eadb5",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>九</prosody></voice></speak>",
+  "text": "九",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "shape.circle.zh": {
+  "approval": "carried from the heard file 221e342f4939 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.877,
+  "generated_at": "2026-11-23T17:01:13+00:00",
+  "sha256": "27aaf8e89991f9437cdd91e4ce2428c9cfe38dc293bd80c5074f757a40e0c796",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>圓形</prosody></voice></speak>",
+  "text": "圓形",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "shape.cross.zh": {
+  "approval": "carried from the heard file d93db27c4ac6 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.852,
+  "generated_at": "2026-11-23T17:01:15+00:00",
+  "sha256": "968963ed9484d9953c2bfb42d3222a200d86663e319447da3ba37861b8d20232",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>十字</prosody></voice></speak>",
+  "text": "十字",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "shape.heart.zh": {
+  "approval": "carried from the heard file 506e9bef7620 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.781,
+  "generated_at": "2026-11-23T17:01:19+00:00",
+  "sha256": "ff0b6b3b8acffad01cd19d772da33f5a8605f56c8eaaf375b8b74aaae390ebdd",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>愛心</prosody></voice></speak>",
+  "text": "愛心",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "shape.line.zh": {
+  "approval": "carried from the heard file 747080f09f46 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.695,
+  "generated_at": "2026-11-23T17:01:12+00:00",
+  "sha256": "5c10923032baa268424adb330a6d2498724f3424a0a15b537a40c69015fffb4c",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>線</prosody></voice></speak>",
+  "text": "線",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "shape.square.zh": {
+  "approval": "carried from the heard file 56525791cb88 (length diff 0.0 ms, corr 0.9999)",
+  "duration": 1.037,
+  "generated_at": "2026-11-23T17:01:17+00:00",
+  "sha256": "2f3d31cfc67ad6f02361e77c19d4e75bdaa58235ad933900b2288e6771eb57cf",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>正方形</prosody></voice></speak>",
+  "text": "正方形",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "shape.star.zh": {
+  "approval": "carried from the heard file 7fb7fb4d129a (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.975,
+  "generated_at": "2026-11-23T17:01:20+00:00",
+  "sha256": "535ba87a446a5bdd650524139654e9c10233cef3f2ce7a567e45542b35da805f",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>星星</prosody></voice></speak>",
+  "text": "星星",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "shape.triangle.zh": {
+  "approval": "carried from the heard file 3982ddbd2f48 (length diff 0.0 ms, corr 0.9999)",
+  "duration": 1.183,
+  "generated_at": "2026-11-23T17:01:18+00:00",
+  "sha256": "44ce21b6c0049893ae43ac6a885791366d90b763365ba05f8c91dfce575e8dbb",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>三角形</prosody></voice></speak>",
+  "text": "三角形",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "shape.wave.zh": {
+  "approval": "carried from the heard file 015fbdc23eb4 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.957,
+  "generated_at": "2026-11-23T17:01:16+00:00",
+  "sha256": "e01ab3363067a185a3343b26ab5c61487081fd9569f3ec3791a8462d12a191ce",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>波浪線</prosody></voice></speak>",
+  "text": "波浪線",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "shape.zigzag.zh": {
+  "approval": "carried from the heard file b3a6a53352f1 (length diff 0.0 ms, corr 0.9996)",
+  "duration": 1.003,
+  "generated_at": "2026-11-23T17:04:24+00:00",
+  "sha256": "f831314c7d487ce1cb60eaab3eb8fc123507c53eac12a8e8a2f760b816e54064",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>鋸齒線</prosody></voice></speak>",
+  "text": "鋸齒線",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ }
+}

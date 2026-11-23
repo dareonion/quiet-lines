@@ -1,0 +1,722 @@
+{
+ "letter.a.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.437,
+  "generated_at": "2026-11-23T17:06:26+00:00",
+  "sha256": "b7278d94ff69268828d010bfe8237aa211566e78907c277683dfbdeb04ae8718",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'><say-as interpret-as='characters'>A</say-as></prosody></voice></speak>",
+  "text": "A",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "letter.b.en": {
+  "approval": "carried from the heard file 0a983069a8dd (length diff 0.0 ms, corr 0.9992)",
+  "duration": 0.443,
+  "generated_at": "2026-11-23T16:59:43+00:00",
+  "sha256": "a41f74b03404a1955f57b86832879db49cb38fa7e39c4ec4f002947763ed714e",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'><say-as interpret-as='characters'>B</say-as></prosody></voice></speak>",
+  "text": "B",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "letter.c.en": {
+  "approval": "carried from the heard file 1e61f365e4c5 (length diff 0.0 ms, corr 0.9999)",
+  "duration": 0.499,
+  "generated_at": "2026-11-23T16:59:44+00:00",
+  "sha256": "8f06a3b9fe7ff7075bc1e5681309d42413f5e828a80a68fcd43e447622d7154a",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'><say-as interpret-as='characters'>C</say-as></prosody></voice></speak>",
+  "text": "C",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "letter.d.en": {
+  "approval": "carried from the heard file 91b07a69034f (length diff 0.0 ms, corr 0.9994)",
+  "duration": 0.449,
+  "generated_at": "2026-11-23T16:59:46+00:00",
+  "sha256": "cc5ad220517acf3bc416b2c5fce03b4366de037ca2ab9ebf25172f6b16d9db58",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'><say-as interpret-as='characters'>D</say-as></prosody></voice></speak>",
+  "text": "D",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "letter.e.en": {
+  "approval": "carried from the heard file c6d0f9a6044b (length diff 0.0 ms, corr 0.9996)",
+  "duration": 0.457,
+  "generated_at": "2026-11-23T16:59:48+00:00",
+  "sha256": "7d6a3d7b3a067811be9280d3f18449aafcdb189bf77c7dd20ff1a131f5e08ed2",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'><say-as interpret-as='characters'>E</say-as></prosody></voice></speak>",
+  "text": "E",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "letter.f.en": {
+  "approval": "carried from the heard file 6bfaba1f1738 (length diff 0.0 ms, corr 0.9995)",
+  "duration": 0.498,
+  "generated_at": "2026-11-23T16:59:50+00:00",
+  "sha256": "5021e2e47e154bfd78a7b22646ace1ea7d97c09e2838756a68f9a6efb7f92aad",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'><say-as interpret-as='characters'>F</say-as></prosody></voice></speak>",
+  "text": "F",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "letter.g.en": {
+  "approval": "carried from the heard file b65dcb932c6f (length diff 0.0 ms, corr 0.9991)",
+  "duration": 0.511,
+  "generated_at": "2026-11-23T16:59:52+00:00",
+  "sha256": "fd728e6f674bda326d0237d5473e797e89801a00110793cc5358b405574d7bcb",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'><say-as interpret-as='characters'>G</say-as></prosody></voice></speak>",
+  "text": "G",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "letter.h.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.534,
+  "generated_at": "2026-11-23T17:06:27+00:00",
+  "sha256": "e3df20d2d22c1df3e7034b06c4bdd5285fe4e7d9a9e4fefe667ba4f45b161117",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'><say-as interpret-as='characters'>H</say-as></prosody></voice></speak>",
+  "text": "H",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "letter.i.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.463,
+  "generated_at": "2026-11-23T17:06:28+00:00",
+  "sha256": "f692e01dab1a9df9100a5f9981258e75c8a90491b8f3019f48a5f16a0faa6dfc",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'><say-as interpret-as='characters'>I</say-as></prosody></voice></speak>",
+  "text": "I",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "letter.j.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.502,
+  "generated_at": "2026-11-23T17:06:29+00:00",
+  "sha256": "74708c44d68577aabe760305e740390c1b6119e42de3371d483aa694265e3aff",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'><say-as interpret-as='characters'>J</say-as></prosody></voice></speak>",
+  "text": "J",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "letter.k.en": {
+  "approval": "carried from the heard file 138ce4dd10e4 (length diff 0.0 ms, corr 0.9997)",
+  "duration": 0.468,
+  "generated_at": "2026-11-23T17:00:00+00:00",
+  "sha256": "51d615e40ad2dd1e0f211e32abe30b329f98e3e3b02c9af57cb64180c313d904",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'><say-as interpret-as='characters'>K</say-as></prosody></voice></speak>",
+  "text": "K",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "letter.l.en": {
+  "approval": "carried from the heard file b596ee78d97f (length diff 0.0 ms, corr 0.9994)",
+  "duration": 0.446,
+  "generated_at": "2026-11-23T17:00:02+00:00",
+  "sha256": "ba0841b4e09b08044ca207469adc5b96ace4ac351a56b29080bcc3c55172bd4c",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'><say-as interpret-as='characters'>L</say-as></prosody></voice></speak>",
+  "text": "L",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "letter.m.en": {
+  "approval": "carried from the heard file eb86ade87cfb (length diff 0.0 ms, corr 0.9997)",
+  "duration": 0.483,
+  "generated_at": "2026-11-23T17:00:04+00:00",
+  "sha256": "1b34b9d32534dae136c85f8db8976524833383478ef20bf00ae7d9a67578011d",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'><say-as interpret-as='characters'>M</say-as></prosody></voice></speak>",
+  "text": "M",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "letter.n.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.478,
+  "generated_at": "2026-11-23T17:06:31+00:00",
+  "sha256": "706f710b495d360b62aac76017e9d08fa192f96642dbb5982a47ba3f96c91374",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'><say-as interpret-as='characters'>N</say-as></prosody></voice></speak>",
+  "text": "N",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "letter.o.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.449,
+  "generated_at": "2026-11-23T17:06:31+00:00",
+  "sha256": "16e7a4e5e9d0ea83c206155fe138628cc12254ca18695743e4f2ae2ca05f865b",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'><say-as interpret-as='characters'>O</say-as></prosody></voice></speak>",
+  "text": "O",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "letter.p.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.449,
+  "generated_at": "2026-11-23T17:06:33+00:00",
+  "sha256": "34b298be89e326156d745a1c6ab209bc7381367a79d8fd2b79fbf489df72917b",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'><say-as interpret-as='characters'>P</say-as></prosody></voice></speak>",
+  "text": "P",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "letter.q.en": {
+  "approval": "carried from the heard file da30f88ff695 (length diff 0.0 ms, corr 0.9999)",
+  "duration": 0.492,
+  "generated_at": "2026-11-23T17:00:12+00:00",
+  "sha256": "4e83b519c236e9340c645bf4c5a88ffe5ee41b648f67245c152f03ee6b58d082",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'><say-as interpret-as='characters'>Q</say-as></prosody></voice></speak>",
+  "text": "Q",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "letter.r.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.48,
+  "generated_at": "2026-11-23T17:06:34+00:00",
+  "sha256": "256da709226c85b54cccc149097c856423f2132dbfe5eb69c947400388e6d071",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'><say-as interpret-as='characters'>R</say-as></prosody></voice></speak>",
+  "text": "R",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "letter.s.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.521,
+  "generated_at": "2026-11-23T17:06:35+00:00",
+  "sha256": "9ad493ad412afb6f30b0a689ae3e65a640fcc679587464cedd2cad0f35a02b13",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'><say-as interpret-as='characters'>S</say-as></prosody></voice></speak>",
+  "text": "S",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "letter.t.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.448,
+  "generated_at": "2026-11-23T17:06:36+00:00",
+  "sha256": "22af38e25a05e99e0f7134f1b09383eca833d29a18c327597e00ba737b279aa5",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'><say-as interpret-as='characters'>T</say-as></prosody></voice></speak>",
+  "text": "T",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "letter.u.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.472,
+  "generated_at": "2026-11-23T17:06:36+00:00",
+  "sha256": "0a736cf43a02f16049344f9a30cc0173af5a575a8e1161b683aa45cf9cae49c2",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'><say-as interpret-as='characters'>U</say-as></prosody></voice></speak>",
+  "text": "U",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "letter.v.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.491,
+  "generated_at": "2026-11-23T17:06:37+00:00",
+  "sha256": "2487d08a7769fe7cb72d7eedefeb2a9c9981c6b370e2e3569528fa8112e00432",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'><say-as interpret-as='characters'>V</say-as></prosody></voice></speak>",
+  "text": "V",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "letter.w.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.633,
+  "generated_at": "2026-11-23T17:06:38+00:00",
+  "sha256": "f63c6baea34cb4e0956fe58fb69231a047fed53ded9962215fe31fc9d5d11587",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'><say-as interpret-as='characters'>W</say-as></prosody></voice></speak>",
+  "text": "W",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "letter.x.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.552,
+  "generated_at": "2026-11-23T17:06:39+00:00",
+  "sha256": "b783c54db7038b82f0a5d3f1a3ab8df7286c63fbcfedf54cd7bda2628fe92008",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'><say-as interpret-as='characters'>X</say-as></prosody></voice></speak>",
+  "text": "X",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "letter.y.en": {
+  "approval": "carried from the heard file e23725ddfe2b (length diff 0.0 ms, corr 0.9996)",
+  "duration": 0.512,
+  "generated_at": "2026-11-23T17:00:29+00:00",
+  "sha256": "70880bdc831e0284528fd654007a8f88a87091b6328cc29ef011a060e4e3d726",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'><say-as interpret-as='characters'>Y</say-as></prosody></voice></speak>",
+  "text": "Y",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "letter.z.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.558,
+  "generated_at": "2026-11-23T17:06:40+00:00",
+  "sha256": "c847d3b388f286f771712ba5e392a622bfca1182c09e62eb165c715db8ed1c9f",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'><say-as interpret-as='characters'>Z</say-as></prosody></voice></speak>",
+  "text": "Z",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "num.0.en": {
+  "approval": "carried from the heard file 52064670f789 (length diff 0.0 ms, corr 0.9999)",
+  "duration": 0.663,
+  "generated_at": "2026-11-23T16:59:30+00:00",
+  "sha256": "e0f97cf6ad1baf1ed31a7dee87f3fc58b6163f30c05c08ac3c10328ee258d35b",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>zero</prosody></voice></speak>",
+  "text": "zero",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "num.1.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.493,
+  "generated_at": "2026-11-23T17:06:42+00:00",
+  "sha256": "32c3e6c47a59918766bc915a3ad99b897cdc4dcc18d534d0142a25a5fdd9d518",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>one</prosody></voice></speak>",
+  "text": "one",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "num.10.en": {
+  "approval": "carried from the heard file 41d81ebeb850 (length diff 0.0 ms, corr 0.9997)",
+  "duration": 0.483,
+  "generated_at": "2026-11-23T16:59:40+00:00",
+  "sha256": "0b82bd1902a4eb9710fc1cc3379467d4312824ddea42f3566ca44cb08414985c",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>ten</prosody></voice></speak>",
+  "text": "ten",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "num.2.en": {
+  "approval": "carried from the heard file 19d4e7fdf697 (length diff 0.0 ms, corr 0.9999)",
+  "duration": 0.453,
+  "generated_at": "2026-11-23T16:59:32+00:00",
+  "sha256": "b396682e22816e0b9e5b366b5adec3c48a0ce6c87edcd43e274710f07e5263ad",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>two</prosody></voice></speak>",
+  "text": "two",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "num.3.en": {
+  "approval": "carried from the heard file e48919e98eac (length diff 0.0 ms, corr 0.9999)",
+  "duration": 0.5,
+  "generated_at": "2026-11-23T16:59:33+00:00",
+  "sha256": "ab22dd32ebea1a432d95c5889fb69ab188a6833b1c7c0cb5b0326052ed103099",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>three</prosody></voice></speak>",
+  "text": "three",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "num.4.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.546,
+  "generated_at": "2026-11-23T17:06:43+00:00",
+  "sha256": "9806a4871f74bc04c3eefe4512536848671b7bd8ad192165bcf88a9d608c2ee4",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>four</prosody></voice></speak>",
+  "text": "four",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "num.5.en": {
+  "approval": "carried from the heard file a7ccc66571e7 (length diff 0.0 ms, corr 0.9991)",
+  "duration": 0.577,
+  "generated_at": "2026-11-23T16:59:34+00:00",
+  "sha256": "6a8f052791752ec2fe24262ea49954b7e3621af0e180e915cc248d8d5344fbb0",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>five</prosody></voice></speak>",
+  "text": "five",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "num.6.en": {
+  "approval": "carried from the heard file 0c6824676ff8 (length diff 0.0 ms, corr 0.9992)",
+  "duration": 0.649,
+  "generated_at": "2026-11-23T16:59:35+00:00",
+  "sha256": "f976c138908c4e6d62cec8d3705d948328676b117cde4d02e9b191667b10f69e",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>six</prosody></voice></speak>",
+  "text": "six",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "num.7.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.561,
+  "generated_at": "2026-11-23T17:06:44+00:00",
+  "sha256": "b971307c873dfe11f4285856d99ee844b2616dce9741c240beeae4bf9416c6c5",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>seven</prosody></voice></speak>",
+  "text": "seven",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "num.8.en": {
+  "approval": "carried from the heard file 06fd89fc92ef (length diff 0.0 ms, corr 0.9995)",
+  "duration": 0.429,
+  "generated_at": "2026-11-23T16:59:38+00:00",
+  "sha256": "8ec8af5019d7da5326b1d1df7948f55abd2a15e6003c79bd059f3c7d6bc0030c",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>eight</prosody></voice></speak>",
+  "text": "eight",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "num.9.en": {
+  "approval": "carried from the heard file 47e293292c0a (length diff 0.0 ms, corr 0.9997)",
+  "duration": 0.542,
+  "generated_at": "2026-11-23T16:59:39+00:00",
+  "sha256": "d40fd33600564289d07b7b14188eb2ee57c7f332ab1c197f3c2493a865e98d50",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>nine</prosody></voice></speak>",
+  "text": "nine",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "shape.circle.en": {
+  "approval": "carried from the heard file 64f0ce5c6ff4 (length diff 0.0 ms, corr 0.9997)",
+  "duration": 0.642,
+  "generated_at": "2026-11-23T16:59:21+00:00",
+  "sha256": "2a80690f045566a0755bdaa25b1913b6d19dbcf121d3771d46d7c57d37d3f878",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>circle</prosody></voice></speak>",
+  "text": "circle",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "shape.cross.en": {
+  "approval": "carried from the heard file a54fcbd6637d (length diff 0.0 ms, corr 0.9997)",
+  "duration": 0.67,
+  "generated_at": "2026-11-23T16:59:22+00:00",
+  "sha256": "df35ce4c9f913f1e1c9649763c8bab1943b8049f24d79798b7e76c67c8a4186a",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>cross</prosody></voice></speak>",
+  "text": "cross",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "shape.heart.en": {
+  "approval": "carried from the heard file 879e8c8ed299 (length diff 0.0 ms, corr 0.9995)",
+  "duration": 0.482,
+  "generated_at": "2026-11-23T16:59:28+00:00",
+  "sha256": "f8070a790eec1ba8bf72216d8b6cf235f5b9f365336a425c506656900400666e",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>heart</prosody></voice></speak>",
+  "text": "heart",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "shape.line.en": {
+  "approval": "carried from the heard file 7d00c6659a19 (length diff 0.0 ms, corr 0.9990)",
+  "duration": 0.551,
+  "generated_at": "2026-11-23T16:59:20+00:00",
+  "sha256": "a75d880bb9446c8321aca45b8657cdde241f846d7d4a9c4ff1e07221202980db",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>line</prosody></voice></speak>",
+  "text": "line",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "shape.square.en": {
+  "approval": "carried from the heard file f7ca226f6992 (length diff 0.0 ms, corr 0.9991)",
+  "duration": 0.66,
+  "generated_at": "2026-11-23T16:59:26+00:00",
+  "sha256": "67514621cdbab940b36a3856ff5ff96ac7f3dca8c20b00fe08fe7f8483fea0e6",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>square</prosody></voice></speak>",
+  "text": "square",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "shape.star.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.644,
+  "generated_at": "2026-11-23T17:06:46+00:00",
+  "sha256": "0ae3f9ed3c7dc6f0887b61a69eef4fa80759048c2bfd4390eb2c4b5076c7457d",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>star</prosody></voice></speak>",
+  "text": "star",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "shape.triangle.en": {
+  "approval": "carried from the heard file 8db527143a52 (length diff 0.0 ms, corr 0.9991)",
+  "duration": 0.748,
+  "generated_at": "2026-11-23T16:59:27+00:00",
+  "sha256": "2291f278579e61dffc8633120c77b5f888115b55f4a0066bfdccf91112d81e4e",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>triangle</prosody></voice></speak>",
+  "text": "triangle",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "shape.wave.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.563,
+  "generated_at": "2026-11-23T17:06:47+00:00",
+  "sha256": "e5bae2e954efbdeebe60158c6d6086fd8a21e655bc0b1ebac17286c34487144c",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>wave</prosody></voice></speak>",
+  "text": "wave",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "shape.zigzag.en": {
+  "approval": "carried from the heard file f0a848cb9c9f (length diff 0.0 ms, corr 0.9993)",
+  "duration": 0.764,
+  "generated_at": "2026-11-23T16:59:23+00:00",
+  "sha256": "bdbfcdbc4d192f5e4e87c93e2775e2997260a69bf62e8ce34a6597d1140290f2",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>zigzag</prosody></voice></speak>",
+  "text": "zigzag",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "word.apple.en": {
+  "approval": "carried from the heard file 460a167ecd5a (length diff 0.0 ms, corr 0.9990)",
+  "duration": 0.568,
+  "generated_at": "2026-11-23T16:59:42+00:00",
+  "sha256": "50ebb51841620afa7dcd28cf8b8943cbdf62861c2942fb367251ef110a6c05d8",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>apple</prosody></voice></speak>",
+  "text": "apple",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "word.ball.en": {
+  "approval": "carried from the heard file ba4f4f9eee88 (length diff 0.0 ms, corr 0.9994)",
+  "duration": 0.496,
+  "generated_at": "2026-11-23T16:59:43+00:00",
+  "sha256": "2467c43bb0d82f6e3f4c1d2879442b80f7da5036c57c4f837a734be2d002c4f2",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>ball</prosody></voice></speak>",
+  "text": "ball",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "word.box.en": {
+  "approval": "carried from the heard file 399071bef645 (length diff 0.0 ms, corr 0.9993)",
+  "duration": 0.625,
+  "generated_at": "2026-11-23T17:00:28+00:00",
+  "sha256": "7bf56d7765f322f6b53e16d0b8395764a1bf16b8084023576eea5273a4c1cc04",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>box</prosody></voice></speak>",
+  "text": "box",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "word.cat.en": {
+  "approval": "carried from the heard file 7024f0b54f9f (length diff 0.0 ms, corr 0.9997)",
+  "duration": 0.536,
+  "generated_at": "2026-11-23T16:59:45+00:00",
+  "sha256": "6cbc0421739f25dae8099d99adc1539602799cf3479c94e25c3c5f911327b9e0",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>cat</prosody></voice></speak>",
+  "text": "cat",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "word.dog.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.538,
+  "generated_at": "2026-11-23T17:06:48+00:00",
+  "sha256": "8a3548615867a8e544c957d7bd06c48164d4136dfe020c695f7906d679a22174",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>dog</prosody></voice></speak>",
+  "text": "dog",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "word.egg.en": {
+  "approval": "carried from the heard file 6c27a17aea29 (length diff 0.0 ms, corr 0.9994)",
+  "duration": 0.489,
+  "generated_at": "2026-11-23T16:59:49+00:00",
+  "sha256": "abc09909e9b2b009d2f1d265b1db2309da86ac390037c628e91056a1c9154661",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>egg</prosody></voice></speak>",
+  "text": "egg",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "word.fish.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.576,
+  "generated_at": "2026-11-23T17:06:49+00:00",
+  "sha256": "ccbbb8a41aa9d4ea91c8021cc814d099b882a7de467d7b66584a38f0ae4e2d01",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>fish</prosody></voice></speak>",
+  "text": "fish",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "word.goat.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.488,
+  "generated_at": "2026-11-23T17:06:50+00:00",
+  "sha256": "4bf1c9b1792735757dd27b6dc8ef5b0d3a467ce5083c02039c3a02da93e46fce",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>goat</prosody></voice></speak>",
+  "text": "goat",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "word.hat.en": {
+  "approval": "carried from the heard file 357f61104dde (length diff 0.0 ms, corr 0.9994)",
+  "duration": 0.506,
+  "generated_at": "2026-11-23T16:59:54+00:00",
+  "sha256": "74bb2bad6e5ccd7ee78d2c627c94c5565a6ff396a908087c7a943a3c4bd3b24b",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>hat</prosody></voice></speak>",
+  "text": "hat",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "word.ice-cream.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.739,
+  "generated_at": "2026-11-23T17:06:51+00:00",
+  "sha256": "d0d399f7c8abe8577bf17fc343257611d463043ec6bc736af9c6a07133720b6f",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>ice cream</prosody></voice></speak>",
+  "text": "ice cream",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "word.juice.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.628,
+  "generated_at": "2026-11-23T17:06:52+00:00",
+  "sha256": "e532f532219ed1a4d9ba5cccfd33cf0e96996c7e4051e0bb273b85373b788ee0",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>juice</prosody></voice></speak>",
+  "text": "juice",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "word.kite.en": {
+  "approval": "carried from the heard file 21e9040fff02 (length diff 0.0 ms, corr 0.9998)",
+  "duration": 0.503,
+  "generated_at": "2026-11-23T17:00:01+00:00",
+  "sha256": "a23a4d0f892f4ef979e2250135464f0ace23678583765d755a479c9d01995a2f",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>kite</prosody></voice></speak>",
+  "text": "kite",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "word.leaf.en": {
+  "approval": "carried from the heard file 575017483146 (length diff 0.0 ms, corr 0.9996)",
+  "duration": 0.567,
+  "generated_at": "2026-11-23T17:00:03+00:00",
+  "sha256": "fa6720b2397adce412c5cda1ae21b98544dff8b3327706a65492551919d5bdc6",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>leaf</prosody></voice></speak>",
+  "text": "leaf",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "word.mouse.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.683,
+  "generated_at": "2026-11-23T17:06:53+00:00",
+  "sha256": "3c3622592af5e1b3850673ec99aa7cef4ff8a8f2fb54ca52fa4c569a92baa395",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>mouse</prosody></voice></speak>",
+  "text": "mouse",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "word.nose.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.669,
+  "generated_at": "2026-11-23T17:06:54+00:00",
+  "sha256": "d43152d3d166beea2b2befee95f788be11172ac1c6fcc38ef868af5cf832a784",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>nose</prosody></voice></speak>",
+  "text": "nose",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "word.octopus.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.871,
+  "generated_at": "2026-11-23T17:06:55+00:00",
+  "sha256": "df31496ca9bce0a87a3b4a0f6dd3902ce135f390c9d82c9ccd0f69a9ab7316db",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>octopus</prosody></voice></speak>",
+  "text": "octopus",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "word.pig.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.49,
+  "generated_at": "2026-11-23T17:06:56+00:00",
+  "sha256": "5601ef7a57dbfb384d8dc8b98daaac1cf9d5054eb8de3a7a54e1fc7eda4a098d",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>pig</prosody></voice></speak>",
+  "text": "pig",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "word.quack.en": {
+  "approval": "carried from the heard file e0a46a56992a (length diff 0.0 ms, corr 0.9998)",
+  "duration": 0.583,
+  "generated_at": "2026-11-23T17:00:13+00:00",
+  "sha256": "3f2958e38eb725e57ec6b4277b02b7399025f358002eb6ff0d7d1261cff26f1b",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>quack</prosody></voice></speak>",
+  "text": "quack",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "word.rabbit.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.579,
+  "generated_at": "2026-11-23T17:06:58+00:00",
+  "sha256": "294f58bbaa9a4278f98331b2ec94944b6358de89ee60a15782f0d1630e7bec49",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>rabbit</prosody></voice></speak>",
+  "text": "rabbit",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "word.sun.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.547,
+  "generated_at": "2026-11-23T17:06:59+00:00",
+  "sha256": "4d56bdd7ac9d48b9a997001d4294d51ad2aad6a43ff0bd2ff672bf8f15dfc88b",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>sun</prosody></voice></speak>",
+  "text": "sun",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "word.turtle.en": {
+  "approval": "carried from the heard file 9557c498e9f3 (length diff 0.0 ms, corr 0.9998)",
+  "duration": 0.539,
+  "generated_at": "2026-11-23T17:00:20+00:00",
+  "sha256": "70da1eed0753a621aade65505256be785b66768918cc70b9f1a304ce6a1b302a",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>turtle</prosody></voice></speak>",
+  "text": "turtle",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "word.umbrella.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.68,
+  "generated_at": "2026-11-23T17:07:00+00:00",
+  "sha256": "c2b3bbfcfe992c9303ef884b79d6970240828ab702fa1eaafa54ea6d561e33c5",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>umbrella</prosody></voice></speak>",
+  "text": "umbrella",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "word.van.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.543,
+  "generated_at": "2026-11-23T17:07:01+00:00",
+  "sha256": "87471d88b43e3acdb6174074dd1a95cf47a05138bef96710983e94acc88837b0",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>van</prosody></voice></speak>",
+  "text": "van",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "word.whale.en": {
+  "approval": "carried from the heard file 3143b83cc95e (length diff 0.0 ms, corr 0.9994)",
+  "duration": 0.517,
+  "generated_at": "2026-11-23T17:00:26+00:00",
+  "sha256": "d682ebc511482299af3294e8540e284ff30cf0f9d6a0ffdf988861e983f3f275",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>whale</prosody></voice></speak>",
+  "text": "whale",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "word.yarn.en": {
+  "approval": "carried from the heard file 9ea7b20c1100 (length diff 0.0 ms, corr 0.9998)",
+  "duration": 0.523,
+  "generated_at": "2026-11-23T17:00:29+00:00",
+  "sha256": "b49c9e511f1c7249046e1bc3f44792240d26f1a63fc06d40b262cf4ced194ed1",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>yarn</prosody></voice></speak>",
+  "text": "yarn",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ },
+ "word.zebra.en": {
+  "approval": "carried from the heard file 95877c0cb73b (length diff 0.0 ms, corr 0.9998)",
+  "duration": 0.655,
+  "generated_at": "2026-11-23T17:00:31+00:00",
+  "sha256": "d50d7cf53c675baf27af683db1f2fdb2ec90e1f9aa2f8072af1dd2a92cc3b0fe",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-AndrewNeural'><prosody rate='-10%'>zebra</prosody></voice></speak>",
+  "text": "zebra",
+  "tier": "S0",
+  "voice": "en-US-AndrewNeural"
+ }
+}

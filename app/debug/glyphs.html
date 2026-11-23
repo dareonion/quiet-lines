@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Glyph contact sheet</title>
+  <style>
+    :root { color: #403c35; background: #f7f4ec; font-family: system-ui, sans-serif; }
+    body { margin: 1.25rem; }
+    h1, h2, p { margin: 0 0 .5rem; }
+    h1 { font-size: 1.5rem; }
+    h2 { margin-top: 1.5rem; font-size: 1.1rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: .55rem; }
+    figure { margin: 0; padding: .5rem; border: 1px solid #d2cbbd; border-radius: .4rem; background: #fffdf7; }
+    figure.invalid { outline: 2px solid #ad433e; outline-offset: -2px; }
+    figure svg { display: block; width: 100%; max-width: 160px; margin: auto; }
+    figcaption { font-size: .85rem; }
+    code, small { display: block; }
+    small { margin-top: .2rem; color: #983a34; overflow-wrap: anywhere; }
+    svg text { font: bold 7.5px system-ui, sans-serif; fill: #27241f; stroke: #fffdf7; stroke-width: 2px; paint-order: stroke; }
+  </style>
+</head>
+<body>
+  <h1>Glyph contact sheet</h1>
+  <p>Numbers mark stroke starts. Arrows show the writing direction.</p>
+  <p id="status" role="status">Loading glyphs…</p>
+  <main></main>
+  <script type="module" src="./glyphs.js"></script>
+</body>
+</html>

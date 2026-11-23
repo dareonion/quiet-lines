@@ -1,0 +1,1693 @@
+{
+  "version": 1,
+  "clips": {
+    "shape.line.en": {
+      "lang": "en",
+      "text": "line",
+      "prompt": "Say: line"
+    },
+    "shape.line.zh": {
+      "lang": "zh",
+      "text": "線",
+      "prompt": "請說：線（xiàn）"
+    },
+    "shape.circle.en": {
+      "lang": "en",
+      "text": "circle",
+      "prompt": "Say: circle"
+    },
+    "shape.circle.zh": {
+      "lang": "zh",
+      "text": "圓形",
+      "prompt": "請說：圓形（yuánxíng）"
+    },
+    "shape.cross.en": {
+      "lang": "en",
+      "text": "cross",
+      "prompt": "Say: cross"
+    },
+    "shape.cross.zh": {
+      "lang": "zh",
+      "text": "十字",
+      "prompt": "請說：十字（shízì）"
+    },
+    "shape.zigzag.en": {
+      "lang": "en",
+      "text": "zigzag",
+      "prompt": "Say: zigzag"
+    },
+    "shape.zigzag.zh": {
+      "lang": "zh",
+      "text": "鋸齒線",
+      "prompt": "請說：鋸齒線（jùchǐxiàn）"
+    },
+    "shape.wave.en": {
+      "lang": "en",
+      "text": "wave",
+      "prompt": "Say: wave"
+    },
+    "shape.wave.zh": {
+      "lang": "zh",
+      "text": "波浪線",
+      "prompt": "請說：波浪線（bōlàngxiàn）"
+    },
+    "shape.square.en": {
+      "lang": "en",
+      "text": "square",
+      "prompt": "Say: square"
+    },
+    "shape.square.zh": {
+      "lang": "zh",
+      "text": "正方形",
+      "prompt": "請說：正方形（zhèngfāngxíng）"
+    },
+    "shape.triangle.en": {
+      "lang": "en",
+      "text": "triangle",
+      "prompt": "Say: triangle"
+    },
+    "shape.triangle.zh": {
+      "lang": "zh",
+      "text": "三角形",
+      "prompt": "請說：三角形（sānjiǎoxíng）"
+    },
+    "shape.heart.en": {
+      "lang": "en",
+      "text": "heart",
+      "prompt": "Say: heart"
+    },
+    "shape.heart.zh": {
+      "lang": "zh",
+      "text": "愛心",
+      "prompt": "請說：愛心（àixīn）"
+    },
+    "shape.star.en": {
+      "lang": "en",
+      "text": "star",
+      "prompt": "Say: star"
+    },
+    "shape.star.zh": {
+      "lang": "zh",
+      "text": "星星",
+      "prompt": "請說：星星（xīngxing）"
+    },
+    "num.0.en": {
+      "lang": "en",
+      "text": "zero",
+      "prompt": "Say: zero"
+    },
+    "num.0.zh": {
+      "lang": "zh",
+      "text": "零",
+      "prompt": "請說：零（líng）"
+    },
+    "num.1.en": {
+      "lang": "en",
+      "text": "one",
+      "prompt": "Say: one"
+    },
+    "num.1.zh": {
+      "lang": "zh",
+      "text": "一",
+      "prompt": "請說：一（yī）"
+    },
+    "num.2.en": {
+      "lang": "en",
+      "text": "two",
+      "prompt": "Say: two"
+    },
+    "num.2.zh": {
+      "lang": "zh",
+      "text": "二",
+      "prompt": "請說：二（èr）"
+    },
+    "num.3.en": {
+      "lang": "en",
+      "text": "three",
+      "prompt": "Say: three"
+    },
+    "num.3.zh": {
+      "lang": "zh",
+      "text": "三",
+      "prompt": "請說：三（sān）"
+    },
+    "num.4.en": {
+      "lang": "en",
+      "text": "four",
+      "prompt": "Say: four"
+    },
+    "num.4.zh": {
+      "lang": "zh",
+      "text": "四",
+      "prompt": "請說：四（sì）"
+    },
+    "num.5.en": {
+      "lang": "en",
+      "text": "five",
+      "prompt": "Say: five"
+    },
+    "num.5.zh": {
+      "lang": "zh",
+      "text": "五",
+      "prompt": "請說：五（wǔ）"
+    },
+    "num.6.en": {
+      "lang": "en",
+      "text": "six",
+      "prompt": "Say: six"
+    },
+    "num.6.zh": {
+      "lang": "zh",
+      "text": "六",
+      "prompt": "請說：六（liù）"
+    },
+    "num.7.en": {
+      "lang": "en",
+      "text": "seven",
+      "prompt": "Say: seven"
+    },
+    "num.7.zh": {
+      "lang": "zh",
+      "text": "七",
+      "prompt": "請說：七（qī）"
+    },
+    "num.8.en": {
+      "lang": "en",
+      "text": "eight",
+      "prompt": "Say: eight"
+    },
+    "num.8.zh": {
+      "lang": "zh",
+      "text": "八",
+      "prompt": "請說：八（bā）"
+    },
+    "num.9.en": {
+      "lang": "en",
+      "text": "nine",
+      "prompt": "Say: nine"
+    },
+    "num.9.zh": {
+      "lang": "zh",
+      "text": "九",
+      "prompt": "請說：九（jiǔ）"
+    },
+    "num.10.en": {
+      "lang": "en",
+      "text": "ten",
+      "prompt": "Say: ten"
+    },
+    "num.10.zh": {
+      "lang": "zh",
+      "text": "十",
+      "prompt": "請說：十（shí）"
+    },
+    "letter.a.en": {
+      "lang": "en",
+      "text": "A",
+      "prompt": "Say the letter: A"
+    },
+    "word.apple.en": {
+      "lang": "en",
+      "text": "apple",
+      "prompt": "Say: apple"
+    },
+    "letter.b.en": {
+      "lang": "en",
+      "text": "B",
+      "prompt": "Say the letter: B"
+    },
+    "word.ball.en": {
+      "lang": "en",
+      "text": "ball",
+      "prompt": "Say: ball"
+    },
+    "letter.c.en": {
+      "lang": "en",
+      "text": "C",
+      "prompt": "Say the letter: C"
+    },
+    "word.cat.en": {
+      "lang": "en",
+      "text": "cat",
+      "prompt": "Say: cat"
+    },
+    "letter.d.en": {
+      "lang": "en",
+      "text": "D",
+      "prompt": "Say the letter: D"
+    },
+    "word.dog.en": {
+      "lang": "en",
+      "text": "dog",
+      "prompt": "Say: dog"
+    },
+    "letter.e.en": {
+      "lang": "en",
+      "text": "E",
+      "prompt": "Say the letter: E"
+    },
+    "word.egg.en": {
+      "lang": "en",
+      "text": "egg",
+      "prompt": "Say: egg"
+    },
+    "letter.f.en": {
+      "lang": "en",
+      "text": "F",
+      "prompt": "Say the letter: F"
+    },
+    "word.fish.en": {
+      "lang": "en",
+      "text": "fish",
+      "prompt": "Say: fish"
+    },
+    "letter.g.en": {
+      "lang": "en",
+      "text": "G",
+      "prompt": "Say the letter: G"
+    },
+    "word.goat.en": {
+      "lang": "en",
+      "text": "goat",
+      "prompt": "Say: goat"
+    },
+    "letter.h.en": {
+      "lang": "en",
+      "text": "H",
+      "prompt": "Say the letter: H"
+    },
+    "word.hat.en": {
+      "lang": "en",
+      "text": "hat",
+      "prompt": "Say: hat"
+    },
+    "letter.i.en": {
+      "lang": "en",
+      "text": "I",
+      "prompt": "Say the letter: I"
+    },
+    "word.ice-cream.en": {
+      "lang": "en",
+      "text": "ice cream",
+      "prompt": "Say: ice cream"
+    },
+    "letter.j.en": {
+      "lang": "en",
+      "text": "J",
+      "prompt": "Say the letter: J"
+    },
+    "word.juice.en": {
+      "lang": "en",
+      "text": "juice",
+      "prompt": "Say: juice"
+    },
+    "letter.k.en": {
+      "lang": "en",
+      "text": "K",
+      "prompt": "Say the letter: K"
+    },
+    "word.kite.en": {
+      "lang": "en",
+      "text": "kite",
+      "prompt": "Say: kite"
+    },
+    "letter.l.en": {
+      "lang": "en",
+      "text": "L",
+      "prompt": "Say the letter: L"
+    },
+    "word.leaf.en": {
+      "lang": "en",
+      "text": "leaf",
+      "prompt": "Say: leaf"
+    },
+    "letter.m.en": {
+      "lang": "en",
+      "text": "M",
+      "prompt": "Say the letter: M"
+    },
+    "word.mouse.en": {
+      "lang": "en",
+      "text": "mouse",
+      "prompt": "Say: mouse"
+    },
+    "letter.n.en": {
+      "lang": "en",
+      "text": "N",
+      "prompt": "Say the letter: N"
+    },
+    "word.nose.en": {
+      "lang": "en",
+      "text": "nose",
+      "prompt": "Say: nose"
+    },
+    "letter.o.en": {
+      "lang": "en",
+      "text": "O",
+      "prompt": "Say the letter: O"
+    },
+    "word.octopus.en": {
+      "lang": "en",
+      "text": "octopus",
+      "prompt": "Say: octopus"
+    },
+    "letter.p.en": {
+      "lang": "en",
+      "text": "P",
+      "prompt": "Say the letter: P"
+    },
+    "word.pig.en": {
+      "lang": "en",
+      "text": "pig",
+      "prompt": "Say: pig"
+    },
+    "letter.q.en": {
+      "lang": "en",
+      "text": "Q",
+      "prompt": "Say the letter: Q"
+    },
+    "word.quack.en": {
+      "lang": "en",
+      "text": "quack",
+      "prompt": "Say: quack"
+    },
+    "letter.r.en": {
+      "lang": "en",
+      "text": "R",
+      "prompt": "Say the letter: R"
+    },
+    "word.rabbit.en": {
+      "lang": "en",
+      "text": "rabbit",
+      "prompt": "Say: rabbit"
+    },
+    "letter.s.en": {
+      "lang": "en",
+      "text": "S",
+      "prompt": "Say the letter: S"
+    },
+    "word.sun.en": {
+      "lang": "en",
+      "text": "sun",
+      "prompt": "Say: sun"
+    },
+    "letter.t.en": {
+      "lang": "en",
+      "text": "T",
+      "prompt": "Say the letter: T"
+    },
+    "word.turtle.en": {
+      "lang": "en",
+      "text": "turtle",
+      "prompt": "Say: turtle"
+    },
+    "letter.u.en": {
+      "lang": "en",
+      "text": "U",
+      "prompt": "Say the letter: U"
+    },
+    "word.umbrella.en": {
+      "lang": "en",
+      "text": "umbrella",
+      "prompt": "Say: umbrella"
+    },
+    "letter.v.en": {
+      "lang": "en",
+      "text": "V",
+      "prompt": "Say the letter: V"
+    },
+    "word.van.en": {
+      "lang": "en",
+      "text": "van",
+      "prompt": "Say: van"
+    },
+    "letter.w.en": {
+      "lang": "en",
+      "text": "W",
+      "prompt": "Say the letter: W"
+    },
+    "word.whale.en": {
+      "lang": "en",
+      "text": "whale",
+      "prompt": "Say: whale"
+    },
+    "letter.x.en": {
+      "lang": "en",
+      "text": "X",
+      "prompt": "Say the letter: X"
+    },
+    "word.box.en": {
+      "lang": "en",
+      "text": "box",
+      "prompt": "Say: box"
+    },
+    "letter.y.en": {
+      "lang": "en",
+      "text": "Y",
+      "prompt": "Say the letter: Y"
+    },
+    "word.yarn.en": {
+      "lang": "en",
+      "text": "yarn",
+      "prompt": "Say: yarn"
+    },
+    "letter.z.en": {
+      "lang": "en",
+      "text": "Z",
+      "prompt": "Say the letter: Z"
+    },
+    "word.zebra.en": {
+      "lang": "en",
+      "text": "zebra",
+      "prompt": "Say: zebra"
+    },
+    "char.ren2.zh": {
+      "lang": "zh",
+      "text": "人",
+      "prompt": "請說：人（rén）"
+    },
+    "char.kou3.zh": {
+      "lang": "zh",
+      "text": "口",
+      "prompt": "請說：口（kǒu）"
+    },
+    "char.da4.zh": {
+      "lang": "zh",
+      "text": "大",
+      "prompt": "請說：大（dà）"
+    },
+    "char.xiao3.zh": {
+      "lang": "zh",
+      "text": "小",
+      "prompt": "請說：小（xiǎo）"
+    },
+    "char.shan1.zh": {
+      "lang": "zh",
+      "text": "山",
+      "prompt": "請說：山（shān）"
+    },
+    "char.shui3.zh": {
+      "lang": "zh",
+      "text": "水",
+      "prompt": "請說：水（shuǐ）"
+    },
+    "char.huo3.zh": {
+      "lang": "zh",
+      "text": "火",
+      "prompt": "請說：火（huǒ）"
+    },
+    "char.ri4.zh": {
+      "lang": "zh",
+      "text": "日",
+      "prompt": "請說：日（rì）"
+    },
+    "char.yue4.zh": {
+      "lang": "zh",
+      "text": "月",
+      "prompt": "請說：月（yuè）"
+    },
+    "char.mu4.zh": {
+      "lang": "zh",
+      "text": "木",
+      "prompt": "請說：木（mù）"
+    },
+    "char.shou3.zh": {
+      "lang": "zh",
+      "text": "手",
+      "prompt": "請說：手（shǒu）"
+    },
+    "char.mu4-eye.zh": {
+      "lang": "zh",
+      "text": "目",
+      "prompt": "請說：目（mù）"
+    },
+    "char.yu2.zh": {
+      "lang": "zh",
+      "text": "魚",
+      "prompt": "請說：魚（yú）"
+    },
+    "char.niao3.zh": {
+      "lang": "zh",
+      "text": "鳥",
+      "prompt": "請說：鳥（niǎo）"
+    },
+    "char.ma3.zh": {
+      "lang": "zh",
+      "text": "馬",
+      "prompt": "請說：馬（mǎ）"
+    },
+    "char.niu2.zh": {
+      "lang": "zh",
+      "text": "牛",
+      "prompt": "請說：牛（niú）"
+    },
+    "char.yang2.zh": {
+      "lang": "zh",
+      "text": "羊",
+      "prompt": "請說：羊（yáng）"
+    },
+    "char.er3.zh": {
+      "lang": "zh",
+      "text": "耳",
+      "prompt": "請說：耳（ěr）"
+    },
+    "char.yu3.zh": {
+      "lang": "zh",
+      "text": "雨",
+      "prompt": "請說：雨（yǔ）"
+    },
+    "char.shang4.zh": {
+      "lang": "zh",
+      "text": "上",
+      "prompt": "請說：上（shàng）"
+    },
+    "char.xia4.zh": {
+      "lang": "zh",
+      "text": "下",
+      "prompt": "請說：下（xià）"
+    }
+  },
+  "items": [
+    {
+      "id": "shape.vline",
+      "kind": "shape",
+      "glyph": "latin:vline",
+      "label": {
+        "en": "vertical line",
+        "zh": "直線"
+      },
+      "clips": {
+        "en": "shape.line.en",
+        "zh": "shape.line.zh"
+      },
+      "trace": true
+    },
+    {
+      "id": "shape.hline",
+      "kind": "shape",
+      "glyph": "latin:hline",
+      "label": {
+        "en": "horizontal line",
+        "zh": "橫線"
+      },
+      "clips": {
+        "en": "shape.line.en",
+        "zh": "shape.line.zh"
+      },
+      "trace": true
+    },
+    {
+      "id": "shape.diagonal",
+      "kind": "shape",
+      "glyph": "latin:diagonal",
+      "label": {
+        "en": "diagonal line",
+        "zh": "斜線"
+      },
+      "clips": {
+        "en": "shape.line.en",
+        "zh": "shape.line.zh"
+      },
+      "trace": true
+    },
+    {
+      "id": "shape.circle",
+      "kind": "shape",
+      "glyph": "latin:circle",
+      "label": {
+        "en": "circle",
+        "zh": "圓形"
+      },
+      "clips": {
+        "en": "shape.circle.en",
+        "zh": "shape.circle.zh"
+      },
+      "trace": true
+    },
+    {
+      "id": "shape.cross",
+      "kind": "shape",
+      "glyph": "latin:cross",
+      "label": {
+        "en": "cross",
+        "zh": "十字"
+      },
+      "clips": {
+        "en": "shape.cross.en",
+        "zh": "shape.cross.zh"
+      },
+      "trace": true
+    },
+    {
+      "id": "shape.zigzag",
+      "kind": "shape",
+      "glyph": "latin:zigzag",
+      "label": {
+        "en": "zigzag",
+        "zh": "鋸齒線"
+      },
+      "clips": {
+        "en": "shape.zigzag.en",
+        "zh": "shape.zigzag.zh"
+      },
+      "trace": true
+    },
+    {
+      "id": "shape.wave",
+      "kind": "shape",
+      "glyph": "latin:wave",
+      "label": {
+        "en": "wave",
+        "zh": "波浪線"
+      },
+      "clips": {
+        "en": "shape.wave.en",
+        "zh": "shape.wave.zh"
+      },
+      "trace": true
+    },
+    {
+      "id": "shape.square",
+      "kind": "shape",
+      "glyph": "latin:square",
+      "label": {
+        "en": "square",
+        "zh": "正方形"
+      },
+      "clips": {
+        "en": "shape.square.en",
+        "zh": "shape.square.zh"
+      },
+      "trace": true
+    },
+    {
+      "id": "shape.triangle",
+      "kind": "shape",
+      "glyph": "latin:triangle",
+      "label": {
+        "en": "triangle",
+        "zh": "三角形"
+      },
+      "clips": {
+        "en": "shape.triangle.en",
+        "zh": "shape.triangle.zh"
+      },
+      "trace": true
+    },
+    {
+      "id": "shape.heart",
+      "kind": "shape",
+      "glyph": "latin:heart",
+      "label": {
+        "en": "heart",
+        "zh": "愛心"
+      },
+      "clips": {
+        "en": "shape.heart.en",
+        "zh": "shape.heart.zh"
+      },
+      "trace": true
+    },
+    {
+      "id": "shape.star",
+      "kind": "shape",
+      "glyph": "latin:star",
+      "label": {
+        "en": "star",
+        "zh": "星星"
+      },
+      "clips": {
+        "en": "shape.star.en",
+        "zh": "shape.star.zh"
+      },
+      "trace": true
+    },
+    {
+      "id": "num.0",
+      "kind": "number",
+      "text": "0",
+      "glyph": "latin:0",
+      "clips": {
+        "en": "num.0.en",
+        "zh": "num.0.zh"
+      },
+      "count_emoji": null,
+      "trace": true
+    },
+    {
+      "id": "num.1",
+      "kind": "number",
+      "text": "1",
+      "glyph": "latin:1",
+      "clips": {
+        "en": "num.1.en",
+        "zh": "num.1.zh"
+      },
+      "count_emoji": "🍎",
+      "trace": true
+    },
+    {
+      "id": "num.2",
+      "kind": "number",
+      "text": "2",
+      "glyph": "latin:2",
+      "clips": {
+        "en": "num.2.en",
+        "zh": "num.2.zh"
+      },
+      "count_emoji": "🐟",
+      "trace": true
+    },
+    {
+      "id": "num.3",
+      "kind": "number",
+      "text": "3",
+      "glyph": "latin:3",
+      "clips": {
+        "en": "num.3.en",
+        "zh": "num.3.zh"
+      },
+      "count_emoji": "🦆",
+      "trace": true
+    },
+    {
+      "id": "num.4",
+      "kind": "number",
+      "text": "4",
+      "glyph": "latin:4",
+      "clips": {
+        "en": "num.4.en",
+        "zh": "num.4.zh"
+      },
+      "count_emoji": "🍐",
+      "trace": true
+    },
+    {
+      "id": "num.5",
+      "kind": "number",
+      "text": "5",
+      "glyph": "latin:5",
+      "clips": {
+        "en": "num.5.en",
+        "zh": "num.5.zh"
+      },
+      "count_emoji": "🐢",
+      "trace": true
+    },
+    {
+      "id": "num.6",
+      "kind": "number",
+      "text": "6",
+      "glyph": "latin:6",
+      "clips": {
+        "en": "num.6.en",
+        "zh": "num.6.zh"
+      },
+      "count_emoji": "🥕",
+      "trace": true
+    },
+    {
+      "id": "num.7",
+      "kind": "number",
+      "text": "7",
+      "glyph": "latin:7",
+      "clips": {
+        "en": "num.7.en",
+        "zh": "num.7.zh"
+      },
+      "count_emoji": "🍋",
+      "trace": true
+    },
+    {
+      "id": "num.8",
+      "kind": "number",
+      "text": "8",
+      "glyph": "latin:8",
+      "clips": {
+        "en": "num.8.en",
+        "zh": "num.8.zh"
+      },
+      "count_emoji": "🐰",
+      "trace": true
+    },
+    {
+      "id": "num.9",
+      "kind": "number",
+      "text": "9",
+      "glyph": "latin:9",
+      "clips": {
+        "en": "num.9.en",
+        "zh": "num.9.zh"
+      },
+      "count_emoji": "🍊",
+      "trace": true
+    },
+    {
+      "id": "num.10",
+      "kind": "number",
+      "text": "10",
+      "glyph": "latin:10",
+      "clips": {
+        "en": "num.10.en",
+        "zh": "num.10.zh"
+      },
+      "count_emoji": "🍌",
+      "trace": true
+    },
+    {
+      "id": "letter.a",
+      "kind": "letter",
+      "text": "A",
+      "glyph": "latin:A",
+      "emoji": "🍎",
+      "word": "apple",
+      "clips": {
+        "en": "letter.a.en",
+        "word": "word.apple.en"
+      },
+      "trace": true
+    },
+    {
+      "id": "letter.b",
+      "kind": "letter",
+      "text": "B",
+      "glyph": "latin:B",
+      "emoji": "⚽",
+      "word": "ball",
+      "clips": {
+        "en": "letter.b.en",
+        "word": "word.ball.en"
+      },
+      "trace": true
+    },
+    {
+      "id": "letter.c",
+      "kind": "letter",
+      "text": "C",
+      "glyph": "latin:C",
+      "emoji": "🐱",
+      "word": "cat",
+      "clips": {
+        "en": "letter.c.en",
+        "word": "word.cat.en"
+      },
+      "trace": true
+    },
+    {
+      "id": "letter.d",
+      "kind": "letter",
+      "text": "D",
+      "glyph": "latin:D",
+      "emoji": "🐶",
+      "word": "dog",
+      "clips": {
+        "en": "letter.d.en",
+        "word": "word.dog.en"
+      },
+      "trace": true
+    },
+    {
+      "id": "letter.e",
+      "kind": "letter",
+      "text": "E",
+      "glyph": "latin:E",
+      "emoji": "🥚",
+      "word": "egg",
+      "clips": {
+        "en": "letter.e.en",
+        "word": "word.egg.en"
+      },
+      "trace": true
+    },
+    {
+      "id": "letter.f",
+      "kind": "letter",
+      "text": "F",
+      "glyph": "latin:F",
+      "emoji": "🐟",
+      "word": "fish",
+      "clips": {
+        "en": "letter.f.en",
+        "word": "word.fish.en"
+      },
+      "trace": true
+    },
+    {
+      "id": "letter.g",
+      "kind": "letter",
+      "text": "G",
+      "glyph": "latin:G",
+      "emoji": "🐐",
+      "word": "goat",
+      "clips": {
+        "en": "letter.g.en",
+        "word": "word.goat.en"
+      },
+      "trace": true
+    },
+    {
+      "id": "letter.h",
+      "kind": "letter",
+      "text": "H",
+      "glyph": "latin:H",
+      "emoji": "🎩",
+      "word": "hat",
+      "clips": {
+        "en": "letter.h.en",
+        "word": "word.hat.en"
+      },
+      "trace": true
+    },
+    {
+      "id": "letter.i",
+      "kind": "letter",
+      "text": "I",
+      "glyph": "latin:I",
+      "emoji": "🍦",
+      "word": "ice cream",
+      "clips": {
+        "en": "letter.i.en",
+        "word": "word.ice-cream.en"
+      },
+      "trace": true
+    },
+    {
+      "id": "letter.j",
+      "kind": "letter",
+      "text": "J",
+      "glyph": "latin:J",
+      "emoji": "🧃",
+      "word": "juice",
+      "clips": {
+        "en": "letter.j.en",
+        "word": "word.juice.en"
+      },
+      "trace": true
+    },
+    {
+      "id": "letter.k",
+      "kind": "letter",
+      "text": "K",
+      "glyph": "latin:K",
+      "emoji": "🪁",
+      "word": "kite",
+      "clips": {
+        "en": "letter.k.en",
+        "word": "word.kite.en"
+      },
+      "trace": true
+    },
+    {
+      "id": "letter.l",
+      "kind": "letter",
+      "text": "L",
+      "glyph": "latin:L",
+      "emoji": "🍁",
+      "word": "leaf",
+      "clips": {
+        "en": "letter.l.en",
+        "word": "word.leaf.en"
+      },
+      "trace": true
+    },
+    {
+      "id": "letter.m",
+      "kind": "letter",
+      "text": "M",
+      "glyph": "latin:M",
+      "emoji": "🐭",
+      "word": "mouse",
+      "clips": {
+        "en": "letter.m.en",
+        "word": "word.mouse.en"
+      },
+      "trace": true
+    },
+    {
+      "id": "letter.n",
+      "kind": "letter",
+      "text": "N",
+      "glyph": "latin:N",
+      "emoji": "👃",
+      "word": "nose",
+      "clips": {
+        "en": "letter.n.en",
+        "word": "word.nose.en"
+      },
+      "trace": true
+    },
+    {
+      "id": "letter.o",
+      "kind": "letter",
+      "text": "O",
+      "glyph": "latin:O",
+      "emoji": "🐙",
+      "word": "octopus",
+      "clips": {
+        "en": "letter.o.en",
+        "word": "word.octopus.en"
+      },
+      "trace": true
+    },
+    {
+      "id": "letter.p",
+      "kind": "letter",
+      "text": "P",
+      "glyph": "latin:P",
+      "emoji": "🐷",
+      "word": "pig",
+      "clips": {
+        "en": "letter.p.en",
+        "word": "word.pig.en"
+      },
+      "trace": true
+    },
+    {
+      "id": "letter.q",
+      "kind": "letter",
+      "text": "Q",
+      "glyph": "latin:Q",
+      "emoji": "🦆",
+      "word": "quack",
+      "clips": {
+        "en": "letter.q.en",
+        "word": "word.quack.en"
+      },
+      "trace": true
+    },
+    {
+      "id": "letter.r",
+      "kind": "letter",
+      "text": "R",
+      "glyph": "latin:R",
+      "emoji": "🐰",
+      "word": "rabbit",
+      "clips": {
+        "en": "letter.r.en",
+        "word": "word.rabbit.en"
+      },
+      "trace": true
+    },
+    {
+      "id": "letter.s",
+      "kind": "letter",
+      "text": "S",
+      "glyph": "latin:S",
+      "emoji": "☀️",
+      "word": "sun",
+      "clips": {
+        "en": "letter.s.en",
+        "word": "word.sun.en"
+      },
+      "trace": true
+    },
+    {
+      "id": "letter.t",
+      "kind": "letter",
+      "text": "T",
+      "glyph": "latin:T",
+      "emoji": "🐢",
+      "word": "turtle",
+      "clips": {
+        "en": "letter.t.en",
+        "word": "word.turtle.en"
+      },
+      "trace": true
+    },
+    {
+      "id": "letter.u",
+      "kind": "letter",
+      "text": "U",
+      "glyph": "latin:U",
+      "emoji": "☂️",
+      "word": "umbrella",
+      "clips": {
+        "en": "letter.u.en",
+        "word": "word.umbrella.en"
+      },
+      "trace": true
+    },
+    {
+      "id": "letter.v",
+      "kind": "letter",
+      "text": "V",
+      "glyph": "latin:V",
+      "emoji": "🚐",
+      "word": "van",
+      "clips": {
+        "en": "letter.v.en",
+        "word": "word.van.en"
+      },
+      "trace": true
+    },
+    {
+      "id": "letter.w",
+      "kind": "letter",
+      "text": "W",
+      "glyph": "latin:W",
+      "emoji": "🐳",
+      "word": "whale",
+      "clips": {
+        "en": "letter.w.en",
+        "word": "word.whale.en"
+      },
+      "trace": true
+    },
+    {
+      "id": "letter.x",
+      "kind": "letter",
+      "text": "X",
+      "glyph": "latin:X",
+      "emoji": "📦",
+      "word": "box",
+      "clips": {
+        "en": "letter.x.en",
+        "word": "word.box.en"
+      },
+      "trace": true,
+      "word_note": "ends with x"
+    },
+    {
+      "id": "letter.y",
+      "kind": "letter",
+      "text": "Y",
+      "glyph": "latin:Y",
+      "emoji": "🧶",
+      "word": "yarn",
+      "clips": {
+        "en": "letter.y.en",
+        "word": "word.yarn.en"
+      },
+      "trace": true
+    },
+    {
+      "id": "letter.z",
+      "kind": "letter",
+      "text": "Z",
+      "glyph": "latin:Z",
+      "emoji": "🦓",
+      "word": "zebra",
+      "clips": {
+        "en": "letter.z.en",
+        "word": "word.zebra.en"
+      },
+      "trace": true
+    },
+    {
+      "id": "char.yi1",
+      "kind": "hanzi",
+      "text": "一",
+      "glyph": "hanzi:一",
+      "emoji": null,
+      "label": {
+        "zh": "一",
+        "en": "one"
+      },
+      "clips": {
+        "zh": "num.1.zh"
+      },
+      "strokes": 1,
+      "trace": true
+    },
+    {
+      "id": "char.er4",
+      "kind": "hanzi",
+      "text": "二",
+      "glyph": "hanzi:二",
+      "emoji": null,
+      "label": {
+        "zh": "二",
+        "en": "two"
+      },
+      "clips": {
+        "zh": "num.2.zh"
+      },
+      "strokes": 2,
+      "trace": true
+    },
+    {
+      "id": "char.san1",
+      "kind": "hanzi",
+      "text": "三",
+      "glyph": "hanzi:三",
+      "emoji": null,
+      "label": {
+        "zh": "三",
+        "en": "three"
+      },
+      "clips": {
+        "zh": "num.3.zh"
+      },
+      "strokes": 3,
+      "trace": true
+    },
+    {
+      "id": "char.si4",
+      "kind": "hanzi",
+      "text": "四",
+      "glyph": "hanzi:四",
+      "emoji": null,
+      "label": {
+        "zh": "四",
+        "en": "four"
+      },
+      "clips": {
+        "zh": "num.4.zh"
+      },
+      "strokes": 5,
+      "trace": true
+    },
+    {
+      "id": "char.wu3",
+      "kind": "hanzi",
+      "text": "五",
+      "glyph": "hanzi:五",
+      "emoji": null,
+      "label": {
+        "zh": "五",
+        "en": "five"
+      },
+      "clips": {
+        "zh": "num.5.zh"
+      },
+      "strokes": 4,
+      "trace": true
+    },
+    {
+      "id": "char.liu4",
+      "kind": "hanzi",
+      "text": "六",
+      "glyph": "hanzi:六",
+      "emoji": null,
+      "label": {
+        "zh": "六",
+        "en": "six"
+      },
+      "clips": {
+        "zh": "num.6.zh"
+      },
+      "strokes": 4,
+      "trace": true
+    },
+    {
+      "id": "char.qi1",
+      "kind": "hanzi",
+      "text": "七",
+      "glyph": "hanzi:七",
+      "emoji": null,
+      "label": {
+        "zh": "七",
+        "en": "seven"
+      },
+      "clips": {
+        "zh": "num.7.zh"
+      },
+      "strokes": 2,
+      "trace": true
+    },
+    {
+      "id": "char.ba1",
+      "kind": "hanzi",
+      "text": "八",
+      "glyph": "hanzi:八",
+      "emoji": null,
+      "label": {
+        "zh": "八",
+        "en": "eight"
+      },
+      "clips": {
+        "zh": "num.8.zh"
+      },
+      "strokes": 2,
+      "trace": true
+    },
+    {
+      "id": "char.jiu3",
+      "kind": "hanzi",
+      "text": "九",
+      "glyph": "hanzi:九",
+      "emoji": null,
+      "label": {
+        "zh": "九",
+        "en": "nine"
+      },
+      "clips": {
+        "zh": "num.9.zh"
+      },
+      "strokes": 2,
+      "trace": true
+    },
+    {
+      "id": "char.shi2",
+      "kind": "hanzi",
+      "text": "十",
+      "glyph": "hanzi:十",
+      "emoji": null,
+      "label": {
+        "zh": "十",
+        "en": "ten"
+      },
+      "clips": {
+        "zh": "num.10.zh"
+      },
+      "strokes": 2,
+      "trace": true
+    },
+    {
+      "id": "char.ren2",
+      "kind": "hanzi",
+      "text": "人",
+      "glyph": "hanzi:人",
+      "emoji": "🧍",
+      "label": {
+        "zh": "人",
+        "en": "person"
+      },
+      "clips": {
+        "zh": "char.ren2.zh"
+      },
+      "strokes": 2,
+      "trace": true
+    },
+    {
+      "id": "char.kou3",
+      "kind": "hanzi",
+      "text": "口",
+      "glyph": "hanzi:口",
+      "emoji": "👄",
+      "label": {
+        "zh": "口",
+        "en": "mouth"
+      },
+      "clips": {
+        "zh": "char.kou3.zh"
+      },
+      "strokes": 3,
+      "trace": true
+    },
+    {
+      "id": "char.da4",
+      "kind": "hanzi",
+      "text": "大",
+      "glyph": "hanzi:大",
+      "emoji": "🐘",
+      "label": {
+        "zh": "大",
+        "en": "big"
+      },
+      "clips": {
+        "zh": "char.da4.zh"
+      },
+      "strokes": 3,
+      "trace": true
+    },
+    {
+      "id": "char.xiao3",
+      "kind": "hanzi",
+      "text": "小",
+      "glyph": "hanzi:小",
+      "emoji": "🐜",
+      "label": {
+        "zh": "小",
+        "en": "small"
+      },
+      "clips": {
+        "zh": "char.xiao3.zh"
+      },
+      "strokes": 3,
+      "trace": true
+    },
+    {
+      "id": "char.shan1",
+      "kind": "hanzi",
+      "text": "山",
+      "glyph": "hanzi:山",
+      "emoji": "⛰️",
+      "label": {
+        "zh": "山",
+        "en": "mountain"
+      },
+      "clips": {
+        "zh": "char.shan1.zh"
+      },
+      "strokes": 3,
+      "trace": true
+    },
+    {
+      "id": "char.shui3",
+      "kind": "hanzi",
+      "text": "水",
+      "glyph": "hanzi:水",
+      "emoji": "💧",
+      "label": {
+        "zh": "水",
+        "en": "water"
+      },
+      "clips": {
+        "zh": "char.shui3.zh"
+      },
+      "strokes": 4,
+      "trace": true
+    },
+    {
+      "id": "char.huo3",
+      "kind": "hanzi",
+      "text": "火",
+      "glyph": "hanzi:火",
+      "emoji": "🔥",
+      "label": {
+        "zh": "火",
+        "en": "fire"
+      },
+      "clips": {
+        "zh": "char.huo3.zh"
+      },
+      "strokes": 4,
+      "trace": true
+    },
+    {
+      "id": "char.ri4",
+      "kind": "hanzi",
+      "text": "日",
+      "glyph": "hanzi:日",
+      "emoji": "☀️",
+      "label": {
+        "zh": "日",
+        "en": "sun"
+      },
+      "clips": {
+        "zh": "char.ri4.zh"
+      },
+      "strokes": 4,
+      "trace": true
+    },
+    {
+      "id": "char.yue4",
+      "kind": "hanzi",
+      "text": "月",
+      "glyph": "hanzi:月",
+      "emoji": "🌙",
+      "label": {
+        "zh": "月",
+        "en": "moon"
+      },
+      "clips": {
+        "zh": "char.yue4.zh"
+      },
+      "strokes": 4,
+      "trace": true
+    },
+    {
+      "id": "char.mu4",
+      "kind": "hanzi",
+      "text": "木",
+      "glyph": "hanzi:木",
+      "emoji": "🌳",
+      "label": {
+        "zh": "木",
+        "en": "tree"
+      },
+      "clips": {
+        "zh": "char.mu4.zh"
+      },
+      "strokes": 4,
+      "trace": true
+    },
+    {
+      "id": "char.shou3",
+      "kind": "hanzi",
+      "text": "手",
+      "glyph": "hanzi:手",
+      "emoji": "✋",
+      "label": {
+        "zh": "手",
+        "en": "hand"
+      },
+      "clips": {
+        "zh": "char.shou3.zh"
+      },
+      "strokes": 4,
+      "trace": true
+    },
+    {
+      "id": "char.mu4-eye",
+      "kind": "hanzi",
+      "text": "目",
+      "glyph": "hanzi:目",
+      "emoji": "👁️",
+      "label": {
+        "zh": "目",
+        "en": "eye"
+      },
+      "clips": {
+        "zh": "char.mu4-eye.zh"
+      },
+      "strokes": 5,
+      "trace": true
+    },
+    {
+      "id": "char.yu2",
+      "kind": "hanzi",
+      "text": "魚",
+      "glyph": "hanzi:魚",
+      "emoji": "🐟",
+      "label": {
+        "zh": "魚",
+        "en": "fish"
+      },
+      "clips": {
+        "zh": "char.yu2.zh"
+      },
+      "strokes": 11,
+      "trace": false
+    },
+    {
+      "id": "char.niao3",
+      "kind": "hanzi",
+      "text": "鳥",
+      "glyph": "hanzi:鳥",
+      "emoji": "🐦",
+      "label": {
+        "zh": "鳥",
+        "en": "bird"
+      },
+      "clips": {
+        "zh": "char.niao3.zh"
+      },
+      "strokes": 11,
+      "trace": false
+    },
+    {
+      "id": "char.ma3",
+      "kind": "hanzi",
+      "text": "馬",
+      "glyph": "hanzi:馬",
+      "emoji": "🐴",
+      "label": {
+        "zh": "馬",
+        "en": "horse"
+      },
+      "clips": {
+        "zh": "char.ma3.zh"
+      },
+      "strokes": 10,
+      "trace": false
+    },
+    {
+      "id": "char.niu2",
+      "kind": "hanzi",
+      "text": "牛",
+      "glyph": "hanzi:牛",
+      "emoji": "🐄",
+      "label": {
+        "zh": "牛",
+        "en": "cow"
+      },
+      "clips": {
+        "zh": "char.niu2.zh"
+      },
+      "strokes": 4,
+      "trace": true
+    },
+    {
+      "id": "char.yang2",
+      "kind": "hanzi",
+      "text": "羊",
+      "glyph": "hanzi:羊",
+      "emoji": "🐑",
+      "label": {
+        "zh": "羊",
+        "en": "sheep"
+      },
+      "clips": {
+        "zh": "char.yang2.zh"
+      },
+      "strokes": 6,
+      "trace": true
+    },
+    {
+      "id": "char.er3",
+      "kind": "hanzi",
+      "text": "耳",
+      "glyph": "hanzi:耳",
+      "emoji": "👂",
+      "label": {
+        "zh": "耳",
+        "en": "ear"
+      },
+      "clips": {
+        "zh": "char.er3.zh"
+      },
+      "strokes": 6,
+      "trace": true
+    },
+    {
+      "id": "char.yu3",
+      "kind": "hanzi",
+      "text": "雨",
+      "glyph": "hanzi:雨",
+      "emoji": "🌧️",
+      "label": {
+        "zh": "雨",
+        "en": "rain"
+      },
+      "clips": {
+        "zh": "char.yu3.zh"
+      },
+      "strokes": 8,
+      "trace": false
+    },
+    {
+      "id": "char.shang4",
+      "kind": "hanzi",
+      "text": "上",
+      "glyph": "hanzi:上",
+      "emoji": null,
+      "label": {
+        "zh": "上",
+        "en": "up"
+      },
+      "clips": {
+        "zh": "char.shang4.zh"
+      },
+      "strokes": 3,
+      "trace": true
+    },
+    {
+      "id": "char.xia4",
+      "kind": "hanzi",
+      "text": "下",
+      "glyph": "hanzi:下",
+      "emoji": null,
+      "label": {
+        "zh": "下",
+        "en": "down"
+      },
+      "clips": {
+        "zh": "char.xia4.zh"
+      },
+      "strokes": 3,
+      "trace": true
+    }
+  ]
+}

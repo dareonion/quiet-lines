@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Quiet Lines · recorder</title>
+  <link rel="stylesheet" href="/recorder/recorder.css">
+  <script type="module" src="/recorder/recorder.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Record your voices</h1>
+    <p class="hint">Tap a word, say it once, then listen. What you hear is exactly what the iPad
+      will play. Tap <b>Keep</b> if it sounds right. New clips reach the iPad the next time it opens
+      the app online.</p>
+    <div class="row">
+      <span class="label">Who's recording?</span>
+      <div id="speakers" class="seg"></div>
+    </div>
+    <div class="row">
+      <span class="label">Show</span>
+      <div id="filters" class="seg"></div>
+    </div>
+    <p id="summary" class="hint"></p>
+  </header>
+  <main id="list"></main>
+  <p id="micnote" class="hint"></p>
+</body>
+</html>

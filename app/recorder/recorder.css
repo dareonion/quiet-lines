@@ -1,0 +1,42 @@
+:root {
+  --paper: #f6f1e7; --card: #fbf8f2; --edge: #e6dccb; --ink: #4a4036; --soft: #8a7f72;
+  --rec: #b4583f; --ok: #6f8f6b; --accent: #6f8fad;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 16px 16px 48px; background: var(--paper); color: var(--ink);
+  font: 16px/1.4 -apple-system, "PingFang TC", system-ui, sans-serif;
+  max-width: 760px; margin-inline: auto;
+}
+h1 { font-size: 22px; margin: 8px 0; }
+.hint { color: var(--soft); font-size: 14px; margin: 6px 0 12px; }
+.row { display: flex; align-items: center; gap: 12px; margin: 10px 0; flex-wrap: wrap; }
+.label { font-size: 14px; color: var(--soft); min-width: 120px; }
+.seg { display: flex; gap: 8px; flex-wrap: wrap; }
+.seg button, .seg input {
+  font: inherit; padding: 10px 14px; border-radius: 12px; border: 2px solid var(--edge);
+  background: var(--card); color: var(--ink);
+}
+.seg button[aria-pressed="true"] { border-color: var(--accent); background: #e9eef3; }
+.seg input { width: 150px; }
+.clip {
+  display: grid; grid-template-columns: 1fr auto; gap: 8px 12px; align-items: center;
+  background: var(--card); border: 2px solid var(--edge); border-radius: 16px;
+  padding: 12px 14px; margin: 10px 0;
+}
+.clip .text { font-size: 30px; line-height: 1.1; }
+.clip .prompt { font-size: 14px; color: var(--soft); }
+.clip .status { font-size: 13px; color: var(--soft); grid-column: 1 / -1; }
+.clip .status.kept { color: var(--ok); }
+.clip .status.err { color: var(--rec); }
+.clip .actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+.clip button {
+  font: inherit; font-size: 15px; padding: 12px 16px; border-radius: 12px; border: 0;
+  background: #ece4d6; color: var(--ink); min-width: 64px;
+}
+.clip button.rec { background: var(--rec); color: white; }
+.clip button.rec.on { background: #7d2f1e; }
+.clip button.keep { background: var(--ok); color: white; }
+.clip button.retry { background: var(--accent); color: white; }
+.clip button:disabled { opacity: 0.5; }
+h2.group { font-size: 15px; color: var(--soft); margin: 22px 4px 4px; font-weight: 600; }

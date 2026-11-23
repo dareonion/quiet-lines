@@ -1,0 +1,15 @@
+{
+  "num.1.zh": {"skip": true},
+  "char.yu2.zh": {"skip": true},
+  "char.ren2.zh": {"skip": true},
+  "num.3.zh": {"carrier": "三個"},
+  "char.shan1.zh": {"carrier": "山頂"},
+  "num.7.zh": {"carrier": "七個"},
+  "num.8.zh": {"carrier": "八天"},
+  "char.niu2.zh": {"carrier": "牛排"},
+  "char.yang2.zh": {"carrier": "羊排"},
+  "num.0.zh": {"carrier": "零點"},
+  "num.10.zh": {"contour": "(0%,-8%) (40%,-6%) (100%,+30%)"},
+  "char.niao3.zh": {"carrier": "鳥蛋"},
+  "char.xiao3.zh": {"carrier": "小兔"}
+}

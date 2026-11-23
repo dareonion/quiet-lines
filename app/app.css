@@ -1,0 +1,294 @@
+/* Calm rules (CLAUDE.md): muted warm palette, motion only in response to touch (<= 300 ms),
+   big targets (>= 88pt), nothing to read for the child. */
+:root {
+  --paper: #f6f1e7;
+  --paper-deep: #ece4d6;
+  --ink: #4a4036;
+  --ink-soft: #8a7f72;
+  --guide: #e2d8c8;
+  --dot: #c98b6b;       /* terracotta: where to start */
+  --trace: #6f8fad;     /* dusty blue: his ink on the path */
+  --done: #7f9f7b;      /* sage: a finished glyph */
+  --tile: #fbf8f2;
+  --tile-edge: #e6dccb;
+  --shadow: 0 2px 0 #e3d9c8;
+  --tap: 88px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, "PingFang TC", "Heiti TC", system-ui, sans-serif;
+  overscroll-behavior: none;
+  overflow: hidden;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+#app {
+  position: fixed;
+  inset: 0;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  border: 0;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  /* the screen itself keeps clear of the home indicator and rounded corners */
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+/* invisible: holds taps for the moment an update takes over (main.js) */
+.shield { position: fixed; inset: 0; z-index: 10; }
+
+/* ---------- top bar: Home (left) and Start over (right) ---------- */
+.bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px 0;
+  flex: none;
+}
+.round {
+  width: var(--tap);
+  height: var(--tap);
+  border-radius: 50%;
+  background: var(--tile);
+  box-shadow: var(--shadow);
+  border: 2px solid var(--tile-edge);
+  display: grid;
+  place-items: center;
+  transition: transform 120ms ease-out;
+}
+.round:active { transform: scale(0.96); }
+.round svg { width: 44px; height: 44px; stroke: var(--ink-soft); fill: none; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ---------- home ---------- */
+.home-grid {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 36px;
+  padding: 32px max(32px, calc(50% - 420px));
+}
+.home-grid .tile { width: min(26vw, 32vh, 240px); }
+@media (orientation: portrait) {
+  .home-grid { padding: 32px max(32px, calc(50% - 300px)); }
+  .home-grid .tile { width: min(36vw, 22vh, 260px); }
+}
+.tile {
+  aspect-ratio: 1;
+  border-radius: 36px;
+  background: var(--tile);
+  border: 2px solid var(--tile-edge);
+  box-shadow: var(--shadow);
+  display: grid;
+  place-items: center;
+  transition: transform 120ms ease-out;
+}
+.tile:active { transform: scale(0.97); }
+.tile .glyph { font-size: 120px; line-height: 1; color: var(--ink); }
+.tile .area-text { font-size: 72px; font-weight: 600; letter-spacing: 0.02em; }
+.tile svg { width: 60%; height: 60%; }
+
+/* the parent corner: small and quiet on purpose */
+.parent-corner {
+  position: absolute;
+  right: calc(12px + env(safe-area-inset-right));
+  bottom: calc(12px + env(safe-area-inset-bottom));
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  opacity: 0.35;
+}
+.parent-corner svg { width: 26px; height: 26px; stroke: var(--ink-soft); fill: none; stroke-width: 2; }
+.release-tag {
+  position: absolute;
+  left: calc(14px + env(safe-area-inset-left));
+  bottom: calc(10px + env(safe-area-inset-bottom));
+  font-size: 11px;
+  color: var(--ink-soft);
+  opacity: 0.4;
+  font-family: ui-monospace, monospace;
+}
+
+/* ---------- bars ---------- */
+.bar-group { display: flex; gap: 20px; }
+
+/* ---------- picker ---------- */
+.picker-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  padding: 16px 20px 32px;
+  min-height: 0;
+}
+.picker-grid {
+  display: grid;
+  grid-template-columns: repeat(3, min(22vw, 30vh, 210px));
+  gap: 28px;
+}
+@media (orientation: portrait) {
+  .picker-grid { grid-template-columns: repeat(2, min(30vw, 20vh, 210px)); }
+}
+.arrow[hidden] { visibility: hidden; display: grid; }
+.item-tile svg.glyph-svg { width: 66%; height: 66%; color: var(--ink); }
+.picker-shapes .item-tile svg.glyph-svg { color: var(--done); }
+
+/* ---------- card ---------- */
+.card-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  padding: 24px;
+  min-height: 0;
+}
+@media (orientation: portrait) {
+  .card-body { flex-direction: column; gap: 32px; }
+}
+.card-glyph, .card-emoji {
+  width: min(42vw, 60vh, 460px);
+  aspect-ratio: 1;
+  border-radius: 48px;
+  background: var(--tile);
+  border: 2px solid var(--tile-edge);
+  box-shadow: var(--shadow);
+  display: grid;
+  place-items: center;
+  transition: background-color 250ms ease-out;
+}
+@media (orientation: portrait) {
+  .card-glyph, .card-emoji { width: min(56vw, 36vh, 460px); }
+}
+.card-glyph svg.glyph-svg { width: 76%; height: 76%; color: var(--ink); }
+.card-shape .card-glyph svg.glyph-svg { color: var(--done); }
+.card-number .card-glyph { width: min(30vw, 46vh, 360px); }
+@media (orientation: portrait) {
+  .card-number .card-glyph { width: min(46vw, 30vh, 360px); }
+}
+.card-glyph .glyph-text { font-size: min(30vmin, 300px); line-height: 1; }
+.card-emoji { font-size: min(24vmin, 240px); line-height: 1; }
+.card-glyph.speaking, .card-emoji.speaking { background: var(--paper-deep); }
+.trace-btn svg { stroke: var(--dot); }
+
+/* ten-frame: two rows of five */
+.ten-frame {
+  display: grid;
+  grid-template-columns: repeat(5, max(88px, min(9vw, 12vh, 112px)));
+  gap: 10px;
+  padding: 16px;
+  border-radius: 28px;
+  background: var(--tile);
+  border: 2px solid var(--tile-edge);
+}
+.ten-frame .cell {
+  aspect-ratio: 1;
+  border-radius: 18px;
+  background: var(--paper);
+  display: grid;
+  place-items: center;
+}
+.count-obj {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  font-size: min(6vw, 8vh, 68px);
+  line-height: 1;
+  transition: background-color 200ms ease-out;
+}
+.count-obj.counted { background: #dfe8dc; box-shadow: inset 0 0 0 3px var(--done); }
+@media (orientation: portrait) {
+  .ten-frame { grid-template-columns: repeat(5, max(88px, min(14vw, 9vh, 112px))); }
+  .count-obj { font-size: max(48px, min(9vw, 5vh, 60px)); }
+}
+
+/* ---------- draw ---------- */
+.draw .bar { gap: 16px; }
+.crayons { display: flex; gap: 10px; }
+.crayon {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: var(--c);
+  border: 5px solid var(--paper);
+  box-shadow: 0 0 0 2px var(--tile-edge);
+}
+.crayon[aria-pressed="true"] { box-shadow: 0 0 0 4px var(--ink-soft); }
+.draw-stage {
+  position: relative;
+  flex: 1;
+  margin: 16px 20px 20px;
+  border-radius: 28px;
+  background: #fffdf8;
+  border: 2px solid var(--tile-edge);
+  overflow: hidden;
+}
+.draw-stage canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  transition: opacity 250ms ease-out;
+}
+.draw-stage canvas.clearing { opacity: 0; }
+
+/* ---------- trace ---------- */
+.trace-stage { position: relative; flex: 1; }
+.trace-stage canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+/* ---------- parent area (for adults: ordinary text is fine here) ---------- */
+.parent { overflow-y: auto; -webkit-user-select: text; user-select: text; }
+.parent-body { max-width: 640px; margin: 0 auto; padding: 32px 24px 48px; }
+.parent h1 { font-size: 28px; margin: 0 0 8px; }
+.parent h2 { font-size: 17px; margin: 28px 0 10px; color: var(--ink-soft); font-weight: 600; }
+.parent .status { font-size: 16px; line-height: 1.4; }
+.parent .note { font-size: 14px; line-height: 1.5; color: var(--ink-soft); margin-top: 28px; }
+.parent .seg { display: flex; gap: 10px; flex-wrap: wrap; }
+.parent .seg button, .parent .pbtn {
+  font-size: 16px; padding: 14px 18px; border-radius: 14px; background: var(--tile);
+  border: 2px solid var(--tile-edge);
+}
+.parent .seg button[aria-pressed="true"] { border-color: var(--trace); background: #e9eef3; }
+.parent .pbtn.done { margin-top: 24px; background: var(--done); color: white; border-color: var(--done); }
+
+/* ---------- a first load that failed ---------- */
+.boot-body { margin: auto; text-align: center; color: var(--ink-soft); font-size: 15px; }
+.round.big { width: 120px; height: 120px; margin: 0 auto 16px; }
+#boot-fallback { position: fixed; inset: 0; display: grid; place-content: center; text-align: center;
+  color: var(--ink-soft); font-size: 15px; background: var(--paper); }
+#boot-fallback[hidden] { display: none; }
+#boot-fallback button { width: 120px; height: 120px; margin: 0 auto 16px; border-radius: 50%;
+  background: var(--tile); border: 2px solid var(--tile-edge); font-size: 48px; color: var(--ink-soft); }

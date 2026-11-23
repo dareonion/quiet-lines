@@ -1,0 +1,65 @@
+name: Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: sudo apt-get install -y ffmpeg
+      - run: uv sync --frozen --group voices
+      - run: uv run playwright install --with-deps chromium
+      - run: node --test 'app/js/**/*.test.js'
+      - run: TODDLER_REQUIRE_ALL=1 TODDLER_RELEASE=1 uv run pytest
+      - run: uv run toddler-ipad-build site --voices voices
+      - name: Verify the Pages artifact
+        run: |
+          python3 - <<'PYTHON'
+          import hashlib
+          import json
+          from pathlib import Path
+          from urllib.parse import unquote
+
+          site = Path("site")
+          release = json.loads((site / "release.json").read_bytes())
+          expected = {unquote(key) or "index.html" for key in release["files"]}
+          expected.update({"sw.js", ".nojekyll", "LICENSE.txt", "audio/CREDITS.md"})
+          actual = {p.relative_to(site).as_posix() for p in site.rglob("*") if p.is_file()}
+          assert actual == expected, actual ^ expected
+          for notice in ("ARPHICPL.TXT", "NOTICE.md"):
+              assert f"content/glyphs/hanzi/{notice}" in actual, notice
+          for key, digest in release["hashes"].items():
+              path = site / (unquote(key) or "index.html")
+              assert hashlib.sha256(path.read_bytes()).hexdigest() == digest, path
+          PYTHON
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+          include-hidden-files: true
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

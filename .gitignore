@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+node_modules/
+.uv-cache/
+# Recordings live in data/ (raw takes, processed audio, the takes database). They are
+# personal and kept out of git; back them up separately.
+data/
+test-results/
+live/
+
+# The owner's private notes (deployment, family, status) and the pre-publish privacy patterns.
+/PRIVATE.md
+/.privacy-patterns
+# Build output of the static site.
+/site/
+# Free-tier voice files that were listened to and approved (the paid-tier release must match them).
+/voices-heard/

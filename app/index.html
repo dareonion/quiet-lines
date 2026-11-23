@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Quiet Lines">
+  <meta name="theme-color" content="#f6f1e7">
+  <title>Quiet Lines</title>
+  <script>window.pageController = navigator.serviceWorker?.controller;</script>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="app.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <main id="app" aria-live="off"></main>
+  <!-- If even the scripts couldn't load (the connection dropped during a first install), this is
+       all there is: one big button that tries again. main.js marks the page ready when it runs. -->
+  <div id="boot-fallback" hidden>
+    <button onclick="location.reload()" aria-label="Try again">&#x21bb;</button>
+    <p>Couldn't load. Check the iPad is online, then tap to try again.</p>
+  </div>
+  <script>
+    setTimeout(function () {
+      if (!document.documentElement.dataset.ready && !document.querySelector('#app .screen')) {
+        document.getElementById('boot-fallback').hidden = false;
+      }
+    }, 8000);
+  </script>
+</body>
+</html>

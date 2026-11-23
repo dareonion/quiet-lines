@@ -1,0 +1,412 @@
+{
+ "char.da4.zh": {
+  "approval": "carried from the heard file 1f97aafde21d (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.482,
+  "generated_at": "2026-11-23T17:00:54+00:00",
+  "sha256": "1f97aafde21db84f256e3283660dfbf651bc3c75b394af8850eef8488b9f2923",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>大</prosody></voice></speak>",
+  "text": "大",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "char.er3.zh": {
+  "approval": "carried from the heard file d46448c8e589 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.43,
+  "generated_at": "2026-11-23T17:01:08+00:00",
+  "sha256": "d46448c8e589250d7fa3dcaaf0e093ae7659a315d0bfc847d491d6b4175c3424",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>耳</prosody></voice></speak>",
+  "text": "耳",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "char.huo3.zh": {
+  "approval": "carried from the heard file d125e464846b (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.529,
+  "generated_at": "2026-11-23T17:00:57+00:00",
+  "sha256": "d125e464846be7c28c4c2cf206d3ce42026c452de0ba4eb3b36f76dda1bed85a",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>火</prosody></voice></speak>",
+  "text": "火",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "char.kou3.zh": {
+  "approval": "carried from the heard file 07a7182de963 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.487,
+  "generated_at": "2026-11-23T17:00:53+00:00",
+  "sha256": "07a7182de9638f27fffd89ee0d2a3a21fc7739ab4600c8a4506870a7791ca443",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>口</prosody></voice></speak>",
+  "text": "口",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "char.ma3.zh": {
+  "approval": "carried from the heard file 51d670b94948 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.483,
+  "generated_at": "2026-11-23T17:01:05+00:00",
+  "sha256": "51d670b94948275a65abc552101a88b26c83ad33cb8025c503cc0914d339f17a",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>馬</prosody></voice></speak>",
+  "text": "馬",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "char.mu4-eye.zh": {
+  "approval": "carried from the heard file 1aab74bf291b (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.415,
+  "generated_at": "2026-11-23T17:01:02+00:00",
+  "sha256": "1aab74bf291bed6d92c52ba6f8786d3cb4f644d2ced50c798ef64471dda02058",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>目</prosody></voice></speak>",
+  "text": "目",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "char.mu4.zh": {
+  "approval": "carried from the heard file 1aab74bf291b (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.415,
+  "generated_at": "2026-11-23T17:01:00+00:00",
+  "sha256": "1aab74bf291bed6d92c52ba6f8786d3cb4f644d2ced50c798ef64471dda02058",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>木</prosody></voice></speak>",
+  "text": "木",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "char.niao3.zh": {
+  "approval": "carried from the heard file 8122165443a2 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.491,
+  "generated_at": "2026-11-23T17:01:04+00:00",
+  "sha256": "8122165443a2b21884bd1f319fdd47f72f0d3351f7b4eb818dffb84af799a7fa",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>鳥</prosody></voice></speak>",
+  "text": "鳥",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "char.niu2.zh": {
+  "approval": "carried from the heard file a0c4be2471a0 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.518,
+  "generated_at": "2026-11-23T17:01:06+00:00",
+  "sha256": "a0c4be2471a06dfa9546f3811d4bc8d787911eb8b7770151d27dbe7d219fd3a2",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>牛</prosody></voice></speak>",
+  "text": "牛",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "char.ren2.zh": {
+  "approval": "carried from the heard file 88e701870adb (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.543,
+  "generated_at": "2026-11-23T17:00:52+00:00",
+  "sha256": "88e701870adbb3ff9826155393a5374f5a77b73ad5f042078790e7a4532022b2",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>人</prosody></voice></speak>",
+  "text": "人",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "char.ri4.zh": {
+  "approval": "carried from the heard file 24e5a89dd172 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.472,
+  "generated_at": "2026-11-23T17:00:58+00:00",
+  "sha256": "24e5a89dd172eef0a0715ccd226acb432e1c695cac067f6940414251e7f1a6de",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>日</prosody></voice></speak>",
+  "text": "日",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "char.shan1.zh": {
+  "approval": "carried from the heard file 05eb54e33cb2 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.561,
+  "generated_at": "2026-11-23T17:00:56+00:00",
+  "sha256": "05eb54e33cb2d0dac73922c538c6542f87145cecd53a5dd41066898bea5ca900",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>山</prosody></voice></speak>",
+  "text": "山",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "char.shang4.zh": {
+  "approval": "carried from the heard file efcceced44c1 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.599,
+  "generated_at": "2026-11-23T17:01:10+00:00",
+  "sha256": "efcceced44c1fd4e54e7a052075445be7f724ce9ec30c1a7d6761b1fa934bcec",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>上</prosody></voice></speak>",
+  "text": "上",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "char.shou3.zh": {
+  "approval": "carried from the heard file 8e1eab4a05c3 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.578,
+  "generated_at": "2026-11-23T17:01:01+00:00",
+  "sha256": "8e1eab4a05c3cb5b710ec95d51cb39ff7d190fb8c225110ffc2a783c0546f413",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>手</prosody></voice></speak>",
+  "text": "手",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "char.shui3.zh": {
+  "approval": "carried from the heard file bcc3a01b0849 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.578,
+  "generated_at": "2026-11-23T17:00:57+00:00",
+  "sha256": "bcc3a01b08490b079c6ac57bb7fec70449a6a6362b31e81e5e3cb9dbe4a69e10",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>水</prosody></voice></speak>",
+  "text": "水",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "char.xia4.zh": {
+  "approval": "carried from the heard file 84e718c31a7e (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.622,
+  "generated_at": "2026-11-23T17:01:11+00:00",
+  "sha256": "84e718c31a7ee16fae2d00687349c88d91d3f67d24770fff33d156af992940e4",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>下</prosody></voice></speak>",
+  "text": "下",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "char.xiao3.zh": {
+  "approval": "carried from the heard file 01fe8fc96a19 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.595,
+  "generated_at": "2026-11-23T17:00:55+00:00",
+  "sha256": "01fe8fc96a191c9c90ec45701aa83df9e9a14510dcedeebd331ad484ce9a8a89",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>小</prosody></voice></speak>",
+  "text": "小",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "char.yang2.zh": {
+  "approval": "carried from the heard file 7d0c11712492 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.543,
+  "generated_at": "2026-11-23T17:01:07+00:00",
+  "sha256": "7d0c11712492a45492252bc0b35e2f8e7454cfc2a3678a90c43b3a60eddde0ee",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>羊</prosody></voice></speak>",
+  "text": "羊",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "char.yu2.zh": {
+  "approval": "carried from the heard file 1ba36622b2d1 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.458,
+  "generated_at": "2026-11-23T17:01:03+00:00",
+  "sha256": "1ba36622b2d16714283bdd0d9027f2baf5bb4c361c2aa8257d09bbb904d51e68",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>魚</prosody></voice></speak>",
+  "text": "魚",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "char.yu3.zh": {
+  "approval": "carried from the heard file d80fd8876638 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.394,
+  "generated_at": "2026-11-23T17:01:09+00:00",
+  "sha256": "d80fd887663825bcebab55b123b27d4b5a18ef04b0ce77422444786bfd20593d",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>雨</prosody></voice></speak>",
+  "text": "雨",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "char.yue4.zh": {
+  "approval": "carried from the heard file dd3e08f3f40d (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.461,
+  "generated_at": "2026-11-23T17:00:59+00:00",
+  "sha256": "dd3e08f3f40d46635647cf393d39c5228bd5b825f3612486a56fd71e0bd99dbf",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>月</prosody></voice></speak>",
+  "text": "月",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "num.0.zh": {
+  "approval": "carried from the heard file a6097e22ac41 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.479,
+  "generated_at": "2026-11-23T17:00:41+00:00",
+  "sha256": "a6097e22ac41e3668cde69f94f8ef33d1aca4140e97c3241af13d8244b18587a",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>零</prosody></voice></speak>",
+  "text": "零",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "num.1.zh": {
+  "approval": "carried from the heard file 89749d70e2dd (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.424,
+  "generated_at": "2026-11-23T17:00:42+00:00",
+  "sha256": "89749d70e2dd29550f2a3287bff2f0c35bdf85e9fa8aa40c7f375323390f2cd5",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>一</prosody></voice></speak>",
+  "text": "一",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "num.10.zh": {
+  "approval": "carried from the heard file 490da9bba4da (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.618,
+  "generated_at": "2026-11-23T17:00:51+00:00",
+  "sha256": "490da9bba4dadf9fee7214c5e403002869017cc15d5186b306b10668d881d4c6",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>十</prosody></voice></speak>",
+  "text": "十",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "num.2.zh": {
+  "approval": "carried from the heard file 4fab6bc8797c (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.444,
+  "generated_at": "2026-11-23T17:00:43+00:00",
+  "sha256": "4fab6bc8797c75495ea80a79c1d2c3f7b3bdd061cd90754ba70ab65a4b3b4a00",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>二</prosody></voice></speak>",
+  "text": "二",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "num.3.zh": {
+  "approval": "carried from the heard file 5525ff0f2315 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.544,
+  "generated_at": "2026-11-23T17:00:44+00:00",
+  "sha256": "5525ff0f2315864c0c931fa83fd0e523c311d50454e3f7c72b35938a4cf24856",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>三</prosody></voice></speak>",
+  "text": "三",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "num.4.zh": {
+  "approval": "carried from the heard file a9ea72109def (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.602,
+  "generated_at": "2026-11-23T17:00:45+00:00",
+  "sha256": "a9ea72109defc3cbadb80ad0bc9dbe6cbb3e7b44e5e4299541f5c806df69116a",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>四</prosody></voice></speak>",
+  "text": "四",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "num.5.zh": {
+  "approval": "carried from the heard file c4ea30bccb74 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.376,
+  "generated_at": "2026-11-23T17:00:46+00:00",
+  "sha256": "c4ea30bccb74bbf1ae4c64750cd050f2447210fadc74f28a7a54fd8bf52ad3e9",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>五</prosody></voice></speak>",
+  "text": "五",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "num.6.zh": {
+  "approval": "carried from the heard file 7d2b4eea136f (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.462,
+  "generated_at": "2026-11-23T17:00:47+00:00",
+  "sha256": "7d2b4eea136fb75f33f90158588c0d4869eef3da4ac9a7de7c33dd15d52db391",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>六</prosody></voice></speak>",
+  "text": "六",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "num.7.zh": {
+  "approval": "carried from the heard file 69100c61d202 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.533,
+  "generated_at": "2026-11-23T17:00:48+00:00",
+  "sha256": "69100c61d202c706d73da180888d071749b76b0deee17fbb9c2261f8c96d89c2",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>七</prosody></voice></speak>",
+  "text": "七",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "num.8.zh": {
+  "approval": "carried from the heard file 48fb78677a5a (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.404,
+  "generated_at": "2026-11-23T17:00:49+00:00",
+  "sha256": "48fb78677a5aabfde1e096a0f9e6796e1ef28764125b6aaf0ebc38cc19498068",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>八</prosody></voice></speak>",
+  "text": "八",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "num.9.zh": {
+  "approval": "carried from the heard file 057f0c898a9f (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.514,
+  "generated_at": "2026-11-23T17:00:50+00:00",
+  "sha256": "057f0c898a9f72a39438b6b489c756dea39679daafe056e38d36f0d84c2682a5",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>九</prosody></voice></speak>",
+  "text": "九",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "shape.circle.zh": {
+  "approval": "carried from the heard file de213cdbd2e2 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.823,
+  "generated_at": "2026-11-23T17:00:33+00:00",
+  "sha256": "660da7423c7171a2d144ac45028b022b1f751f975b119b53070ae31ce58d8f1a",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>圓形</prosody></voice></speak>",
+  "text": "圓形",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "shape.cross.zh": {
+  "approval": "carried from the heard file 1524f0af8ab8 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.822,
+  "generated_at": "2026-11-23T17:00:34+00:00",
+  "sha256": "a0a1f7e86458772ec3f6d6e8b65d9e5a66603985775dcc098fbdd29c75cff893",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>十字</prosody></voice></speak>",
+  "text": "十字",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "shape.heart.zh": {
+  "approval": "carried from the heard file 3b364b3454bf (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.653,
+  "generated_at": "2026-11-23T17:00:39+00:00",
+  "sha256": "3b364b3454bf77a5353c76c3b35aefeb6b7b53194338b3a21393fa6341e0555a",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>愛心</prosody></voice></speak>",
+  "text": "愛心",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "shape.line.zh": {
+  "approval": "carried from the heard file 817b89e92f17 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.61,
+  "generated_at": "2026-11-23T17:00:33+00:00",
+  "sha256": "817b89e92f171101a7b3c8b214f8e1af97c6dc5e26ba11347b56dcb14ed90306",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>線</prosody></voice></speak>",
+  "text": "線",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "shape.square.zh": {
+  "approval": "carried from the heard file c648c02e2567 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 1.017,
+  "generated_at": "2026-11-23T17:00:37+00:00",
+  "sha256": "62747eae05d27af213705930b7dd183551e1b9e4d9daa16e1e44a8434479e48a",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>正方形</prosody></voice></speak>",
+  "text": "正方形",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "shape.star.zh": {
+  "approval": "carried from the heard file 9fe90ee41cbd (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.767,
+  "generated_at": "2026-11-23T17:00:40+00:00",
+  "sha256": "851c4c610449d87477d41c2e79d6e63a384855290b912dc605b682bcff9f86d0",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>星星</prosody></voice></speak>",
+  "text": "星星",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "shape.triangle.zh": {
+  "approval": "carried from the heard file b324fb501f21 (length diff 0.0 ms, corr 0.9999)",
+  "duration": 1.108,
+  "generated_at": "2026-11-23T17:00:38+00:00",
+  "sha256": "927cb0b3b0850a746e3fac6d0e2ae1d5e2b706b2353aeea9cd151d8ea173ca30",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>三角形</prosody></voice></speak>",
+  "text": "三角形",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "shape.wave.zh": {
+  "approval": "carried from the heard file 2d4df7179d04 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.98,
+  "generated_at": "2026-11-23T17:00:36+00:00",
+  "sha256": "96a80cc1073eebe45b42e36a4a8f5337c2ff14dd0a669d20e944648369a90cda",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>波浪線</prosody></voice></speak>",
+  "text": "波浪線",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ },
+ "shape.zigzag.zh": {
+  "approval": "carried from the heard file 116e0cef8385 (length diff 0.0 ms, corr 0.9998)",
+  "duration": 1.029,
+  "generated_at": "2026-11-23T17:00:35+00:00",
+  "sha256": "d853bb5e348263fd690ddf01e5ad4184db48829003e7552921a218ac01aa50dc",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-HsiaoChenNeural'><prosody rate='-10%'>鋸齒線</prosody></voice></speak>",
+  "text": "鋸齒線",
+  "tier": "S0",
+  "voice": "zh-TW-HsiaoChenNeural"
+ }
+}

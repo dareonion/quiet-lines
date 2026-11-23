@@ -1,0 +1,23 @@
+[Unit]
+Description=Quiet Lines (offline iPad web app + parents' recorder)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+WorkingDirectory=%h/gitrepo/toddler_ipad/live/current
+Environment=PORT=8019
+Environment=HOST=127.0.0.1
+Environment=UV_PROJECT_ENVIRONMENT=%h/gitrepo/toddler_ipad/live/.venv
+Environment=TODDLER_DATA_DIR=%h/gitrepo/toddler_ipad/data
+Environment=TODDLER_APP_DIR=app
+# The recorder accepts writes only from the origins in TODDLER_ORIGINS (plus localhost), set in
+# ~/.config/toddler-ipad/env, e.g. TODDLER_ORIGINS=https://<your-machine>.<tailnet>.ts.net:8019.
+# Reach it privately, e.g. `tailscale serve --bg --https=8019 http://127.0.0.1:8019` (HTTPS: service
+# workers and the microphone both need it). Never expose it publicly: its reads are unauthenticated.
+EnvironmentFile=-%h/.config/toddler-ipad/env
+ExecStart=%h/.local/bin/uv run toddler-ipad
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

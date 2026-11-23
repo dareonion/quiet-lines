@@ -1,0 +1,722 @@
+{
+ "letter.a.en": {
+  "approval": "carried from the heard file c91ca7344488 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.59,
+  "generated_at": "2026-11-23T16:57:19+00:00",
+  "sha256": "c91ca7344488d3a807e9a18699d3b3250e64af60083aa31bdf33b179a285fb65",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'><say-as interpret-as='characters'>A</say-as></prosody></voice></speak>",
+  "text": "A",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "letter.b.en": {
+  "approval": "carried from the heard file 27d8bbdd6319 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.525,
+  "generated_at": "2026-11-23T16:57:20+00:00",
+  "sha256": "27d8bbdd6319f3344472ce6452983123e6e942a95676a5ace2e012d2680ba30e",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'><say-as interpret-as='characters'>B</say-as></prosody></voice></speak>",
+  "text": "B",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "letter.c.en": {
+  "approval": "carried from the heard file 0bd024bb0c0b (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.639,
+  "generated_at": "2026-11-23T16:57:22+00:00",
+  "sha256": "0bd024bb0c0ba1c0ab8c4e3282a82c40f5a258459f3624c75a9c137f77bafae4",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'><say-as interpret-as='characters'>C</say-as></prosody></voice></speak>",
+  "text": "C",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "letter.d.en": {
+  "approval": "carried from the heard file 4303b532a0cb (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.593,
+  "generated_at": "2026-11-23T16:57:23+00:00",
+  "sha256": "4303b532a0cb5aff7dc6e7d75afeedbf19293db143b2060ed1af34c64aa1081a",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'><say-as interpret-as='characters'>D</say-as></prosody></voice></speak>",
+  "text": "D",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "letter.e.en": {
+  "approval": "carried from the heard file 15ccc84dd38d (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.565,
+  "generated_at": "2026-11-23T16:57:24+00:00",
+  "sha256": "15ccc84dd38db49b35cf9763612f40614c8854b65733b498bae2b2db168bfbb5",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'><say-as interpret-as='characters'>E</say-as></prosody></voice></speak>",
+  "text": "E",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "letter.f.en": {
+  "approval": "carried from the heard file b9035e1fff79 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.602,
+  "generated_at": "2026-11-23T16:57:26+00:00",
+  "sha256": "b9035e1fff793430ef3d82dc81aa7ffbfbdf4899dbe59dbc5a09eb316bfd615a",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'><say-as interpret-as='characters'>F</say-as></prosody></voice></speak>",
+  "text": "F",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "letter.g.en": {
+  "approval": "carried from the heard file 3896200d9e6c (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.641,
+  "generated_at": "2026-11-23T16:57:28+00:00",
+  "sha256": "3896200d9e6cad4bc8145726c2b060d49b123ed146857b6ea1d976a7e3de74d9",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'><say-as interpret-as='characters'>G</say-as></prosody></voice></speak>",
+  "text": "G",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "letter.h.en": {
+  "approval": "carried from the heard file 50538c8ed0d4 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.669,
+  "generated_at": "2026-11-23T16:57:30+00:00",
+  "sha256": "50538c8ed0d41a2abf8ab04461b85a111898e12a9ce5c39bfad0c5c045ad93a9",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'><say-as interpret-as='characters'>H</say-as></prosody></voice></speak>",
+  "text": "H",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "letter.i.en": {
+  "approval": "carried from the heard file 896d4088555e (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.651,
+  "generated_at": "2026-11-23T16:57:32+00:00",
+  "sha256": "896d4088555e57aef6a1ebb04321f9901b7978a171ae798d2ed7a662ac2af460",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'><say-as interpret-as='characters'>I</say-as></prosody></voice></speak>",
+  "text": "I",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "letter.j.en": {
+  "approval": "carried from the heard file f64f14411aa6 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.631,
+  "generated_at": "2026-11-23T16:57:34+00:00",
+  "sha256": "f64f14411aa61f543e84c7bd96439b9f38ab92fbcf11cd39d52a517673e5d120",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'><say-as interpret-as='characters'>J</say-as></prosody></voice></speak>",
+  "text": "J",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "letter.k.en": {
+  "approval": "carried from the heard file 006dfdf11b8b (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.607,
+  "generated_at": "2026-11-23T16:57:36+00:00",
+  "sha256": "006dfdf11b8bc99a32a6a3d2f9bb67b837d1f03a0b697e2bce26575c14b44170",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'><say-as interpret-as='characters'>K</say-as></prosody></voice></speak>",
+  "text": "K",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "letter.l.en": {
+  "approval": "carried from the heard file aedbe36f43cd (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.542,
+  "generated_at": "2026-11-23T16:57:38+00:00",
+  "sha256": "aedbe36f43cdba84238ec4aa3e13ca242bd7cb9cbad3fd4ba68bc37bee48e499",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'><say-as interpret-as='characters'>L</say-as></prosody></voice></speak>",
+  "text": "L",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "letter.m.en": {
+  "approval": "carried from the heard file 16dafc18e55d (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.578,
+  "generated_at": "2026-11-23T16:57:40+00:00",
+  "sha256": "16dafc18e55df13450de332ee415b626865a1667a2c4b6d2e854e595ae932e14",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'><say-as interpret-as='characters'>M</say-as></prosody></voice></speak>",
+  "text": "M",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "letter.n.en": {
+  "approval": "carried from the heard file 822a01250e00 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.601,
+  "generated_at": "2026-11-23T16:57:42+00:00",
+  "sha256": "822a01250e00d36a9d552c83a13463d6984c758f556e5b64367af70e27a1e47f",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'><say-as interpret-as='characters'>N</say-as></prosody></voice></speak>",
+  "text": "N",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "letter.o.en": {
+  "approval": "carried from the heard file 60e425ac254d (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.627,
+  "generated_at": "2026-11-23T16:57:44+00:00",
+  "sha256": "60e425ac254da1468b470a29a09f4a9992940484f14cd0283d44668226d9b901",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'><say-as interpret-as='characters'>O</say-as></prosody></voice></speak>",
+  "text": "O",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "letter.p.en": {
+  "approval": "carried from the heard file c58a04b1b3f5 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.581,
+  "generated_at": "2026-11-23T16:57:46+00:00",
+  "sha256": "c58a04b1b3f56c78ab05881d799614952becee548ab5d365ef49b67a401090dd",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'><say-as interpret-as='characters'>P</say-as></prosody></voice></speak>",
+  "text": "P",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "letter.q.en": {
+  "approval": "carried from the heard file bc504657be79 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.657,
+  "generated_at": "2026-11-23T16:57:48+00:00",
+  "sha256": "bc504657be79c954f28f7f76ff6c0c000648539139e668dc2953bd67d2ca4a9a",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'><say-as interpret-as='characters'>Q</say-as></prosody></voice></speak>",
+  "text": "Q",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "letter.r.en": {
+  "approval": "carried from the heard file ba3e72fccc18 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.577,
+  "generated_at": "2026-11-23T16:57:50+00:00",
+  "sha256": "ba3e72fccc189f40680cf564ab6b439b59b2a7661ddfd794129d1744c91c7de7",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'><say-as interpret-as='characters'>R</say-as></prosody></voice></speak>",
+  "text": "R",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "letter.s.en": {
+  "approval": "carried from the heard file 5093bd3a9457 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.586,
+  "generated_at": "2026-11-23T16:57:52+00:00",
+  "sha256": "5093bd3a945752e45aecfe168300076af3891e7f5716779325182c5f54ecd00b",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'><say-as interpret-as='characters'>S</say-as></prosody></voice></speak>",
+  "text": "S",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "letter.t.en": {
+  "approval": "carried from the heard file e9568d35cb88 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.59,
+  "generated_at": "2026-11-23T16:57:54+00:00",
+  "sha256": "e9568d35cb88d7d1d751cf75b47084f1216384ba29f2e32480ae32080257e6c2",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'><say-as interpret-as='characters'>T</say-as></prosody></voice></speak>",
+  "text": "T",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "letter.u.en": {
+  "approval": "carried from the heard file 68734414c708 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.62,
+  "generated_at": "2026-11-23T16:57:56+00:00",
+  "sha256": "68734414c7088150fd5985c35902724d0e520bcad7382dd61adc86a56ae65f36",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'><say-as interpret-as='characters'>U</say-as></prosody></voice></speak>",
+  "text": "U",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "letter.v.en": {
+  "approval": "carried from the heard file 21f2e0dddb9d (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.597,
+  "generated_at": "2026-11-23T16:57:58+00:00",
+  "sha256": "21f2e0dddb9d21b872b42f8a9bc79c54b5a4a5fe4f50a4a7bb520799920b03a1",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'><say-as interpret-as='characters'>V</say-as></prosody></voice></speak>",
+  "text": "V",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "letter.w.en": {
+  "approval": "carried from the heard file a784926a4cc4 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.828,
+  "generated_at": "2026-11-23T16:58:00+00:00",
+  "sha256": "4189ddd834cefbaba589ddda0b6382032cc52af7a56df9edb3d11b2e8a47285e",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'><say-as interpret-as='characters'>W</say-as></prosody></voice></speak>",
+  "text": "W",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "letter.x.en": {
+  "approval": "carried from the heard file 0cd2f74ef1ba (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.691,
+  "generated_at": "2026-11-23T16:58:02+00:00",
+  "sha256": "0cd2f74ef1bac69784867f93ef55b976c4f1db1eae50b109fb9a80c5a084685d",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'><say-as interpret-as='characters'>X</say-as></prosody></voice></speak>",
+  "text": "X",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "letter.y.en": {
+  "approval": "carried from the heard file 45bf85d163f2 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.593,
+  "generated_at": "2026-11-23T16:58:04+00:00",
+  "sha256": "45bf85d163f2a28b748ee22353655936783537db353ae6e418539b7705f504d3",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'><say-as interpret-as='characters'>Y</say-as></prosody></voice></speak>",
+  "text": "Y",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "letter.z.en": {
+  "approval": "carried from the heard file 4a5ab64e196c (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.64,
+  "generated_at": "2026-11-23T16:58:06+00:00",
+  "sha256": "4a5ab64e196c6095b2ec8ca3e1cfcfd50443cef801ea52a67db042e751f4fd9b",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'><say-as interpret-as='characters'>Z</say-as></prosody></voice></speak>",
+  "text": "Z",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "num.0.en": {
+  "approval": "carried from the heard file 0ad5dcaf18c7 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.773,
+  "generated_at": "2026-11-23T16:57:12+00:00",
+  "sha256": "8db39b3e82fa7d16e7a04f28083d5c85249d1b634b17a80077ecd0788652fd04",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>zero</prosody></voice></speak>",
+  "text": "zero",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "num.1.en": {
+  "approval": "carried from the heard file a3892592fe27 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.617,
+  "generated_at": "2026-11-23T16:57:13+00:00",
+  "sha256": "a3892592fe273b7b5c559c01afd4e131b0977c286c729274cf8b342f2d44fb84",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>one</prosody></voice></speak>",
+  "text": "one",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "num.10.en": {
+  "approval": "carried from the heard file 3c421112f595 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.634,
+  "generated_at": "2026-11-23T16:57:18+00:00",
+  "sha256": "3c421112f595a801285b5e7b94acb022eda6bce14f28012cbca1607e98b69fa0",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>ten</prosody></voice></speak>",
+  "text": "ten",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "num.2.en": {
+  "approval": "carried from the heard file c16ee6483331 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.612,
+  "generated_at": "2026-11-23T16:57:13+00:00",
+  "sha256": "c16ee6483331aa0c22fed117eefbc4ad12dc9070547ba4bc0f83b90075dad04e",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>two</prosody></voice></speak>",
+  "text": "two",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "num.3.en": {
+  "approval": "carried from the heard file a042fccc4499 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.59,
+  "generated_at": "2026-11-23T16:57:14+00:00",
+  "sha256": "a042fccc449990aa9cdaabae05f94a3ed57b25edf0cfb8da79f65bb2b43d286f",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>three</prosody></voice></speak>",
+  "text": "three",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "num.4.en": {
+  "approval": "carried from the heard file 45ecde4d02ef (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.718,
+  "generated_at": "2026-11-23T16:57:15+00:00",
+  "sha256": "d6aa3c0a6046b1b0a6ad5516e670d054e4db6b524aa4802d0411d716ce88d70d",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>four</prosody></voice></speak>",
+  "text": "four",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "num.5.en": {
+  "approval": "carried from the heard file 520fcae75829 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.759,
+  "generated_at": "2026-11-23T16:57:15+00:00",
+  "sha256": "0647dadbe416ffac1ee1f1f7e729e8da85afe7b053169d99a3f362c6911fb229",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>five</prosody></voice></speak>",
+  "text": "five",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "num.6.en": {
+  "approval": "carried from the heard file 276233e61bce (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.799,
+  "generated_at": "2026-11-23T16:57:16+00:00",
+  "sha256": "697b10102e599712ef9bea542e0f3299db539760b9b96d44d325aad24cb4bb45",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>six</prosody></voice></speak>",
+  "text": "six",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "num.7.en": {
+  "approval": "carried from the heard file 150bd2406a32 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.773,
+  "generated_at": "2026-11-23T16:57:17+00:00",
+  "sha256": "f048a5c6e32f8dd21c99f7c0e2845ae23ca9cda6ec9f7d2c6577a2e3869b9f1b",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>seven</prosody></voice></speak>",
+  "text": "seven",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "num.8.en": {
+  "approval": "carried from the heard file 628f776eab51 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.615,
+  "generated_at": "2026-11-23T16:57:17+00:00",
+  "sha256": "628f776eab516c805294c1af394feb14c156fcf14d773cf983dab4d242da822a",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>eight</prosody></voice></speak>",
+  "text": "eight",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "num.9.en": {
+  "approval": "carried from the heard file 596681565c30 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.694,
+  "generated_at": "2026-11-23T16:57:18+00:00",
+  "sha256": "596681565c30f3254e9bd87930ab0c687dce77fc65580abf9ebc9a2f17e3b3cb",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>nine</prosody></voice></speak>",
+  "text": "nine",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "shape.circle.en": {
+  "approval": "carried from the heard file e53990624e4f (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.775,
+  "generated_at": "2026-11-23T16:57:04+00:00",
+  "sha256": "22e0bf24d11332648c79d267ed6508925919b5562be587199383430be2a88a38",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>circle</prosody></voice></speak>",
+  "text": "circle",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "shape.cross.en": {
+  "approval": "carried from the heard file 274f5628a56d (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.772,
+  "generated_at": "2026-11-23T16:57:06+00:00",
+  "sha256": "a1ced4b2e366683a413c33193e7509c24ba26934bb786d74d6be126f98e18363",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>cross</prosody></voice></speak>",
+  "text": "cross",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "shape.heart.en": {
+  "approval": "carried from the heard file 05fc696c0a8e (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.664,
+  "generated_at": "2026-11-23T16:57:10+00:00",
+  "sha256": "05fc696c0a8e4515c832f12a6edc077d5d454f2f0706b023aa71617e29bd42b7",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>heart</prosody></voice></speak>",
+  "text": "heart",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "shape.line.en": {
+  "approval": "carried from the heard file 9341f557f3c5 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.685,
+  "generated_at": "2026-11-23T16:57:03+00:00",
+  "sha256": "9341f557f3c57fe68f4b5ac5981ae48d58d3c861ab0811e9ae7c093030b81e80",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>line</prosody></voice></speak>",
+  "text": "line",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "shape.square.en": {
+  "approval": "carried from the heard file 040cfe4c7e74 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.788,
+  "generated_at": "2026-11-23T16:57:09+00:00",
+  "sha256": "483cd574ab4443a97cda2065071f4d6604bb61e0ff6e326aec747805ffd34aad",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>square</prosody></voice></speak>",
+  "text": "square",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "shape.star.en": {
+  "approval": "carried from the heard file cc16ccf3baa9 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.745,
+  "generated_at": "2026-11-23T16:57:11+00:00",
+  "sha256": "407ee00bd22f278bf1f1df835e0b9a18535e5af8e9ae75a37f85594b02710e4a",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>star</prosody></voice></speak>",
+  "text": "star",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "shape.triangle.en": {
+  "approval": "carried from the heard file dd9389d878dd (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.899,
+  "generated_at": "2026-11-23T16:57:10+00:00",
+  "sha256": "f8d813ced21fea2ca689d86b0edd2313e88a5f918f4c2c85084f3e4717f4a432",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>triangle</prosody></voice></speak>",
+  "text": "triangle",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "shape.wave.en": {
+  "approval": "carried from the heard file d36dc1f3fbfe (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.667,
+  "generated_at": "2026-11-23T16:57:08+00:00",
+  "sha256": "d36dc1f3fbfe9018dee4e3f01e2e490311bfa83d373df21244f4e4ad019cd7d6",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>wave</prosody></voice></speak>",
+  "text": "wave",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "shape.zigzag.en": {
+  "approval": "carried from the heard file d06a2ff27515 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.881,
+  "generated_at": "2026-11-23T16:57:07+00:00",
+  "sha256": "4c5905121cfc58c8ca1fbdc9e80a8d716c652325a2621464c17c0f60ae1455b1",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>zigzag</prosody></voice></speak>",
+  "text": "zigzag",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "word.apple.en": {
+  "approval": "carried from the heard file 3a5891564890 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.642,
+  "generated_at": "2026-11-23T16:57:20+00:00",
+  "sha256": "3a5891564890d9f4136714e6732ed317268a375212a6da5241bfe9989198d8be",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>apple</prosody></voice></speak>",
+  "text": "apple",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "word.ball.en": {
+  "approval": "carried from the heard file 2ba648b3fcc7 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.586,
+  "generated_at": "2026-11-23T16:57:21+00:00",
+  "sha256": "2ba648b3fcc7d924bf36aa11ea00a22c8edcb0bbe7da27f069d871564c561bdc",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>ball</prosody></voice></speak>",
+  "text": "ball",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "word.box.en": {
+  "approval": "carried from the heard file 600d9c59da62 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.73,
+  "generated_at": "2026-11-23T16:58:03+00:00",
+  "sha256": "c05f15c541a889d6f6e72e6d43394c92f6fd9e7d069730a1b89708be3ebe6d8a",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>box</prosody></voice></speak>",
+  "text": "box",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "word.cat.en": {
+  "approval": "carried from the heard file 0e3e7c95bcee (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.692,
+  "generated_at": "2026-11-23T16:57:22+00:00",
+  "sha256": "0e3e7c95bcee19919b8d413b32611271c37bd20036041e4a8aff54fe727a2e9f",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>cat</prosody></voice></speak>",
+  "text": "cat",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "word.dog.en": {
+  "approval": "carried from the heard file a12c90c7552a (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.63,
+  "generated_at": "2026-11-23T16:57:24+00:00",
+  "sha256": "a12c90c7552ae2987847be45b44ba5e301ffb6f148896a1b34e16c8a13fd17ac",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>dog</prosody></voice></speak>",
+  "text": "dog",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "word.egg.en": {
+  "approval": "carried from the heard file 12335e98cd2c (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.613,
+  "generated_at": "2026-11-23T16:57:25+00:00",
+  "sha256": "12335e98cd2cc5b00fe57cee168af2bbd94deedeaef9eb3755c14b4ce62fd2f2",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>egg</prosody></voice></speak>",
+  "text": "egg",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "word.fish.en": {
+  "approval": "carried from the heard file 187f79b730b6 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.699,
+  "generated_at": "2026-11-23T16:57:27+00:00",
+  "sha256": "187f79b730b68510f0a060f01914a99bf29b615791a00cf79d467418003b6c61",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>fish</prosody></voice></speak>",
+  "text": "fish",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "word.goat.en": {
+  "approval": "carried from the heard file f70a71ad7643 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.615,
+  "generated_at": "2026-11-23T16:57:29+00:00",
+  "sha256": "f70a71ad764377ef92c37a3fdd3f077aef43d4d633c500a5f550e02218cdfefd",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>goat</prosody></voice></speak>",
+  "text": "goat",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "word.hat.en": {
+  "approval": "carried from the heard file 54d04c82ab44 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.679,
+  "generated_at": "2026-11-23T16:57:31+00:00",
+  "sha256": "54d04c82ab44d0a7a7f837f9e4c02555841d7b957602753d0ec06c6f9589d631",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>hat</prosody></voice></speak>",
+  "text": "hat",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "word.ice-cream.en": {
+  "approval": "carried from the heard file 9c407dc036b7 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.935,
+  "generated_at": "2026-11-23T16:57:33+00:00",
+  "sha256": "4e5bf3e305a4e73091706f9d7958e6b54ef6fa30c03ec3c0c37144dfe870db79",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>ice cream</prosody></voice></speak>",
+  "text": "ice cream",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "word.juice.en": {
+  "approval": "carried from the heard file 87cd2f1fa993 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.681,
+  "generated_at": "2026-11-23T16:57:35+00:00",
+  "sha256": "87cd2f1fa993a072d028d1204d355f5d1224cba1ed0832de4394050e96ee63b6",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>juice</prosody></voice></speak>",
+  "text": "juice",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "word.kite.en": {
+  "approval": "carried from the heard file a52d3eb8b004 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.677,
+  "generated_at": "2026-11-23T16:57:37+00:00",
+  "sha256": "a52d3eb8b004b09e92c49dbdf8e209ec41c31fbffb64dede63b868d7b9b81c0f",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>kite</prosody></voice></speak>",
+  "text": "kite",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "word.leaf.en": {
+  "approval": "carried from the heard file ff1c1b50b77b (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.666,
+  "generated_at": "2026-11-23T16:57:39+00:00",
+  "sha256": "ff1c1b50b77b904dc11a7d2d6a28715f9859ec91ca7224374a9e304e2bc4f4ab",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>leaf</prosody></voice></speak>",
+  "text": "leaf",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "word.mouse.en": {
+  "approval": "carried from the heard file 00dc675376ce (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.643,
+  "generated_at": "2026-11-23T16:57:41+00:00",
+  "sha256": "00dc675376cecb8186ecf178d2b2ab9358ed231673ead203c5e9528118c078ea",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>mouse</prosody></voice></speak>",
+  "text": "mouse",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "word.nose.en": {
+  "approval": "carried from the heard file b2c3cd344ea4 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.703,
+  "generated_at": "2026-11-23T16:57:43+00:00",
+  "sha256": "b2c3cd344ea478a79f690d4fecf3afc921f5394497b6aaafa0a69b3ac0d64acd",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>nose</prosody></voice></speak>",
+  "text": "nose",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "word.octopus.en": {
+  "approval": "carried from the heard file 3459fce69ad0 (length diff 0.0 ms, corr 0.9999)",
+  "duration": 1.031,
+  "generated_at": "2026-11-23T16:57:45+00:00",
+  "sha256": "2623b85d619dad72c1d96004bb39e86b576c0d26529add365389893110c13c27",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>octopus</prosody></voice></speak>",
+  "text": "octopus",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "word.pig.en": {
+  "approval": "carried from the heard file ccb16a05e1a0 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.577,
+  "generated_at": "2026-11-23T16:57:47+00:00",
+  "sha256": "ccb16a05e1a0290f33ee54c2c2ce0b9e76f0564045c5eebb139777a455fe1ffd",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>pig</prosody></voice></speak>",
+  "text": "pig",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "word.quack.en": {
+  "approval": "carried from the heard file b874f5d178de (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.719,
+  "generated_at": "2026-11-23T16:57:49+00:00",
+  "sha256": "345322cd00fa112b44603be323798bf5d82931c0c6937517361d2008520b3885",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>quack</prosody></voice></speak>",
+  "text": "quack",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "word.rabbit.en": {
+  "approval": "carried from the heard file 8b6658a0aa41 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.746,
+  "generated_at": "2026-11-23T16:57:51+00:00",
+  "sha256": "d014a743c845f37fdf77f86ff4f5ae5265655b01d6a95d484d5dc00afd76f5fb",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>rabbit</prosody></voice></speak>",
+  "text": "rabbit",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "word.sun.en": {
+  "approval": "carried from the heard file 5fe8abaa8ef7 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.709,
+  "generated_at": "2026-11-23T16:57:53+00:00",
+  "sha256": "5fe8abaa8ef77e9f7a8f8496ef9ffd43807e030193621c56c4e953ccf89ba3b1",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>sun</prosody></voice></speak>",
+  "text": "sun",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "word.turtle.en": {
+  "approval": "carried from the heard file a4f0b84a78b1 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.661,
+  "generated_at": "2026-11-23T16:57:55+00:00",
+  "sha256": "a4f0b84a78b1bfe2cb0f321d38997e4eb687bfda8455df9540c1f121cec55837",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>turtle</prosody></voice></speak>",
+  "text": "turtle",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "word.umbrella.en": {
+  "approval": "carried from the heard file caaf11883696 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.821,
+  "generated_at": "2026-11-23T16:57:57+00:00",
+  "sha256": "46e6bf39644ec7e4e214a4c27961170d75b9890d7bdf9ab1e6bcfad0804625ed",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>umbrella</prosody></voice></speak>",
+  "text": "umbrella",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "word.van.en": {
+  "approval": "carried from the heard file 4532764613b9 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.631,
+  "generated_at": "2026-11-23T16:57:59+00:00",
+  "sha256": "4532764613b942c1880e834a569d28d31ca49ed37740f851cd230dc24eaa3314",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>van</prosody></voice></speak>",
+  "text": "van",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "word.whale.en": {
+  "approval": "carried from the heard file f0d4a33f3979 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.629,
+  "generated_at": "2026-11-23T16:58:01+00:00",
+  "sha256": "f0d4a33f39797bc742a95718e72e35df7f5170665e71d501562db5f82a210f50",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>whale</prosody></voice></speak>",
+  "text": "whale",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "word.yarn.en": {
+  "approval": "carried from the heard file 5e5992df91ce (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.623,
+  "generated_at": "2026-11-23T16:58:05+00:00",
+  "sha256": "5e5992df91ce995dba5dc24cb689dd593c6665d7b233cf468cd0ede27f022ebf",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>yarn</prosody></voice></speak>",
+  "text": "yarn",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "word.zebra.en": {
+  "approval": "carried from the heard file f9bc5da803a1 (length diff 0.0 ms, corr 1.0000)",
+  "duration": 0.731,
+  "generated_at": "2026-11-23T16:58:07+00:00",
+  "sha256": "f9bc5da803a1894117e69cb5f19074dc25aedd41befeae3c91e6db96ffcb07b8",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>zebra</prosody></voice></speak>",
+  "text": "zebra",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ }
+}
