@@ -77,8 +77,18 @@ def test_publish_paths_link_targets_and_secrets(repo, name, value):
 
 def test_public_email_exceptions_and_invalid_patterns(repo):
     (repo / "contacts").write_text("\n".join([PUBLIC, "a@example.org", "c@example.com",
-                                             "b@example.net", "name@project.example"]))
+                                             "b@example.net", "name@project.example",
+                                             "Co-Authored-By: Claude <noreply@anthropic.com>"]))
     check(repo, ok=True)
+    # Built at run time: written out, these addresses would trip this repo's own check.
+    for local, domain in (("someone", "anthropic.com"), ("xnoreply", "anthropic.com"),
+                          ("noreply", "anthropic.com.evil.net"), ("noreply", "anthropic.company"),
+                          ("parent!noreply", "anthropic.com"), ("jos\u00e9noreply", "anthropic.com"),
+                          ("<noreply", "anthropic.com.\u516c\u53f8.cn>"), ("<NoReply", "anthropic.com>"),
+                          ("'noreply", "anthropic.com'"), ("noreply", "anthropic.com")):
+        (repo / "near").write_text(local + "@" + domain)
+        check(repo, ok=False)
+    (repo / "near").unlink()
     for invalid in ("", "# comment\n  \n", "[bad regex"):
         (repo / ".privacy-patterns").write_text(invalid)
         output = check(repo, ok=False)

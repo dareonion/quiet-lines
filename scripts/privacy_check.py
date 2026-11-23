@@ -18,7 +18,11 @@ NOREPLY = re.compile(rb"[^@\s]+@users\.noreply\.github\.com", re.I)
 # Check the whole domain, including any further labels after an apparent public suffix.
 LABEL = r"[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
 PUBLIC_DOMAIN = rf"(?:users\.noreply\.github\.com|example\.(?:com|org|net)|(?:{LABEL}\.)+example)"
-EMAIL = (rf"[a-z0-9_.%+'-]+@(?!{PUBLIC_DOMAIN}(?![a-z0-9-]|\.[a-z0-9-]))"
+# One public address, only in its commit-trailer form "Co-Authored-By: Claude <noreply@anthropic.com>":
+# right after "<", exact case, closed by ">". The lookbehind makes a match start where the address
+# starts, so the exception can't be dodged by starting later (a leftmost match always starts there).
+PUBLIC_ADDRESS = r"(?<=<)(?-i:noreply@anthropic\.com>)"
+EMAIL = (rf"(?<![a-z0-9_.%+'-])(?!{PUBLIC_ADDRESS})[a-z0-9_.%+'-]+@(?!{PUBLIC_DOMAIN}(?![a-z0-9-]|\.[a-z0-9-]))"
          rf"(?:{LABEL}\.)+[a-z]{{2,}}\b")
 CREDENTIALS = [
     r"AKIA[0-9A-Z]{16}", r"-----BEGIN [A-Z ]*PRIVATE KEY", r"gh[pousr]_[a-z0-9]{30,}",
