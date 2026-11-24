@@ -64,7 +64,7 @@ TAIWAN_ORDER = {
 }
 # Known form differences, kept deliberately (all tiny for a toddler):
 # - 四, 日: Taiwan's standard ends stroke 2 with a small hook (橫折鉤); the data has none.
-# - 雨 (look-and-listen only): Taiwan's inner strokes are 點, 挑, 撇, 點; the data has four 點.
+# - 雨: Taiwan's inner strokes are 點, 挑, 撇, 點; the data has four 點 (Normal tracing follows the data's way).
 # - 目, 魚, 鳥: some inner bars stop short of the frame.
 # - 耳: MoE sources disagree; the data matches the archived MoE player and CNS 11643, so it stays.
 

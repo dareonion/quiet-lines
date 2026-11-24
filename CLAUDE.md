@@ -75,8 +75,8 @@ big, very forgiving finger tracing. Letters and characters are exposure, not han
 ## Content decisions
 
 - v1 has 81 items and 136 clips: 13 shapes (the balloon and ice cream came on 2026-11-23; the ice
-  cream's English reuses the letter I's "ice cream"), 0–10, A–Z, and 31 characters. Characters with 6 or fewer
-  strokes are traceable; 魚 鳥 馬 雨 are look-and-listen.
+  cream's English reuses the letter I's "ice cream"), 0–10, A–Z, and 31 characters. Every item is traceable: 魚 鳥 馬 雨
+  (8 to 11 strokes) were look-and-listen until 2026-11-23, when they were asked for.
 - 花 was replaced by 耳: the data has the mainland 7-stroke form (3-stroke 艹), and Taiwan's
   standard is 8 strokes. Picture words: I is 🍦 ice cream and V is 🚐 van ("insect" and "violin" were
   the draft's picks).

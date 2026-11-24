@@ -100,7 +100,7 @@ def test_counting_and_picture_words(catalog):
                 assert word.startswith(glyph.lower())
         if kind == "hanzi":
             assert type(item["strokes"]) is int and item["strokes"] > 0
-            assert item["trace"] is (item["strokes"] <= 6)
+            assert item["trace"] is True   # all 31; 魚 鳥 馬 雨 (8 to 11 strokes) were look-and-listen until 2026-11-23
             if glyph in HANZI[:10]:
                 assert item["clips"] == {"zh": f"num.{HANZI.index(glyph) + 1}.zh"}
             if glyph in HANZI[:10] + "上下":

@@ -1742,7 +1742,7 @@
         "zh": "char.yu2.zh"
       },
       "strokes": 11,
-      "trace": false
+      "trace": true
     },
     {
       "id": "char.niao3",
@@ -1758,7 +1758,7 @@
         "zh": "char.niao3.zh"
       },
       "strokes": 11,
-      "trace": false
+      "trace": true
     },
     {
       "id": "char.ma3",
@@ -1774,7 +1774,7 @@
         "zh": "char.ma3.zh"
       },
       "strokes": 10,
-      "trace": false
+      "trace": true
     },
     {
       "id": "char.niu2",
@@ -1838,7 +1838,7 @@
         "zh": "char.yu3.zh"
       },
       "strokes": 8,
-      "trace": false
+      "trace": true
     },
     {
       "id": "char.shang4",

@@ -197,6 +197,14 @@ def _controlled(page, timeout: float = 20):
     raise AssertionError("the page never came under its service worker")
 
 
+def _home(page, server):
+    """Open Home on a fresh profile and wait out the first install, which reloads Home onto the worker
+    (main.js): a tap made just then is lost with the old page. Under load that raced the tests' first
+    taps (pickers, layout)."""
+    page.goto(server["base"] + "/")
+    _controlled(page)
+
+
 def _wait_for_waiting_worker(page, seconds: float = 15) -> bool:
     # (wait_for_function treats a returned Promise as truthy, so poll inside the page instead.)
     return page.evaluate(
@@ -265,8 +273,7 @@ def _offline_ready(page):
 
 @both_hosts
 def test_home_renders_and_line_traces(server, page):
-    page.goto(server["base"] + "/")
-    _ready(page)
+    _home(page, server)
     assert page.locator(".tile[data-area]").count() == 5
     _open_trace(page)
     _trace(page)
@@ -278,8 +285,7 @@ def test_home_renders_and_line_traces(server, page):
 
 
 def test_rotation_keeps_progress(server, page):
-    page.goto(server["base"] + "/")
-    _ready(page)
+    _home(page, server)
     _open_trace(page)
     _trace(page, 0.0, 0.5)
     before = _covered_fraction(page)
@@ -296,8 +302,7 @@ def test_rotation_keeps_progress(server, page):
 
 @both_hosts
 def test_parent_gate_needs_the_full_hold(server, page):
-    page.goto(server["base"] + "/")
-    _ready(page)
+    _home(page, server)
     gear = page.locator(".parent-corner")
     gear.click()                                    # a tap does nothing
     page.wait_for_timeout(300)
@@ -562,8 +567,7 @@ def test_update_waits_for_home_then_serves_new_clip(server, page, code_change):
 def test_representative_glyphs_trace_in_the_browser(server, page):
     """The surface + glyph layout in a real page (every glyph's data is covered fast by
     app/js/trace/glyphs.test.js): one of each kind, plus the shared-end and sharp-corner cases."""
-    page.goto(server["base"] + "/")
-    _ready(page)
+    _home(page, server)
     failed = []
     for item in [{"id": i} for i in ("shape.star", "shape.heart", "num.10", "letter.b", "letter.d", "char.kou3", "char.shui3")]:
         page.evaluate(f"location.hash = '#/trace/{item['id']}'")
@@ -578,8 +582,7 @@ def test_representative_glyphs_trace_in_the_browser(server, page):
 def test_shapes_trace_in_any_order_and_letters_in_order(server, page, ease):
     """Shapes have no handwriting order, in either mode: the cross's horizontal line can come
     first. A letter's strokes still go in order: T's bar first doesn't count, but its stem does."""
-    page.goto(server["base"] + "/")
-    _ready(page)
+    _home(page, server)
     page.evaluate(f"localStorage.setItem('toddler.settings.v1', JSON.stringify({{ease: '{ease}'}}))")
     for item in ("shape.cross", "letter.t"):
         page.goto(server["base"] + f"/#/trace/{item}")
@@ -597,8 +600,7 @@ def test_shapes_trace_in_any_order_and_letters_in_order(server, page, ease):
 
 @both_hosts
 def test_pickers_page_and_cards_open(server, page):
-    page.goto(server["base"] + "/")
-    _ready(page)
+    _home(page, server)
     page.locator('.tile[data-area="letters"]').click()
     expect(page.locator(".item-tile")).to_have_count(6)      # retries: the page renders after the tap
     expect(page.locator('[data-act="prev"]')).to_be_hidden()
@@ -622,8 +624,7 @@ def test_pickers_page_and_cards_open(server, page):
 )
 @both_hosts
 def test_counting_counts_each_object_once(server, page, lang, expected):
-    page.goto(server["base"] + "/")
-    _ready(page)
+    _home(page, server)
     page.evaluate(f"localStorage.setItem('toddler.settings.v1', JSON.stringify({{lang: '{lang}'}}))")
     page.goto(server["base"] + "/#/card/num.3")
     _ready(page)
@@ -655,8 +656,7 @@ def test_counting_counts_each_object_once(server, page, lang, expected):
 
 @both_hosts
 def test_draw_leaves_ink_and_new_page_clears(server, page):
-    page.goto(server["base"] + "/")
-    _ready(page)
+    _home(page, server)
     page.locator('.tile[data-area="draw"]').click()
     c = page.locator(".draw-stage canvas").bounding_box()
     page.mouse.move(c["x"] + 100, c["y"] + 100)
@@ -677,8 +677,7 @@ CHILD_TARGETS = ".round, .tile, .crayon, .count-obj, .card-glyph, .card-emoji"
 @pytest.mark.parametrize("vp", VIEWPORTS, ids=lambda v: f"{v['width']}x{v['height']}")
 def test_child_targets_are_at_least_88pt_and_fit(server, page, vp):
     page.set_viewport_size(vp)
-    page.goto(server["base"] + "/")
-    _ready(page)
+    _home(page, server)
     for h in ["#/", "#/area/letters/0", "#/card/num.7", "#/card/letter.a", "#/card/char.shan1",
               "#/trace/char.shan1", "#/draw"]:
         page.evaluate(f"location.hash = '{h}'")
@@ -832,8 +831,7 @@ def test_pencil_tapping_a_crayon_also_lifts_the_hands_ink(server, page):
 
 
 def test_a_resting_hand_does_not_open_the_parent_area(server, page):
-    page.goto(server["base"] + "/")
-    _ready(page)
+    _home(page, server)
     hand = _Hand(page)
     gear = _centre(page, ".parent-corner")
     hand.hover(gear[0] - 300, gear[1] - 300)            # the Pencil hovering nearby (on screen)
@@ -850,8 +848,7 @@ def test_a_resting_hand_does_not_open_the_parent_area(server, page):
 
 
 def test_trace_follows_the_pencil_not_a_hand_on_the_line(server, page):
-    page.goto(server["base"] + "/")
-    _ready(page)
+    _home(page, server)
     _open_trace(page)
     pts = page.evaluate("window.__trace.strokePts[0]")
     box = page.locator(".trace-stage canvas").bounding_box()
@@ -872,8 +869,7 @@ def test_trace_follows_the_pencil_not_a_hand_on_the_line(server, page):
 @both_hosts
 def test_every_item_opens_a_card_drawn_from_stroke_data(server, page):
     catalog = json.loads((REPO / "app/content/catalog.json").read_text())
-    page.goto(server["base"] + "/")
-    _ready(page)
+    _home(page, server)
     bad = []
     for item in catalog["items"]:
         page.evaluate(f"location.hash = '#/card/{item['id']}'")
