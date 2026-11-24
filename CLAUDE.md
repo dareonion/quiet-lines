@@ -176,7 +176,7 @@ uv run --group voices python scripts/check_tones.py voices/zh-yunjhe --male   # 
 uv run --group voices python scripts/carry_approvals.py voices/en-guy        # after an S0 regeneration
     # reads the immutable heard approvals in voices-heard/<pack>/approved.json; refuses HD voices
 scripts/privacy_check.sh [HEAD [site]]   # before any push: private patterns, data files, credentials
-    # audio must be an approved S0 pack clip (audio-only MP4); only its tags are text-scanned (needs ffprobe)
+    # audio must be an approved S0 pack clip (audio-only MP4); only its tags are text-scanned (needs rg, ffprobe)
 ```
 
 The hosted build fails unless every clip in each pack matches that pack's `approved.json`. `--preview`

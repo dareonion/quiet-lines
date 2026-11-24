@@ -108,7 +108,10 @@ def scan_files(directory, patterns):
     for pattern in CREDENTIALS:
         credential_args.extend(("-e", pattern))
     for args in (["-f", str(patterns)], credential_args):
-        scan = subprocess.run([*flags, *args, "."], cwd=directory, capture_output=True)
+        try:
+            scan = subprocess.run([*flags, *args, "."], cwd=directory, capture_output=True)
+        except FileNotFoundError:
+            raise CheckError("ripgrep (rg) is needed to scan") from None
         if scan.returncode == 1:
             continue
         if scan.returncode != 0:

@@ -19,7 +19,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
-      - run: sudo apt-get install -y ffmpeg
+      - run: sudo apt-get install -y ffmpeg ripgrep   # ripgrep: scripts/privacy_check.py
       - run: uv sync --frozen --group voices
       - run: uv run playwright install --with-deps chromium
       - run: node --test 'app/js/**/*.test.js'

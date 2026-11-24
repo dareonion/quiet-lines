@@ -33,10 +33,15 @@ def repo(tmp_path):
     return tmp_path
 
 
-def check(repo, *args, ok):
+def check(repo, *args, ok, error=False):
+    """ok: passes. Otherwise it must fail with findings, or (error=True) refuse to run: a missing tool
+    or bad configuration must never pass for a finding (CI once lacked ripgrep and many did)."""
     result = subprocess.run(["scripts/privacy_check.sh", *args], cwd=repo, capture_output=True, text=True)
     assert (result.returncode == 0) == ok, result
-    return result.stdout + result.stderr
+    output = result.stdout + result.stderr
+    if not ok:
+        assert ("privacy check FAILED (" in output) == error, output
+    return output
 
 
 def test_hidden_files_staged_blobs_and_deleted_history(repo):
@@ -91,7 +96,7 @@ def test_public_email_exceptions_and_invalid_patterns(repo):
     (repo / "near").unlink()
     for invalid in ("", "# comment\n  \n", "[bad regex"):
         (repo / ".privacy-patterns").write_text(invalid)
-        output = check(repo, ok=False)
+        output = check(repo, ok=False, error=True)
         assert "bad regex" not in output
 
 
