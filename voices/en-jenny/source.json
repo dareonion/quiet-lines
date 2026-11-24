@@ -1,4 +1,104 @@
 {
+ "count.1.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.9,
+  "generated_at": "2026-11-24T00:17:44+00:00",
+  "sha256": "cbf8e2e848227bb4b1dd76e5d2cfb66c65ed8dd6a9de299f6baf667c6fb77d2f",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>one apple</prosody></voice></speak>",
+  "text": "one apple",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "count.10.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.209,
+  "generated_at": "2026-11-24T00:17:54+00:00",
+  "sha256": "9f80b6727ec562c376b938f09e24e3dc7795082d0b6a288238c49df9fee08596",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>ten bananas</prosody></voice></speak>",
+  "text": "ten bananas",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "count.2.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.961,
+  "generated_at": "2026-11-24T00:17:45+00:00",
+  "sha256": "1b35749c42529e895f8e124d04e4de238e617af1a604b11acb0ce4da0b161dad",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>two fish</prosody></voice></speak>",
+  "text": "two fish",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "count.3.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.04,
+  "generated_at": "2026-11-24T00:17:46+00:00",
+  "sha256": "36485c2809cb51d4472da5d03588991b561e15668c4f01c13a344d9bd5125785",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>three ducks</prosody></voice></speak>",
+  "text": "three ducks",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "count.4.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.149,
+  "generated_at": "2026-11-24T00:17:47+00:00",
+  "sha256": "20cb7f9361670a5862ca4a3ae0dcd796ed69aaa5dc0d3dcf627eee230596e925",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>four pears</prosody></voice></speak>",
+  "text": "four pears",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "count.5.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.198,
+  "generated_at": "2026-11-24T00:17:48+00:00",
+  "sha256": "93173c93921525c18298e371e282ef1e0def9bf131ccb722e9f7549a5ca3e25c",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>five turtles</prosody></voice></speak>",
+  "text": "five turtles",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "count.6.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.232,
+  "generated_at": "2026-11-24T00:17:50+00:00",
+  "sha256": "3c4c1f23b6a4c889b875ac943338f7f180e2d857bb5ebd73c52c39a624e48072",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>six carrots</prosody></voice></speak>",
+  "text": "six carrots",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "count.7.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.3,
+  "generated_at": "2026-11-24T00:17:51+00:00",
+  "sha256": "c6247e03e769df6ef7fe92e94d23a14ddffcaba56a28865138810afcf15542f1",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>seven lemons</prosody></voice></speak>",
+  "text": "seven lemons",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "count.8.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.075,
+  "generated_at": "2026-11-24T00:17:52+00:00",
+  "sha256": "643a7feab1e058d0cc468dd49340663515eca290bb8eea5061f45f2d695cf832",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>eight rabbits</prosody></voice></speak>",
+  "text": "eight rabbits",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "count.9.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.191,
+  "generated_at": "2026-11-24T00:17:53+00:00",
+  "sha256": "658e7d261c30a570aefd50cf4e8b40adec8e5c2ab7ac7099556ff6a49c8ce0cb",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>nine oranges</prosody></voice></speak>",
+  "text": "nine oranges",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
  "letter.a.en": {
   "approval": "carried from the heard file c91ca7344488 (length diff 0.0 ms, corr 1.0000)",
   "duration": 0.59,
@@ -366,6 +466,16 @@
   "sha256": "596681565c30f3254e9bd87930ab0c687dce77fc65580abf9ebc9a2f17e3b3cb",
   "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>nine</prosody></voice></speak>",
   "text": "nine",
+  "tier": "S0",
+  "voice": "en-US-JennyNeural"
+ },
+ "shape.balloon.en": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.761,
+  "generated_at": "2026-11-24T00:17:42+00:00",
+  "sha256": "b9d922a576ae334375db2766c44b10a54462e16099b351eb7c5edb089b4f957c",
+  "ssml": "<speak version='1.0' xml:lang='en-US'><voice name='en-US-JennyNeural'><prosody rate='-10%'>balloon</prosody></voice></speak>",
+  "text": "balloon",
   "tier": "S0",
   "voice": "en-US-JennyNeural"
  },

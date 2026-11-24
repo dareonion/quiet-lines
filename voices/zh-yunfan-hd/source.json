@@ -230,6 +230,106 @@
   "tier": "S0",
   "voice": "zh-CN-Yunfan:DragonHDLatestNeural"
  },
+ "count.1.zh": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.067,
+  "generated_at": "2026-11-24T00:18:56+00:00",
+  "sha256": "e2b6ca2243fa8a96a639452b42a86111117fa339c1aa2e953ab88f45ab42b198",
+  "ssml": "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='zh-TW'><voice name='zh-CN-Yunfan:DragonHDLatestNeural'><lang xml:lang='zh-TW'><prosody rate='-10%'>一顆蘋果</prosody></lang></voice></speak>",
+  "text": "一顆蘋果",
+  "tier": "S0",
+  "voice": "zh-CN-Yunfan:DragonHDLatestNeural"
+ },
+ "count.10.zh": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.293,
+  "generated_at": "2026-11-24T00:19:07+00:00",
+  "sha256": "65ce9f9dd9a7d3360750938cb395b26220b9e11d1c1fbc3bbe887f93da3eb9f6",
+  "ssml": "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='zh-TW'><voice name='zh-CN-Yunfan:DragonHDLatestNeural'><lang xml:lang='zh-TW'><prosody rate='-10%'>十根香蕉</prosody></lang></voice></speak>",
+  "text": "十根香蕉",
+  "tier": "S0",
+  "voice": "zh-CN-Yunfan:DragonHDLatestNeural"
+ },
+ "count.2.zh": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.013,
+  "generated_at": "2026-11-24T00:18:57+00:00",
+  "sha256": "8329fbeacb4980e3b439f033c6d7e70ed2b49b5ca4df5fa9f453bcd2103949e0",
+  "ssml": "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='zh-TW'><voice name='zh-CN-Yunfan:DragonHDLatestNeural'><lang xml:lang='zh-TW'><prosody rate='-10%'>兩條魚</prosody></lang></voice></speak>",
+  "text": "兩條魚",
+  "tier": "S0",
+  "voice": "zh-CN-Yunfan:DragonHDLatestNeural"
+ },
+ "count.3.zh": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.399,
+  "generated_at": "2026-11-24T00:18:58+00:00",
+  "sha256": "b7a9b6fcf06bb62e92b12b3b57ab36f583e1e5a9ee9472b72d3a7a5d1f15a1b2",
+  "ssml": "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='zh-TW'><voice name='zh-CN-Yunfan:DragonHDLatestNeural'><lang xml:lang='zh-TW'><prosody rate='-10%'>三隻鴨子</prosody></lang></voice></speak>",
+  "text": "三隻鴨子",
+  "tier": "S0",
+  "voice": "zh-CN-Yunfan:DragonHDLatestNeural"
+ },
+ "count.4.zh": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.324,
+  "generated_at": "2026-11-24T00:18:59+00:00",
+  "sha256": "760ff037e26fb3da363cdf5cb4e872025be9f99aebdf37eaf808c6331dc1f2d5",
+  "ssml": "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='zh-TW'><voice name='zh-CN-Yunfan:DragonHDLatestNeural'><lang xml:lang='zh-TW'><prosody rate='-10%'>四顆梨子</prosody></lang></voice></speak>",
+  "text": "四顆梨子",
+  "tier": "S0",
+  "voice": "zh-CN-Yunfan:DragonHDLatestNeural"
+ },
+ "count.5.zh": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.197,
+  "generated_at": "2026-11-24T00:19:01+00:00",
+  "sha256": "52e3427b9081a8bcba58830ddd04b415bf935b3853b0d28eadadc069ece5680e",
+  "ssml": "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='zh-TW'><voice name='zh-CN-Yunfan:DragonHDLatestNeural'><lang xml:lang='zh-TW'><prosody rate='-10%'>五隻烏龜</prosody></lang></voice></speak>",
+  "text": "五隻烏龜",
+  "tier": "S0",
+  "voice": "zh-CN-Yunfan:DragonHDLatestNeural"
+ },
+ "count.6.zh": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.48,
+  "generated_at": "2026-11-24T00:19:02+00:00",
+  "sha256": "b3dd8073ccf1290764ee1910295a0922e32c331b2f8fba0ce1652c440059f0de",
+  "ssml": "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='zh-TW'><voice name='zh-CN-Yunfan:DragonHDLatestNeural'><lang xml:lang='zh-TW'><prosody rate='-10%'>六根紅蘿蔔</prosody></lang></voice></speak>",
+  "text": "六根紅蘿蔔",
+  "tier": "S0",
+  "voice": "zh-CN-Yunfan:DragonHDLatestNeural"
+ },
+ "count.7.zh": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.389,
+  "generated_at": "2026-11-24T00:19:03+00:00",
+  "sha256": "4ffba1343ecaf05554942a3a644505c9dc12d8712a0bee5c5742047fef7b6fcd",
+  "ssml": "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='zh-TW'><voice name='zh-CN-Yunfan:DragonHDLatestNeural'><lang xml:lang='zh-TW'><prosody rate='-10%'>七顆檸檬</prosody></lang></voice></speak>",
+  "text": "七顆檸檬",
+  "tier": "S0",
+  "voice": "zh-CN-Yunfan:DragonHDLatestNeural"
+ },
+ "count.8.zh": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.156,
+  "generated_at": "2026-11-24T00:19:04+00:00",
+  "sha256": "0b2dae0d960e0a9723d5b3dd6739606b172582d893184bab8a576d3001fb8c7c",
+  "ssml": "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='zh-TW'><voice name='zh-CN-Yunfan:DragonHDLatestNeural'><lang xml:lang='zh-TW'><prosody rate='-10%'>八隻兔子</prosody></lang></voice></speak>",
+  "text": "八隻兔子",
+  "tier": "S0",
+  "voice": "zh-CN-Yunfan:DragonHDLatestNeural"
+ },
+ "count.9.zh": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.081,
+  "generated_at": "2026-11-24T00:19:06+00:00",
+  "sha256": "85136b91fb7f2841ebf884fb27245eb0acd8f2ddb56b068043c7f2cedf506e2a",
+  "ssml": "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='zh-TW'><voice name='zh-CN-Yunfan:DragonHDLatestNeural'><lang xml:lang='zh-TW'><prosody rate='-10%'>九顆橘子</prosody></lang></voice></speak>",
+  "text": "九顆橘子",
+  "tier": "S0",
+  "voice": "zh-CN-Yunfan:DragonHDLatestNeural"
+ },
  "num.0.zh": {
   "approval": "direct listening 2026-11-23",
   "duration": 0.662,
@@ -351,6 +451,16 @@
   "tier": "S0",
   "voice": "zh-CN-Yunfan:DragonHDLatestNeural"
  },
+ "shape.balloon.zh": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.724,
+  "generated_at": "2026-11-24T00:18:53+00:00",
+  "sha256": "21ec9581bc317b2ea300efa52fdac6d9668c1cf928ba737beb8fcbc29df57e20",
+  "ssml": "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='zh-TW'><voice name='zh-CN-Yunfan:DragonHDLatestNeural'><lang xml:lang='zh-TW'><prosody rate='-10%'>氣球</prosody></lang></voice></speak>",
+  "text": "氣球",
+  "tier": "S0",
+  "voice": "zh-CN-Yunfan:DragonHDLatestNeural"
+ },
  "shape.circle.zh": {
   "approval": "direct listening 2026-11-23",
   "duration": 0.848,
@@ -381,6 +491,16 @@
   "sha256": "3ef1ff100c8dd2695195b64777f1c4811088c44d5b70f8b298461ea80f7ca643",
   "ssml": "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='zh-TW'><voice name='zh-CN-Yunfan:DragonHDLatestNeural'><lang xml:lang='zh-TW'><prosody rate='-10%'>愛心</prosody></lang></voice></speak>",
   "text": "愛心",
+  "tier": "S0",
+  "voice": "zh-CN-Yunfan:DragonHDLatestNeural"
+ },
+ "shape.ice-cream.zh": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.865,
+  "generated_at": "2026-11-24T00:18:54+00:00",
+  "sha256": "d9dbfcf8e99f58d06cb5575bca6d631a701d7785fe4218ef2b24d7d23eb5a1d9",
+  "ssml": "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='zh-TW'><voice name='zh-CN-Yunfan:DragonHDLatestNeural'><lang xml:lang='zh-TW'><prosody rate='-10%'>冰淇淋</prosody></lang></voice></speak>",
+  "text": "冰淇淋",
   "tier": "S0",
   "voice": "zh-CN-Yunfan:DragonHDLatestNeural"
  },

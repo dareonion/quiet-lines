@@ -82,3 +82,46 @@ for (const item of traceable) {
     }
   });
 }
+
+// Shapes trace "free" (engine.js): strokes in any order, from either end, in either mode, and a
+// closed shape from anywhere on it. Every shape, every size, both sparsities: its strokes in
+// reverse order, each forwards and backwards; a closed one also from 7 other places round it.
+const isClosed = (pts) => Math.hypot(pts[0][0] - pts.at(-1)[0], pts[0][1] - pts.at(-1)[1]) < 1;
+
+function traceFree(strokes, mode, { order, reverse = false, every, from = 0 }) {
+  const t = createTracer(strokes, { tolerance: TOL[mode], mode, step, free: true });
+  for (const i of order) {
+    let pts = strokes[i];
+    if (from && isClosed(pts)) {
+      const m = pts.length - 1, r = Math.round(from * m);
+      pts = [...pts.slice(r, m), ...pts.slice(0, r + 1)];
+    }
+    if (reverse) pts = pts.slice().reverse();
+    const k = every(pts.length);
+    const path = pts.filter((_, j) => j % k === 0).concat([pts.at(-1)]);
+    t.pointerDown(1, ...path[0]);
+    for (const p of path.slice(1)) t.pointerMove(1, ...p);
+    t.pointerUp(1, ...path.at(-1));
+  }
+  return t.complete;
+}
+
+for (const item of traceable.filter((i) => i.kind === 'shape')) {
+  test(`${item.id} traces in any order, either way, and (if closed) from anywhere`, () => {
+    for (const side of SIDES) {
+      const strokes = screenStrokes(item.glyph, side);
+      const order = strokes.map((_, i) => i).reverse();
+      const starts = strokes.some(isClosed) ? [0, 1, 2, 3, 4, 5, 6, 7].map((j) => j / 8) : [0];
+      for (const mode of ['easy', 'normal']) {
+        for (const [i, every] of SPARSE.entries()) {
+          for (const from of starts) {
+            for (const reverse of [false, true]) {
+              assert.ok(traceFree(strokes, mode, { order, reverse, every, from }),
+                `${mode}, strokes in reverse order${reverse ? ', each backwards' : ''}, from ${from}, side ${side}, sparsity ${i}`);
+            }
+          }
+        }
+      }
+    }
+  });
+}

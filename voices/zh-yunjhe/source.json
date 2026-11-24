@@ -234,6 +234,106 @@
   "tier": "S0",
   "voice": "zh-TW-YunJheNeural"
  },
+ "count.1.zh": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.005,
+  "generated_at": "2026-11-24T00:18:38+00:00",
+  "sha256": "f0c3c94ad210d531a81a551bf38765b7fa2b2d0223de855a5d632627402c69e7",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>一顆蘋果</prosody></voice></speak>",
+  "text": "一顆蘋果",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "count.10.zh": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.145,
+  "generated_at": "2026-11-24T00:18:52+00:00",
+  "sha256": "30742bfd474b830d3aff3c1edfa7831add5f891832481ca8097c580059fcc401",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>十根香蕉</prosody></voice></speak>",
+  "text": "十根香蕉",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "count.2.zh": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.033,
+  "generated_at": "2026-11-24T00:18:40+00:00",
+  "sha256": "7e52d87fda2807496f746f1132c96aa95b0863b3dc25cd67f6b4f813f3ca00ea",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>兩條魚</prosody></voice></speak>",
+  "text": "兩條魚",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "count.3.zh": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.171,
+  "generated_at": "2026-11-24T00:18:41+00:00",
+  "sha256": "5dc850d6b12d9b958d76369f27cce8ec9434545053b457db2ee3b6f0e0d8580c",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>三隻鴨子</prosody></voice></speak>",
+  "text": "三隻鴨子",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "count.4.zh": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.127,
+  "generated_at": "2026-11-24T00:18:43+00:00",
+  "sha256": "b0a2370129bcd17cac5f0437c6102db6b11e6b15c185abe4df2d5470f2f21acf",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>四顆梨子</prosody></voice></speak>",
+  "text": "四顆梨子",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "count.5.zh": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.981,
+  "generated_at": "2026-11-24T00:18:44+00:00",
+  "sha256": "bbb413309bbac675cfd1597ad85e45fc4feb2d39c1d2cede289781efb2e040d9",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>五隻烏龜</prosody></voice></speak>",
+  "text": "五隻烏龜",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "count.6.zh": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.15,
+  "generated_at": "2026-11-24T00:18:46+00:00",
+  "sha256": "a718cf32cc36a815d006201eefbfe930f1e554cb9124853c613dec55252cbcdd",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>六根紅蘿蔔</prosody></voice></speak>",
+  "text": "六根紅蘿蔔",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "count.7.zh": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.168,
+  "generated_at": "2026-11-24T00:18:47+00:00",
+  "sha256": "7dac3d78781560513aae023e1cfcc2acd599e0f8a5467f96c73a9fd90f426e2b",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>七顆檸檬</prosody></voice></speak>",
+  "text": "七顆檸檬",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "count.8.zh": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.059,
+  "generated_at": "2026-11-24T00:18:49+00:00",
+  "sha256": "45b91730d5c55581cde8124f28f3d08ca05229298ddde4497f0a48375c2bf95f",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>八隻兔子</prosody></voice></speak>",
+  "text": "八隻兔子",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "count.9.zh": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.128,
+  "generated_at": "2026-11-24T00:18:50+00:00",
+  "sha256": "f13f4046b2f7a5228d84f5e5555f4243b52c07a85a34fa49552e2483c737fb1c",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>九顆橘子</prosody></voice></speak>",
+  "text": "九顆橘子",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
  "num.0.zh": {
   "approval": "carried from the heard file b3ff68133654 (length diff 0.0 ms, corr 1.0000)",
   "cut": {
@@ -373,6 +473,16 @@
   "tier": "S0",
   "voice": "zh-TW-YunJheNeural"
  },
+ "shape.balloon.zh": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 0.892,
+  "generated_at": "2026-11-24T00:18:35+00:00",
+  "sha256": "59ce1874e3a339c39377a0db4dd72383043e11735beac2db7359c3a15ef08f1a",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>氣球</prosody></voice></speak>",
+  "text": "氣球",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
  "shape.circle.zh": {
   "approval": "carried from the heard file 221e342f4939 (length diff 0.0 ms, corr 1.0000)",
   "duration": 0.877,
@@ -400,6 +510,16 @@
   "sha256": "ff0b6b3b8acffad01cd19d772da33f5a8605f56c8eaaf375b8b74aaae390ebdd",
   "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>愛心</prosody></voice></speak>",
   "text": "愛心",
+  "tier": "S0",
+  "voice": "zh-TW-YunJheNeural"
+ },
+ "shape.ice-cream.zh": {
+  "approval": "direct listening 2026-11-23",
+  "duration": 1.054,
+  "generated_at": "2026-11-24T00:18:36+00:00",
+  "sha256": "ac2d5146168eafb3187c3dc5d99d7ca930265f6908d5f5ee17a53c40b1fbb97c",
+  "ssml": "<speak version='1.0' xml:lang='zh-TW'><voice name='zh-TW-YunJheNeural'><prosody rate='-10%'>冰淇淋</prosody></voice></speak>",
+  "text": "冰淇淋",
   "tier": "S0",
   "voice": "zh-TW-YunJheNeural"
  },

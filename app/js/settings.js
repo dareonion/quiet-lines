@@ -37,3 +37,16 @@ export function clipsToSay(item, settings = getSettings()) {
 export function countClips(n, settings = getSettings()) {
   return langsFor('number', settings).map((l) => `num.${n}.${l}`);
 }
+
+/**
+ * After the last object: what was counted, "five turtles" / 五隻烏龜, in the chosen language(s).
+ * Unless every chosen language's phrase can play (a self-hosted copy where nobody has recorded
+ * them yet), it says the count and then the number again, as before there were phrases. `has`
+ * says whether a clip can play (audio.js hasClip).
+ */
+export function countDoneClips(item, n, has, settings = getSettings()) {
+  const langs = langsFor('number', settings);
+  const phrases = langs.map((l) => item.count_clips?.[l]).filter((id) => id && has(id));
+  if (phrases.length === langs.length) return phrases;
+  return [...countClips(n, settings), ...clipsToSay(item, settings)];
+}

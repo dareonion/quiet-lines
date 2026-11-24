@@ -225,11 +225,12 @@ def _fetch_in_page(page, url: str) -> dict:
     )
 
 
-def _trace(page, start: float = 0.0, end: float = 1.0, reverse: bool = False):
-    """Drag the mouse along each stroke of the open trace screen, from fraction start to end."""
+def _trace(page, start: float = 0.0, end: float = 1.0, reverse: bool = False, order=None):
+    """Drag the mouse along each stroke of the open trace screen (or those in `order`), from
+    fraction start to end."""
     strokes = page.evaluate("window.__trace.strokePts")
     box = page.locator(".trace-stage canvas").bounding_box()
-    for pts in strokes:
+    for pts in [strokes[i] for i in order] if order is not None else strokes:
         pts = pts[::-1] if reverse else pts
         pts = pts[int(start * (len(pts) - 1)): int(end * (len(pts) - 1)) + 1]
         page.mouse.move(box["x"] + pts[0][0], box["y"] + pts[0][1])
@@ -573,6 +574,27 @@ def test_representative_glyphs_trace_in_the_browser(server, page):
     assert not failed, f"could not complete: {failed}"
 
 
+@pytest.mark.parametrize("ease", ["easy", "normal"])
+def test_shapes_trace_in_any_order_and_letters_in_order(server, page, ease):
+    """Shapes have no handwriting order, in either mode: the cross's horizontal line can come
+    first. A letter's strokes still go in order: T's bar first doesn't count, but its stem does."""
+    page.goto(server["base"] + "/")
+    _ready(page)
+    page.evaluate(f"localStorage.setItem('toddler.settings.v1', JSON.stringify({{ease: '{ease}'}}))")
+    for item in ("shape.cross", "letter.t"):
+        page.goto(server["base"] + f"/#/trace/{item}")
+        _ready(page)
+        page.wait_for_function(f"window.__trace && window.__trace.mode === '{ease}'")
+        _trace(page, order=[1, 0])
+        if item == "shape.cross":
+            assert page.evaluate("window.__trace.tracer.complete"), ease
+        else:
+            assert not page.evaluate("window.__trace.tracer.complete"), ease
+            assert page.evaluate("window.__trace.tracer.coverage()[0].done"), ease   # the stem counted
+            _trace(page, order=[1])
+            assert page.evaluate("window.__trace.tracer.complete"), ease
+
+
 @both_hosts
 def test_pickers_page_and_cards_open(server, page):
     page.goto(server["base"] + "/")
@@ -615,9 +637,14 @@ def test_counting_counts_each_object_once(server, page, lang, expected):
     objs.nth(2).click()
     assert page.locator(".count-obj.counted").count() == 3
     if "out" in server:
+        # The last object says what was counted, "three ducks" / 三隻鴨子: the hosted voices have
+        # every phrase. (The self-hosted copy here has no phrase recorded, so it says the number
+        # again, as before.)
+        langs = ["en", "zh"] if lang == "both" else [lang]
+        expected = expected[:-1] + [[f"count.3.{lang_}" for lang_ in langs]]
         default = {"en": "en-jenny", "zh": "zh-hsiaochen"}
         expected = [[f"{default[key.rsplit('.', 1)[1]]}/{key}" for key in count] for count in expected]
-    assert page.evaluate("window.__plays") == expected        # running count, then the number again
+    assert page.evaluate("window.__plays") == expected        # running count, then what was counted
     page.locator('[data-act="recount"]').click()              # count again: a fresh frame
     assert page.locator(".count-obj.counted").count() == 0
     page.goto(server["base"] + "/#/card/num.0")

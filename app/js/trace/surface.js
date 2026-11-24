@@ -14,13 +14,15 @@ export class TraceSurface {
   /**
    * @param {HTMLCanvasElement} canvas
    * @param {object} glyph  from resolveGlyph() (latin strokes or hanzi outlines + medians)
-   * @param {{mode?: 'easy'|'normal', onComplete?: () => void}} opts
+   * @param {{mode?: 'easy'|'normal', free?: boolean, onComplete?: () => void}} opts  free: a shape (any
+   *   stroke first, either way, a closed one from anywhere: engine.js)
    */
   constructor(canvas, glyph, opts = {}) {
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d');
     this.glyph = glyph;
     this.mode = opts.mode ?? 'easy';
+    this.free = !!opts.free;
     this.onComplete = opts.onComplete ?? (() => {});
     this.ink = new Map();          // pointerId -> {pts: [[x,y,t]], color}
     this.fading = [];              // finished ink trails, fading out
@@ -140,7 +142,7 @@ export class TraceSurface {
     this.strokePts = this.layout.strokePts;
     this.lineWidth = this.layout.lineWidth;
     const tolerance = this.mode === 'easy' ? 40 : 26;
-    this.tracer = createTracer(this.strokePts, { tolerance, mode: this.mode, step }, snap);
+    this.tracer = createTracer(this.strokePts, { tolerance, mode: this.mode, free: this.free, step }, snap);
     this.ink.clear();
     this.fading = [];
     this._kick();

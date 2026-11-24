@@ -91,6 +91,21 @@
       "text": "星星",
       "prompt": "請說：星星（xīngxing）"
     },
+    "shape.balloon.en": {
+      "lang": "en",
+      "text": "balloon",
+      "prompt": "Say: balloon"
+    },
+    "shape.balloon.zh": {
+      "lang": "zh",
+      "text": "氣球",
+      "prompt": "請說：氣球（qìqiú）"
+    },
+    "shape.ice-cream.zh": {
+      "lang": "zh",
+      "text": "冰淇淋",
+      "prompt": "請說：冰淇淋（bīngqílín）"
+    },
     "num.0.en": {
       "lang": "en",
       "text": "zero",
@@ -200,6 +215,106 @@
       "lang": "zh",
       "text": "十",
       "prompt": "請說：十（shí）"
+    },
+    "count.1.en": {
+      "lang": "en",
+      "text": "one apple",
+      "prompt": "Say: one apple"
+    },
+    "count.1.zh": {
+      "lang": "zh",
+      "text": "一顆蘋果",
+      "prompt": "請說：一顆蘋果（yì kē píngguǒ）"
+    },
+    "count.2.en": {
+      "lang": "en",
+      "text": "two fish",
+      "prompt": "Say: two fish"
+    },
+    "count.2.zh": {
+      "lang": "zh",
+      "text": "兩條魚",
+      "prompt": "請說：兩條魚（liǎng tiáo yú）"
+    },
+    "count.3.en": {
+      "lang": "en",
+      "text": "three ducks",
+      "prompt": "Say: three ducks"
+    },
+    "count.3.zh": {
+      "lang": "zh",
+      "text": "三隻鴨子",
+      "prompt": "請說：三隻鴨子（sān zhī yāzi）"
+    },
+    "count.4.en": {
+      "lang": "en",
+      "text": "four pears",
+      "prompt": "Say: four pears"
+    },
+    "count.4.zh": {
+      "lang": "zh",
+      "text": "四顆梨子",
+      "prompt": "請說：四顆梨子（sì kē lízi）"
+    },
+    "count.5.en": {
+      "lang": "en",
+      "text": "five turtles",
+      "prompt": "Say: five turtles"
+    },
+    "count.5.zh": {
+      "lang": "zh",
+      "text": "五隻烏龜",
+      "prompt": "請說：五隻烏龜（wǔ zhī wūguī）"
+    },
+    "count.6.en": {
+      "lang": "en",
+      "text": "six carrots",
+      "prompt": "Say: six carrots"
+    },
+    "count.6.zh": {
+      "lang": "zh",
+      "text": "六根紅蘿蔔",
+      "prompt": "請說：六根紅蘿蔔（liù gēn hóngluóbo）"
+    },
+    "count.7.en": {
+      "lang": "en",
+      "text": "seven lemons",
+      "prompt": "Say: seven lemons"
+    },
+    "count.7.zh": {
+      "lang": "zh",
+      "text": "七顆檸檬",
+      "prompt": "請說：七顆檸檬（qī kē níngméng）"
+    },
+    "count.8.en": {
+      "lang": "en",
+      "text": "eight rabbits",
+      "prompt": "Say: eight rabbits"
+    },
+    "count.8.zh": {
+      "lang": "zh",
+      "text": "八隻兔子",
+      "prompt": "請說：八隻兔子（bā zhī tùzi）"
+    },
+    "count.9.en": {
+      "lang": "en",
+      "text": "nine oranges",
+      "prompt": "Say: nine oranges"
+    },
+    "count.9.zh": {
+      "lang": "zh",
+      "text": "九顆橘子",
+      "prompt": "請說：九顆橘子（jiǔ kē júzi）"
+    },
+    "count.10.en": {
+      "lang": "en",
+      "text": "ten bananas",
+      "prompt": "Say: ten bananas"
+    },
+    "count.10.zh": {
+      "lang": "zh",
+      "text": "十根香蕉",
+      "prompt": "請說：十根香蕉（shí gēn xiāngjiāo）"
     },
     "letter.a.en": {
       "lang": "en",
@@ -723,6 +838,34 @@
       "trace": true
     },
     {
+      "id": "shape.balloon",
+      "kind": "shape",
+      "glyph": "latin:balloon",
+      "label": {
+        "en": "balloon",
+        "zh": "氣球"
+      },
+      "clips": {
+        "en": "shape.balloon.en",
+        "zh": "shape.balloon.zh"
+      },
+      "trace": true
+    },
+    {
+      "id": "shape.ice-cream",
+      "kind": "shape",
+      "glyph": "latin:ice-cream",
+      "label": {
+        "en": "ice cream",
+        "zh": "冰淇淋"
+      },
+      "clips": {
+        "en": "word.ice-cream.en",
+        "zh": "shape.ice-cream.zh"
+      },
+      "trace": true
+    },
+    {
       "id": "num.0",
       "kind": "number",
       "text": "0",
@@ -744,7 +887,11 @@
         "zh": "num.1.zh"
       },
       "count_emoji": "🍎",
-      "trace": true
+      "trace": true,
+      "count_clips": {
+        "en": "count.1.en",
+        "zh": "count.1.zh"
+      }
     },
     {
       "id": "num.2",
@@ -756,7 +903,11 @@
         "zh": "num.2.zh"
       },
       "count_emoji": "🐟",
-      "trace": true
+      "trace": true,
+      "count_clips": {
+        "en": "count.2.en",
+        "zh": "count.2.zh"
+      }
     },
     {
       "id": "num.3",
@@ -768,7 +919,11 @@
         "zh": "num.3.zh"
       },
       "count_emoji": "🦆",
-      "trace": true
+      "trace": true,
+      "count_clips": {
+        "en": "count.3.en",
+        "zh": "count.3.zh"
+      }
     },
     {
       "id": "num.4",
@@ -780,7 +935,11 @@
         "zh": "num.4.zh"
       },
       "count_emoji": "🍐",
-      "trace": true
+      "trace": true,
+      "count_clips": {
+        "en": "count.4.en",
+        "zh": "count.4.zh"
+      }
     },
     {
       "id": "num.5",
@@ -792,7 +951,11 @@
         "zh": "num.5.zh"
       },
       "count_emoji": "🐢",
-      "trace": true
+      "trace": true,
+      "count_clips": {
+        "en": "count.5.en",
+        "zh": "count.5.zh"
+      }
     },
     {
       "id": "num.6",
@@ -804,7 +967,11 @@
         "zh": "num.6.zh"
       },
       "count_emoji": "🥕",
-      "trace": true
+      "trace": true,
+      "count_clips": {
+        "en": "count.6.en",
+        "zh": "count.6.zh"
+      }
     },
     {
       "id": "num.7",
@@ -816,7 +983,11 @@
         "zh": "num.7.zh"
       },
       "count_emoji": "🍋",
-      "trace": true
+      "trace": true,
+      "count_clips": {
+        "en": "count.7.en",
+        "zh": "count.7.zh"
+      }
     },
     {
       "id": "num.8",
@@ -828,7 +999,11 @@
         "zh": "num.8.zh"
       },
       "count_emoji": "🐰",
-      "trace": true
+      "trace": true,
+      "count_clips": {
+        "en": "count.8.en",
+        "zh": "count.8.zh"
+      }
     },
     {
       "id": "num.9",
@@ -840,7 +1015,11 @@
         "zh": "num.9.zh"
       },
       "count_emoji": "🍊",
-      "trace": true
+      "trace": true,
+      "count_clips": {
+        "en": "count.9.en",
+        "zh": "count.9.zh"
+      }
     },
     {
       "id": "num.10",
@@ -852,7 +1031,11 @@
         "zh": "num.10.zh"
       },
       "count_emoji": "🍌",
-      "trace": true
+      "trace": true,
+      "count_clips": {
+        "en": "count.10.en",
+        "zh": "count.10.zh"
+      }
     },
     {
       "id": "letter.a",

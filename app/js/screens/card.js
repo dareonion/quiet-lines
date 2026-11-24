@@ -1,6 +1,6 @@
 import { icons } from '../icons.js';
-import { playSequence, silence } from '../audio.js';
-import { clipsToSay, countClips } from '../settings.js';
+import { hasClip, playSequence, silence } from '../audio.js';
+import { clipsToSay, countClips, countDoneClips } from '../settings.js';
 import { pickerHashFor } from '../areas.js';
 import { glyphSVG } from '../glyph.js';
 
@@ -75,8 +75,8 @@ export function renderCard(root, { item, catalog, glyphs, go }) {
  * Ten-frame counting: N identical objects in rows of five. Each object counts once, on its first
  * tap, and stays filled in. The spoken number is the running count (in the chosen language(s)),
  * whichever object he taps. A tap while a number is being said stops it and says the new one.
- * After the last object, the number is said again. Zero is an empty frame. "Count again" and
- * every new visit start afresh.
+ * The last object says what was counted instead: "five turtles" / 五隻烏龜 (settings.js
+ * countDoneClips). Zero is an empty frame. "Count again" and every new visit start afresh.
  */
 const countOf = (item) => Number(item.glyph.split(':')[1]);
 
@@ -97,7 +97,7 @@ function renderCounting(box, item) {
         if (obj.classList.contains('counted')) return;   // each object counts once
         obj.classList.add('counted');
         counted += 1;
-        playSequence(counted === n ? [...countClips(counted), ...clipsToSay(item)] : countClips(counted));
+        playSequence(counted === n ? countDoneClips(item, n, hasClip) : countClips(counted));
       });
       cell.append(obj);
     }

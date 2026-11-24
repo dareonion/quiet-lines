@@ -12,10 +12,12 @@ Home screen's corner shows ✓, it works with no connection at all.
 - **Five areas:** Draw, Shapes, 123, ABC and 中文. Each screen offers at most six big choices.
 - **Item cards:** every item has a card. Tapping the glyph says its name, and tapping the picture
   says its word.
-- **Counting:** number cards have a ten-frame that counts out loud as the child taps.
+- **Counting:** number cards have a ten-frame that counts out loud as the child taps. The last one
+  says what was counted: "five turtles", or 五隻烏龜.
 - **Tracing:** shapes, digits, letters and characters with six strokes or fewer can be traced with a
   finger. Tracing is very forgiving: either direction, wobbly is fine, and progress stays when the
-  finger lifts. Ink off the path fades. There is no wrong sound.
+  finger lifts. Shapes have no set order: their lines go in any order, and a closed shape (circle,
+  square, triangle, star) can start anywhere on it. Ink off the path fades. There is no wrong sound.
 - **Drawing:** five muted crayons and a new page. Apple Pencil works too, with pressure.
 - **Apple Pencil palm rejection:** while the Pencil is in use, a hand resting on the screen draws
   nothing, doesn't count toward a trace, and doesn't press buttons.

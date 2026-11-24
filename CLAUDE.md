@@ -40,7 +40,8 @@ big, very forgiving finger tracing. Letters and characters are exposure, not han
   the app, the recorder and the server:
   - `clips`: clip id → `{lang: "en"|"zh", text, prompt}`. Ids match `^[a-z0-9][a-z0-9._-]{0,63}$`.
   - `items`: `{id, kind: shape|number|letter|hanzi, glyph: "latin:<name>"|"hanzi:<char>", label?,
-    emoji?, word?, count_emoji? (numbers), strokes? (hanzi), clips: {en?, zh?, word?}, trace}`.
+    emoji?, word?, count_emoji? and count_clips? (numbers 1–10: {en, zh}, said after the last object),
+    strokes? (hanzi), clips: {en?, zh?, word?}, trace}`.
     Every item opens a card; tracing starts from the card.
   - `content/glyphs/latin.json` holds SVG path strokes in a 100-unit box, in stroke order, each
     drawn in its writing direction (M L H V C Q Z only, one M per stroke).
@@ -73,7 +74,8 @@ big, very forgiving finger tracing. Letters and characters are exposure, not han
 
 ## Content decisions
 
-- v1 has 79 items and 113 clips: 11 shapes, 0–10, A–Z, and 31 characters. Characters with 6 or fewer
+- v1 has 81 items and 136 clips: 13 shapes (the balloon and ice cream came on 2026-11-23; the ice
+  cream's English reuses the letter I's "ice cream"), 0–10, A–Z, and 31 characters. Characters with 6 or fewer
   strokes are traceable; 魚 鳥 馬 雨 are look-and-listen.
 - 花 was replaced by 耳: the data has the mainland 7-stroke form (3-stroke 艹), and Taiwan's
   standard is 8 strokes. Picture words: I is 🍦 ice cream and V is 🚐 van ("insect" and "violin" were
@@ -83,8 +85,17 @@ big, very forgiving finger tracing. Letters and characters are exposure, not han
   are listed there: 四 and 日 lack Taiwan's tiny end hook, 雨's inner dots are mainland-style, and 耳's
   MoE sources disagree.
 - Counting says the running count in the chosen language(s) ("both": English then 中文 on every
-  tap); after the last object the number is said again. "Count again" resets the frame.
+  tap). The last object says what was counted instead, in the same language(s): "five turtles",
+  五隻烏龜 (2026-11-23; the measure words are 顆 for round fruit, 條 for fish, 隻 for
+  animals, 根 for carrots and bananas, and 2 is 兩). Unless every chosen language's phrase can play
+  (a self-hosted copy without them recorded), it says the number again, as before. "Count again"
+  resets the frame.
 - Every item opens a card (shapes too, so a child can hear a shape's name without tracing it).
+- Shapes have no handwriting order (asked for on 2026-11-23: the diagonal and heart either way, the cross
+  either line first, the star from any corner). In both tracing modes a shape's strokes go in any
+  order and from either end, and a closed one starts wherever it's picked up (`free` in
+  `app/js/trace/engine.js`). Numbers, letters and characters keep their stroke order; Easy lets each
+  stroke go either way, Normal only forwards.
 - Self-hosted copies play recorded voices only: a clip nobody has recorded plays nothing.
 
 ## Voices (2026-11-22/23)
@@ -99,6 +110,10 @@ big, very forgiving finger tracing. Letters and characters are exposure, not han
   Andrew's 72 carried. S0 itself repeated exactly (three regenerations identical), but 33 Andrew clips
   differ from the F0 files heard the day before: same length, correlation 0.83 to 0.999, level within
   4 dB. Guy's "nose" was 21 ms longer. Clips that don't carry need listening (`--direct`).
+- **New clips go straight to S0:** generate them on S0 (`--only`), listen to those exact files, and
+  approve them with `--direct`. The 69 clips added on 2026-11-23 (counting phrases, balloon, ice
+  cream, in all six packs) were approved this way, one take each; the multi-syllable Yunfan HD
+  phrases weren't screened by `check_tones.py`, which judges single syllables only.
 - **HD voices** (`…:DragonHDLatestNeural`) give a different take every request, sometimes with the
   wrong tone. Make several takes, keep the one `scripts/check_tones.py` passes, and approve the S0
   files themselves.

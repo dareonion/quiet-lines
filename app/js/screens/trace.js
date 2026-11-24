@@ -25,6 +25,7 @@ export function renderTrace(root, { item, glyphs, go }) {
   if (!glyph) return () => {};
   const surface = new TraceSurface(el.querySelector('canvas'), glyph, {
     mode: getSettings().ease,
+    free: item.kind === 'shape',   // shapes have no handwriting order or direction
     onComplete: () => playSequence(clipsToSay(item)),
   });
   el.querySelector('[data-act="restart"]').addEventListener('click', () => { silence(); surface.restart(); });

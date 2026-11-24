@@ -13,8 +13,12 @@ CONTENT = ROOT / "app/content"
 CATALOG = CONTENT / "catalog.json"
 LATIN = CONTENT / "glyphs/latin.json"
 ID = re.compile(r"[a-z0-9][a-z0-9._-]{0,63}")
-SHAPES = "vline hline diagonal circle cross zigzag wave square triangle heart star".split()
+SHAPES = "vline hline diagonal circle cross zigzag wave square triangle heart star balloon ice-cream".split()
 HANZI = "一二三四五六七八九十人口大小山水火日月木手目魚鳥馬牛羊耳雨上下"
+# What each ten-frame picture is called in the counting phrases ("five turtles", 五隻烏龜).
+COUNTED = {"🍎": ("apple", "顆蘋果"), "🐟": ("fish", "條魚"), "🦆": ("ducks", "隻鴨子"), "🍐": ("pears", "顆梨子"),
+           "🐢": ("turtles", "隻烏龜"), "🥕": ("carrots", "根紅蘿蔔"), "🍋": ("lemons", "顆檸檬"),
+           "🐰": ("rabbits", "隻兔子"), "🍊": ("oranges", "顆橘子"), "🍌": ("bananas", "根香蕉")}
 
 
 @pytest.fixture
@@ -30,7 +34,7 @@ def test_catalog_ids_and_recordings(catalog):
     assert len({item["id"] for item in items}) == len(items)
     used = set()
     for item in items:
-        for role, key in item["clips"].items():
+        for role, key in [*item["clips"].items(), *item.get("count_clips", {}).items()]:
             assert key in clips, (item["id"], key)
             assert clips[key]["lang"] == ("en" if role == "word" else role)
             used.add(key)
@@ -74,9 +78,16 @@ def test_counting_and_picture_words(catalog):
         kind, glyph = item["kind"], item["glyph"].split(":")[1]
         if kind == "number":
             if glyph == "0":
-                assert item.get("count_emoji") is None
+                assert item.get("count_emoji") is None and "count_clips" not in item
             else:
                 assert item["count_emoji"]
+                # After the last object it says what was counted: "five turtles", 五隻烏龜.
+                assert item["count_clips"] == {lang: f"count.{glyph}.{lang}" for lang in ("en", "zh")}
+                en = catalog["clips"][f"count.{glyph}.en"]["text"]
+                zh = catalog["clips"][f"count.{glyph}.zh"]["text"]
+                en_noun, zh_noun = COUNTED[item["count_emoji"]]
+                assert en == catalog["clips"][f"num.{glyph}.en"]["text"] + " " + en_noun
+                assert zh == ("兩" if glyph == "2" else catalog["clips"][f"num.{glyph}.zh"]["text"]) + zh_noun
             assert item["clips"] == {lang: f"num.{glyph}.{lang}" for lang in ("en", "zh")}
         if kind == "letter":
             assert item["emoji"]
